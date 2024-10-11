@@ -1,7 +1,6 @@
 /* General Styles */
 body {
     font-family: sans-serif;
-    margin: 0; /* Remove default margin */
 }
 
 nav {
@@ -14,7 +13,6 @@ nav {
     width: 250px;
     overflow-y: auto;
     transition: transform 0.3s ease;
-    z-index: 1000; /* Ensure nav appears above other elements */
 }
 
 nav a {
@@ -46,6 +44,23 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+/* Menu Toggle Button Styles */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
 /* Dropdown Styles */
 .dropdown {
     position: relative;
@@ -53,9 +68,7 @@ nav a:hover {
 
 .dropdown-content {
     display: none;
-    position: static;
-    background-color: #444; /* Adjusted for better visibility */
-    width: calc(100% - 40px); /* Adjusted for nesting */
+    background-color: #444;
     padding-left: 20px;
 }
 
@@ -68,14 +81,12 @@ nav a:hover {
 }
 
 .dropdown-submenu > a {
-    padding-left: 30px; /* Indent submenu items */
+    padding-left: 30px;
 }
 
 .dropdown-subcontent {
     display: none;
-    position: static;
-    background-color: #555; /* Deeper color for deeper levels */
-    width: calc(100% - 60px); /* Adjusted for deeper nesting */
+    background-color: #555;
     padding-left: 20px;
 }
 
@@ -84,10 +95,9 @@ nav a:hover {
 }
 
 .dropdown-subcontent .dropdown-submenu > a {
-    padding-left: 40px; /* Further indent for deeper submenu items */
+    padding-left: 40px;
 }
 
-/* Adjustments for links and hover effects */
 .dropdown-content a,
 .dropdown-subcontent a {
     padding: 10px 20px;
@@ -109,7 +119,7 @@ nav a:hover {
     background-color: gray;
     padding: 20px;
     margin-bottom: 10px;
-    margin-left: 250px; /* Adjusted for fixed nav width */
+    margin-left: 250px;
     color: white;
 }
 
@@ -181,40 +191,28 @@ footer a {
     color: #333;
 }
 
-/* Menu Toggle Button */
-.menu-toggle {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1001; /* Above the nav */
-}
-
-.menu-toggle:hover {
-    background-color: #555;
-}
-
-/* Responsive Styles for Mobile */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     nav {
-        transform: translateX(-250px); /* Hide nav by default */
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%);
     }
-
-    nav.visible {
-        transform: translateX(0); /* Show nav when visible */
-    }
-
+    
     .menu-toggle {
-        display: block; /* Show menu toggle button */
+        display: block; /* Show menu toggle button on mobile */
     }
-
-    /* Adjust content sections to align properly */
+    
+    .menu {
+        display: none;
+    }
+    
+    .menu.open {
+        display: block;
+    }
+    
+    /* Adjust content margin */
     .introduction,
     .about,
     .services,
@@ -224,34 +222,28 @@ footer a {
     footer {
         margin-left: 0;
     }
-
-    /* Disable hover effects on mobile */
+    
+    /* Dropdowns on Mobile */
     .dropdown:hover > .dropdown-content,
     .dropdown-submenu:hover > .dropdown-subcontent {
         display: none;
     }
-
-    /* Show submenus when parent is clicked */
-    .dropdown.open > .dropdown-content,
+    
+    .dropdown-content,
+    .dropdown-subcontent {
+        display: none;
+    }
+    
+    .dropdown.open > .dropdown-content {
+        display: block;
+    }
+    
     .dropdown-submenu.open > .dropdown-subcontent {
         display: block;
     }
-
-    /* Adjust link padding for better touch targets */
+    
+    /* Adjust link padding */
     nav a {
-        padding: 15px 20px;
-    }
-
-    /* Add toggle indicators */
-    .dropdown > a.toggle-submenu::after,
-    .dropdown-submenu > a.toggle-submenu::after {
-        content: '\25BC'; /* Down arrow */
-        float: right;
-        margin-right: 20px;
-    }
-
-    .dropdown.open > a.toggle-submenu::after,
-    .dropdown-submenu.open > a.toggle-submenu::after {
-        content: '\25B2'; /* Up arrow */
+        padding: 15px;
     }
 }
