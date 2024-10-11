@@ -1,146 +1,134 @@
 /* Base styles */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #222;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Hide by default */
+}
+
+nav.show-menu {
+  transform: translateX(0); /* Show menu when toggled */
+}
+
+nav .logo {
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+
+nav .logo img {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+nav .logo img:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation menu */
+nav ul.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+nav ul.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.nav-menu li a:hover {
+  background-color: #444;
+}
+
+/* Submenu */
+nav ul.nav-menu li ul {
+  display: none;
+  background-color: #333;
+  padding-left: 0;
+}
+
+nav ul.nav-menu li:hover > ul {
+  display: block;
+}
+
+nav ul.nav-menu li ul li a {
+  padding-left: 30px;
+}
+
+nav ul.nav-menu li ul li ul li a {
+  padding-left: 45px;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  display: block; /* Show toggle button on all screen sizes */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.show-menu {
+  margin-left: 270px; /* Adjust based on nav width */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
   nav {
-    background-color: #222;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-  }
-  
-  nav .logo {
-    padding: 30px 20px;
-    text-align: center;
-    background-color: #222;
-    color: white;
-  }
-  
-  nav .logo img {
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav .logo img:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  
-  /* Navigation menu */
-  nav ul.nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: block;
-  }
-  
-  nav ul.nav-menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav ul.nav-menu li a:hover {
-    background-color: #444;
-  }
-  
-  /* Submenu */
-  nav ul.nav-menu li ul {
-    display: none;
-    background-color: #333;
-    padding-left: 0;
-  }
-  
-  nav ul.nav-menu li:hover > ul {
-    display: block;
-  }
-  
-  nav ul.nav-menu li ul li a {
-    padding-left: 30px;
-  }
-  
-  nav ul.nav-menu li ul li ul li a {
-    padding-left: 45px;
-  }
-  
-  /* Mobile toggle button */
-  .menu-toggle {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .menu-toggle span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    margin: 6px 0;
-    background-color: white;
-    transition: 0.3s;
-  }
-  
-  /* Main content */
-  .main-content {
-    margin-left: 270px;
-    padding: 20px;
-    transition: margin-left 0.3s ease;
-  }
-  
-  /* Responsive styles */
-  @media screen and (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    nav {
       width: 200px;
-      transform: translateX(-100%);
-    }
-  
-    nav.show-menu {
-      transform: translateX(0);
-    }
-  
-    .main-content {
-      margin-left: 0;
-    }
-  
-    footer {
-      margin-left: 0;
-    }
   }
-  
-  @media screen and (max-width: 600px) {
-    nav {
+
+  .main-content.show-menu {
+      margin-left: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
       width: 180px;
-    }
-  
-    nav.show-menu {
-      transform: translateX(0);
-    }
-  
-    .main-content {
-      margin-left: 0;
-    }
-  
-    footer {
-      margin-left: 0;
-    }
-  }  
+  }
+
+  .main-content.show-menu {
+      margin-left: 180px;
+  }
+}
