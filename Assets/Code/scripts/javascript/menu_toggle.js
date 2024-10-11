@@ -1,8 +1,21 @@
-document.getElementById('menuToggle').addEventListener('click', function() {
-  var menu = document.getElementById('menu');
-  if (menu.style.display === 'none') {
-      menu.style.display = 'block';
-  } else {
-      menu.style.display = 'none';
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  var menuToggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('nav');
+  var mainContent = document.querySelector('.main-content');
+  var submenuLinks = document.querySelectorAll('nav ul.nav-menu li > a');
+
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('show-menu');
+    mainContent.classList.toggle('show-menu');
+  });
+
+  submenuLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var submenu = this.nextElementSibling;
+      if (submenu && submenu.tagName === 'UL') {
+        e.preventDefault();
+        this.parentElement.classList.toggle('show-submenu');
+      }
+    });
+  });
 });
