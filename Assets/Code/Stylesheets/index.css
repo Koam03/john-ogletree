@@ -17,26 +17,14 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   }
   
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
-    background-color: #444;
-  }
-  
-  .logo {
+  nav .logo {
     padding: 30px 20px;
     text-align: center;
     background-color: #222;
     color: white;
   }
   
-  .logo img {
+  nav .logo img {
     height: 100px;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
@@ -44,25 +32,53 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .logo img:hover {
+  nav .logo img:hover {
     background-color: rgba(255, 255, 255, 0.5);
   }
   
-  .dropdown {
+  nav ul.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul.nav-menu > li {
     position: relative;
   }
   
-  .dropdown-content {
+  nav ul.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul.nav-menu li a:hover {
+    background-color: #444;
+  }
+  
+  nav ul.nav-menu li ul {
     display: none;
     background-color: #333;
-    padding: 10px;
-    position: relative;
-    width: calc(100% - 40px);
-    margin-left: 20px;
+    list-style: none;
+    padding-left: 0;
   }
   
-  .dropdown:hover .dropdown-content {
+  nav ul.nav-menu li:hover > ul {
     display: block;
+  }
+  
+  nav ul.nav-menu li ul li a {
+    padding-left: 30px;
+  }
+  
+  nav ul.nav-menu li ul li ul li a {
+    padding-left: 45px;
+  }
+  
+  nav ul.nav-menu li ul li ul li ul li a {
+    padding-left: 60px;
   }
   
   .main-content {
@@ -154,7 +170,7 @@ body {
     nav {
       width: 200px;
     }
-    
+  
     .main-content {
       margin-left: 220px;
     }
@@ -168,7 +184,7 @@ body {
     nav {
       width: 180px;
     }
-    
+  
     .main-content {
       margin-left: 190px;
     }
