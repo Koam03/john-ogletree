@@ -1,6 +1,7 @@
 /* General Styles */
 body {
     font-family: sans-serif;
+    margin: 0; /* Remove default margin */
 }
 
 nav {
@@ -12,6 +13,8 @@ nav {
     height: 100%;
     width: 250px;
     overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000; /* Ensure nav appears above other elements */
 }
 
 nav a {
@@ -176,4 +179,79 @@ footer img {
 footer a {
     text-decoration: none;
     color: #333;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; /* Above the nav */
+}
+
+.menu-toggle:hover {
+    background-color: #555;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+    nav {
+        transform: translateX(-250px); /* Hide nav by default */
+    }
+
+    nav.visible {
+        transform: translateX(0); /* Show nav when visible */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle button */
+    }
+
+    /* Adjust content sections to align properly */
+    .introduction,
+    .about,
+    .services,
+    .projects,
+    .music,
+    .contact,
+    footer {
+        margin-left: 0;
+    }
+
+    /* Disable hover effects on mobile */
+    .dropdown:hover > .dropdown-content,
+    .dropdown-submenu:hover > .dropdown-subcontent {
+        display: none;
+    }
+
+    /* Show submenus when parent is clicked */
+    .dropdown.open > .dropdown-content,
+    .dropdown-submenu.open > .dropdown-subcontent {
+        display: block;
+    }
+
+    /* Adjust link padding for better touch targets */
+    nav a {
+        padding: 15px 20px;
+    }
+
+    /* Add toggle indicators */
+    .dropdown > a.toggle-submenu::after,
+    .dropdown-submenu > a.toggle-submenu::after {
+        content: '\25BC'; /* Down arrow */
+        float: right;
+        margin-right: 20px;
+    }
+
+    .dropdown.open > a.toggle-submenu::after,
+    .dropdown-submenu.open > a.toggle-submenu::after {
+        content: '\25B2'; /* Up arrow */
+    }
 }
