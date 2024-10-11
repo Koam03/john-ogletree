@@ -1,38 +1,179 @@
-body {font-family: sans-serif;}
-nav {background-color: #333; color: white; position: fixed; top: 0; left: 0; height: 100%; width: 250px; overflow-y: auto;}
-nav a {color: white; text-decoration: none; padding: 15px 20px; display: block;}
-nav a:hover {background-color: #555; color: white;}
-.logo {padding: 20px; text-align: center; background-color: #333; color: white;}
-.logo img {height: 99px; background-color: rgba(255, 255, 255, 0.5); padding: 0px;}
-.logo img:hover {background-color: rgba(255, 255, 255, 0.7);}
-.dropdown {position: relative;}
-.dropdown-content {display: none; position: static; background-color: black; width: calc(100% - 20px); box-shadow: none; padding: 10px;}
-.dropdown:hover .dropdown-content {display: block;}
-.introduction {background-color: gray; padding: 20px; margin-bottom: 10px; margin-left: 250px; color: white;}
-.introduction button {background-color: #333; color: white; padding: 10px 20px; border: none; cursor: pointer;}
-.introduction button:hover {background-color: #555;}
-.about {background-color: gray; padding: 20px; margin-bottom: 10px; margin-left: 250px; color: white;}
-.about button {background-color: #333; color: white; padding: 10px 20px; border: none; cursor: pointer;}
-.about button:hover {background-color: #555;}
-.services {background-color: gray; padding: 20px; margin-bottom: 10px; margin-left: 250px; color: white;}
-.services button {background-color: #333; color: white; padding: 10px 20px; border: none; cursor: pointer;}
-.services button:hover {background-color: #555;}
-.projects {background-color: gray; padding: 20px; margin-bottom: 10px; margin-left: 250px; color: white;}
-.projects button {background-color: #333; color: white; padding: 10px 20px; border: none; cursor: pointer;}
-.projects button:hover {background-color: #555;}
-.projects img { width: 100%; height: auto;}
-.music {background-color: gray; padding: 20px; margin-bottom: 10px; margin-left: 250px; color: white;}
-.music button {background-color: #333; color: white; padding: 10px 20px; border: none; cursor: pointer;}
-.music button:hover {background-color: #555;}
-.music img {width: 100%; height: auto;}
-.contact {background-color: gray; padding: 20px; margin-bottom: 10px; margin-left: 250px; color: white;}
-.contact button {background-color: #333; color: white; padding: 10px 20px; border: none; cursor: pointer;}
-.contact button:hover {background-color: #555;}
-.contact form {margin-top: 20px;}
-.contact input, .contact textarea { width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;}
-footer {background-color: gray; padding: 20px; margin-left: 250px; color: white;}
-footer table {width: 100%; border-collapse: collapse;}
-footer td {padding: 10px;}
-footer p {margin: 0;}
-footer img {vertical-align: middle;}
-footer a {text-decoration: none; color: #333;} 
+/* General Styles */
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    overflow-y: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.logo {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.logo img {
+    height: 99px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0px;
+}
+
+.logo img:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: static;
+    background-color: #444; /* Adjusted for better visibility */
+    width: calc(100% - 40px); /* Adjusted for nesting */
+    padding-left: 20px;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > a {
+    padding-left: 30px; /* Indent submenu items */
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: static;
+    background-color: #555; /* Deeper color for deeper levels */
+    width: calc(100% - 60px); /* Adjusted for deeper nesting */
+    padding-left: 20px;
+}
+
+.dropdown-submenu:hover > .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-subcontent .dropdown-submenu > a {
+    padding-left: 40px; /* Further indent for deeper submenu items */
+}
+
+/* Adjustments for links and hover effects */
+.dropdown-content a,
+.dropdown-subcontent a {
+    padding: 10px 20px;
+    color: white;
+}
+
+.dropdown-content a:hover,
+.dropdown-subcontent a:hover {
+    background-color: #666;
+}
+
+/* Content Sections */
+.introduction,
+.about,
+.services,
+.projects,
+.music,
+.contact {
+    background-color: gray;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-left: 250px; /* Adjusted for fixed nav width */
+    color: white;
+}
+
+.introduction button,
+.about button,
+.services button,
+.projects button,
+.music button,
+.contact button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.introduction button:hover,
+.about button:hover,
+.services button:hover,
+.projects button:hover,
+.music button:hover,
+.contact button:hover {
+    background-color: #555;
+}
+
+.projects img,
+.music img {
+    width: 100%;
+    height: auto;
+}
+
+.contact form {
+    margin-top: 20px;
+}
+
+.contact input,
+.contact textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: gray;
+    padding: 20px;
+    margin-left: 250px;
+    color: white;
+}
+
+footer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+footer td {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer img {
+    vertical-align: middle;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+}
