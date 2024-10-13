@@ -53,7 +53,7 @@ body {
 .neon-sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Hidden by default */
     width: 250px;
     height: 100vh;
     background-color: #1a1a1a;
@@ -64,11 +64,12 @@ body {
     transition: left 0.3s ease-in-out;
 }
 
+/* Show Sidebar When Menu Toggle is Checked */
 #menuToggle:checked ~ .neon-sidebar {
     left: 0;
 }
 
-/* Overlay for Mobile Menu */
+/* Overlay for Sidebar */
 .overlay {
     display: none;
 }
@@ -367,7 +368,7 @@ a.neon-link:focus::before {
     transform: scaleX(1);
 }
 
-/* Media Queries for Larger Screens */
+/* Media Queries for Responsive Design */
 @media (min-width: 600px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -381,32 +382,24 @@ a.neon-link:focus::before {
         gap: 25px;
     }
 
-    main {
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-    /* Adjust Sidebar for Larger Screens */
-    #menuToggle:checked ~ .neon-sidebar {
+    /* Ensure sidebar remains hidden on larger screens */
+    .neon-sidebar {
         left: -250px;
     }
 
+    /* Keep menu toggle visible on all screens */
+    .menu-toggle-label {
+        display: block;
+    }
+
+    /* Remove any margin-left adjustments on main */
     main {
         margin-left: 0;
     }
 
-    /* Ensure sidebar is always visible on larger screens */
-    .neon-sidebar {
-        left: 0;
-    }
-
-    /* Hide menu toggle button */
-    .menu-toggle-label {
-        display: none;
-    }
-
-    #menuToggle:checked ~ main {
-        margin-left: 250px;
+    /* Ensure overlay works on larger screens */
+    #menuToggle:checked ~ .overlay {
+        display: block;
     }
 
     /* Adjust main padding */
@@ -416,16 +409,13 @@ a.neon-link:focus::before {
 }
 
 @media (min-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
     .neon-sidebar {
         width: 250px;
-    }
-
-    main {
-        margin-left: 250px;
-    }
-
-    .container {
-        padding: 0 40px;
     }
 
     .neon-footer {
