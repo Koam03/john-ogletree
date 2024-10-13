@@ -1,137 +1,107 @@
-/* Neon Theme */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-body {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #000;
-    color: #0ff;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-/* Sidebar Navigation */
-.sidebar {
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar (20% of the width) */
+.neon-sidebar {
+    width: 20%;
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
-    height: 100%;
-    width: 300px;
-    background-color: #000;
-    box-shadow: 0 0 20px #0ff;
-    padding: 30px 0;
-    z-index: 1000;
+    overflow-y: auto;
 }
 
-.sidebar a {
-    display: block;
-    color: #0ff;
-    padding: 20px;
-    text-align: center;
-    text-transform: uppercase;
+/* Sidebar Links */
+.sidebar-nav li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.sidebar-nav a {
+    color: #fff;
     text-decoration: none;
     font-size: 1.2em;
-    letter-spacing: 2px;
-    margin: 20px 0;
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
-    transition: color 0.4s ease-in-out, box-shadow 0.4s;
 }
 
-.sidebar a:hover {
-    color: #fff;
-    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
+.sidebar-nav a:hover {
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
 }
 
-/* Neon Headers */
-h1, h2, h3, p {
-    color: #0ff;
-    text-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
-    margin-left: 350px; /* Space for sidebar */
+/* Main Content (80% of the width) */
+main {
+    width: 80%;
+    margin-left: 20%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
 }
 
-h1 {
-    font-size: 3em;
-    margin-top: 50px;
+/* Sections Styling */
+section {
+    margin-bottom: 50px;
 }
 
-h2 {
+section h1 {
     font-size: 2.5em;
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-p {
+section p {
+    margin-bottom: 20px;
     font-size: 1.2em;
-    margin-top: 15px;
 }
 
-/* Neon Button */
 .neon-button {
-    background-color: #0ff;
-    color: #000;
-    border: 2px solid #0ff;
-    padding: 15px 40px;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    letter-spacing: 2px;
-    transition: 0.4s ease-in-out;
-    text-shadow: 0 0 10px #0ff;
-    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+    background-color: #0f0;
+    border: none;
+    padding: 10px 20px;
+    color: #111;
+    font-size: 1.1em;
     cursor: pointer;
-    margin-left: 350px; /* Space for sidebar */
+    transition: all 0.3s ease;
 }
 
 .neon-button:hover {
-    background-color: #000;
-    color: #0ff;
-    border-color: #0ff;
-    box-shadow: 0 0 50px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    background-color: #111;
+    color: #0f0;
+    box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
 }
 
-/* Content Sections */
-.section {
-    margin-left: 350px; /* Space for sidebar */
-    padding: 50px;
-}
-
-.section h2 {
-    margin-bottom: 20px;
-}
-
-/* Neon Borders */
-.neon-border {
-    border: 2px solid #0ff;
-    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
-    padding: 20px;
-    margin: 20px 0;
-    transition: 0.4s;
-}
-
-.neon-border:hover {
-    box-shadow: 0 0 50px #0ff, 0 0 100px #0ff;
-}
-
-/* Neon Footer */
-.footer {
-    background-color: #000;
-    padding: 30px;
-    text-align: center;
-    color: #0ff;
-    text-shadow: 0 0 5px #0ff;
-    margin-left: 350px; /* Space for sidebar */
-}
-
-.footer a {
-    color: #0ff;
-    text-shadow: 0 0 5px #0ff;
-}
-
-.footer a:hover {
+/* Footer Styling */
+.neon-footer {
+    background-color: #111;
     color: #fff;
-    text-shadow: 0 0 10px #0ff;
+    padding: 10px 0;
+    text-align: center;
 }
 
-/* Highlight */
-.highlight {
-    color: #0ff;
-    text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+.neon-footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    /* Responsive adjustments */
+    .neon-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
 }
