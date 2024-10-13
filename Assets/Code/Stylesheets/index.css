@@ -57,7 +57,7 @@ body {
 .menu-toggle-label i {
     color: #00ffea;
     font-size: 1.5em;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    /* Removed text-shadow to eliminate animations */
 }
 
 /* Hidden Checkbox for Menu Toggle */
@@ -99,12 +99,7 @@ body {
     height: 100%;
     background: rgba(0,0,0,0.8);
     z-index: 999;
-    animation: fadeIn 0.4s forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    /* Removed animation for fadeIn */
 }
 
 /* Logo Section */
@@ -115,9 +110,10 @@ body {
 
 .neon-sidebar .logo h1 {
     font-size: 2em;
-    color: #00ffea;
-    text-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00ffea;
-    animation: flicker 3s infinite;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Removed text-shadow and animation */
 }
 
 .neon-sidebar .logo img {
@@ -125,7 +121,9 @@ body {
     filter: drop-shadow(0 0 20px #00ffea);
     height: 180px;
     width: auto;
-    animation: glow 2s infinite alternate;
+    /* Removed animation */
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    /* Optional: Add gradient overlay if desired */
 }
 
 /* Navigation Menu */
@@ -217,10 +215,12 @@ main {
 }
 
 h1, h2, h3 {
-    color: #00ffea;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea;
+    /* Apply gradient to text */
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
-    animation: neonGlow 2s infinite alternate;
+    /* Removed text-shadow and animation */
 }
 
 p {
@@ -241,8 +241,7 @@ p {
     cursor: pointer;
     box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    background-size: 200% 200%;
-    animation: gradientShift 4s ease infinite;
+    /* Removed gradientShift animation */
 }
 
 .neon-button:hover,
@@ -250,7 +249,7 @@ p {
     transform: translateY(-5px);
     box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
     outline: none;
-    background-position: right center;
+    /* Removed background-position change */
 }
 
 /* Service Grid */
@@ -292,9 +291,11 @@ p {
 }
 
 .service-category h3 {
-    color: #00ffea;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #ff00c8;
-    animation: neonPulse 2s infinite alternate;
+    /* Apply gradient to text */
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Removed text-shadow and animation */
 }
 
 /* Footer */
@@ -340,7 +341,7 @@ form label {
     margin-bottom: 8px;
     color: #fff;
     font-size: 1em;
-    text-shadow: 0 0 5px #00ffea;
+    /* Removed text-shadow */
 }
 
 form input,
@@ -395,8 +396,10 @@ form textarea:focus {
 .project h2, .track h2 {
     margin-bottom: 8px;
     font-size: 1.3em;
-    color: #00ffea;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Removed text-shadow */
 }
 
 /* Button Container */
@@ -409,9 +412,12 @@ form textarea:focus {
 a.neon-link {
     position: relative;
     color: #00ffea;
-    text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea, 0 0 25px #ff00c8;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.1em;
     transition: color 0.3s, text-shadow 0.3s;
+    /* Removed text-shadow and animations */
 }
 
 a.neon-link::before {
@@ -435,8 +441,8 @@ a.neon-link:focus::before {
 
 a.neon-link:hover,
 a.neon-link:focus {
-    color: #ff00c8;
-    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8, 0 0 30px #ff00c8;
+    /* Changed text color to match gradient */
+    /* Removed text-shadow */
 }
 
 /* Media Queries for Responsive Design */
@@ -508,48 +514,5 @@ a.neon-link:focus {
     .social-icons a {
         font-size: 1.8em;
         margin: 0 12px;
-    }
-}
-
-/* Animations */
-@keyframes neonGlow {
-    from {
-        text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #ff00c8;
-    }
-    to {
-        text-shadow: 0 0 20px #00ffea, 0 0 30px #ff00c8, 0 0 40px #ff00c8;
-    }
-}
-
-@keyframes glow {
-    from {
-        filter: drop-shadow(0 0 10px #00ffea);
-    }
-    to {
-        filter: drop-shadow(0 0 20px #00ffea);
-    }
-}
-
-@keyframes neonPulse {
-    0% {
-        text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #ff00c8;
-    }
-    50% {
-        text-shadow: 0 0 20px #00ffea, 0 0 30px #ff00c8, 0 0 40px #ff00c8;
-    }
-    100% {
-        text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #ff00c8;
-    }
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
     }
 }
