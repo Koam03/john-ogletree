@@ -54,9 +54,14 @@ p {
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.8em;
+    font-size: 2em;
     cursor: pointer;
     display: none; /* Hidden on larger screens */
+}
+
+/* Hamburger icon bars */
+.menu-toggle-label i {
+    color: #00ffea;
 }
 
 /* Show menu toggle on small screens */
