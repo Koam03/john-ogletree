@@ -1,5 +1,3 @@
-/* index.css */
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -8,43 +6,68 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
     background-color: #111;
     color: #fff;
+    display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Sidebar Styles */
+/* Layout & Grid */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Neon Sidebar */
 .neon-sidebar {
-    width: 20%;
     background-color: #1a1a1a;
-    padding: 20px;
-    position: fixed;
+    width: 250px;
     height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px #00ffea;
     overflow-y: auto;
-    transition: transform 0.3s ease-in-out;
     z-index: 1000;
-    box-shadow: 0 0 10px #00ffea;
+    transition: transform 0.3s ease-in-out;
 }
 
 .neon-sidebar .logo {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .neon-sidebar .logo h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #00ffea;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    text-shadow: 0 0 15px #00ffea, 0 0 25px #00ffea;
 }
 
 .neon-sidebar .logo img {
-    width: 100%;
-    max-width: 150px;
-    margin-top: 10px;
-    filter: drop-shadow(0 0 5px #00ffea);
+    width: 100px;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 10px #00ffea);
 }
 
 .neon-sidebar .sidebar-nav {
@@ -52,133 +75,106 @@ body {
 }
 
 .neon-sidebar .sidebar-nav li {
-    margin: 15px 0;
-    position: relative;
+    margin: 20px 0;
 }
 
 .neon-sidebar .sidebar-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
     display: block;
-    padding: 10px;
+    font-size: 1.1em;
+    padding: 12px;
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s;
-    position: relative;
 }
 
-.neon-sidebar .sidebar-nav a.neon-link {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
-}
-
-.neon-sidebar .sidebar-nav a.neon-link:hover {
-    background-color: rgba(0, 255, 234, 0.1);
+.neon-sidebar .sidebar-nav a:hover {
+    background-color: rgba(0, 255, 234, 0.2);
     box-shadow: 0 0 10px #00ffea;
 }
 
-/* Dropdown Menus */
-.neon-sidebar .has-submenu {
-    position: relative;
+/* Neon Button */
+.neon-button {
+    background-color: #00ffea;
+    color: #111;
+    padding: 10px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hidden dropdown by default */
-.neon-sidebar .dropdown {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    list-style: none;
-    padding-left: 20px;
+.neon-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
 }
 
-/* Reveal dropdown on hover */
-.neon-sidebar .has-submenu:hover > .dropdown {
-    max-height: 1000px; /* Arbitrary large value for expansion */
-}
-
-.neon-sidebar .dropdown li {
-    margin: 10px 0;
-}
-
-.neon-sidebar .dropdown a {
-    font-size: 0.9em;
-    color: #a0a0a0;
-    text-shadow: none;
-}
-
-.neon-sidebar .dropdown a:hover {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea;
-}
-
-/* Main Content Styles */
-main {
-    margin-left: 20%;
-    width: 80%;
-    padding: 20px;
-    transition: margin-left 0.3s ease-in-out;
-    flex: 1;
-}
-
-main section {
-    margin-bottom: 40px;
-}
-
-main h1 {
-    font-size: 2em;
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
-    margin-bottom: 10px;
-}
-
-main h2, main h3 {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea;
-}
-
-main p {
-    line-height: 1.6;
-    color: #ccc;
-}
-
-main hr {
-    border: 0;
-    height: 1px;
-    background: #444;
-    margin: 20px 0;
-}
-
-/* Footer at the end of main content */
+/* Footer */
 .neon-footer {
     background-color: #1a1a1a;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 -2px 10px #00ffea;
-    margin-top: 20px;
+    box-shadow: 0 -5px 20px #00ffea;
 }
 
-.neon-footer .footer-content p {
-    color: #ccc;
+.neon-footer p {
+    color: #aaa;
     margin-bottom: 10px;
 }
 
 .neon-footer .social-icons a {
     color: #00ffea;
     margin: 0 10px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     transition: color 0.3s;
 }
 
 .neon-footer .social-icons a:hover {
     color: #ff00c8;
-    text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8;
+    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
 }
 
-/* Responsive Styles */
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-category {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px #00ffea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ffea;
+}
+
+.service-category img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.service-category h3 {
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea;
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
     .neon-sidebar {
-        transform: translateX(-100%);
         width: 80%;
+        transform: translateX(-100%);
     }
 
     .neon-sidebar.open {
@@ -189,75 +185,20 @@ main hr {
         margin-left: 0;
         width: 100%;
     }
+}
 
-    .menu-toggle {
-        display: block;
+@media (min-width: 768px) {
+    main {
+        margin-left: 250px;
+        padding: 40px;
     }
-
-    .overlay.show {
-        display: block;
-    }
-}
-
-/* Neon Button Styles */
-.neon-button {
-    background-color: #00ffea;
-    border: none;
-    padding: 10px 20px;
-    color: #111;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.neon-button:hover {
-    background-color: #00e6d1;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-}
-
-/* Service Grid */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.service-category {
-    background-color: #1a1a1a;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px #00ffea;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #00ffea;
-}
-
-.service-category img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.service-category h3 {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea;
 }
 
 /* Additional Neon Effects */
-h1, h2, h3, .neon-link {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
-}
-
 a.neon-link {
     position: relative;
+    color: #00ffea;
+    text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
 }
 
 a.neon-link::before {
@@ -278,7 +219,8 @@ a.neon-link:hover::before {
     transform: scaleX(1);
 }
 
-/* Smooth Scroll Behavior */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
+ 
