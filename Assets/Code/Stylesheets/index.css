@@ -145,6 +145,33 @@ p {
     position: relative;
 }
 
+/* Styling for standalone links similar to dropdown parent links */
+.sidebar-nav li > a.neon-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-nav li > a.neon-link:hover,
+.sidebar-nav li > a.neon-link:focus {
+    background-color: rgba(0, 255, 234, 0.2);
+    box-shadow: 0 0 10px #00ffea;
+    outline: none;
+}
+
+/* Ensure alignment consistency with dropdown arrow icon spacing */
+.sidebar-nav li > a.neon-link::after {
+    content: '';
+    display: inline-block;
+    width: 15px; /* Align with dropdown icon width */
+}
+
 /* Parent links with submenus */
 .has-submenu > a {
     color: #fff;
