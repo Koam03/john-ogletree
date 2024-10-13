@@ -20,7 +20,7 @@ body {
 }
 
 /* Layout & Container */
-.	container {
+.container {
     width: 100%;
     padding: 20px;
     margin: 0 auto;
@@ -99,6 +99,8 @@ body {
 .neon-sidebar .logo {
     text-align: center;
     margin-bottom: 30px;
+    height: 25%;
+    width: auto;
 }
 
 .neon-sidebar .logo h1 {
