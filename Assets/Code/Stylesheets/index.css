@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #111;
@@ -14,38 +19,14 @@ body {
     min-height: 100vh;
 }
 
-/* Layout & Grid */
+/* Layout & Container */
 .container {
-    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-main {
-    flex: 1;
-    padding: 40px 20px;
-    margin-left: 250px; /* Space for the sidebar */
-    transition: margin-left 0.3s ease-in-out;
-}
-
-h1, h2, h3 {
-    color: #00ffea;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    margin-bottom: 20px;
-}
-
-p {
-    color: #ccc;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Hidden Checkbox for Menu Toggle */
-#menuToggle {
-    display: none;
-}
-
-/* Label for Menu Toggle (Hamburger Icon) */
+/* Header & Menu Toggle */
 .menu-toggle-label {
     position: fixed;
     top: 20px;
@@ -56,35 +37,38 @@ p {
     color: #fff;
     font-size: 2em;
     cursor: pointer;
-    display: block; /* Visible on all screen sizes */
+    display: block;
 }
 
-/* Hamburger icon bars */
 .menu-toggle-label i {
     color: #00ffea;
 }
 
-/* Sidebar positioning for all screens */
+/* Hidden Checkbox for Menu Toggle */
+#menuToggle {
+    display: none;
+}
+
+/* Sidebar */
 .neon-sidebar {
     position: fixed;
     top: 0;
     left: -250px;
-    height: 100vh;
     width: 250px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px #00ffea;
+    overflow-y: auto;
+    z-index: 1000;
     transition: left 0.3s ease-in-out;
 }
 
-/* When menu is checked, show sidebar */
 #menuToggle:checked ~ .neon-sidebar {
     left: 0;
 }
 
-/* Adjust main content when sidebar is open */
-#menuToggle:checked ~ main {
-    margin-left: 250px;
-}
-
-/* Overlay for menu */
+/* Overlay for Mobile Menu */
 .overlay {
     display: none;
 }
@@ -97,39 +81,24 @@ p {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
-    z-index: 1000;
-}
-
-/* Neon Sidebar */
-.neon-sidebar {
-    background-color: #1a1a1a;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px #00ffea;
-    overflow-y: auto;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
+    z-index: 999;
 }
 
 /* Logo Section */
 .neon-sidebar .logo {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .neon-sidebar .logo h1 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #00ffea;
     text-shadow: 0 0 15px #00ffea, 0 0 25px #00ffea;
 }
 
 .neon-sidebar .logo img {
-    width: 100px;
-    margin-top: 20px;
+    width: 80px;
+    margin-top: 15px;
     filter: drop-shadow(0 0 10px #00ffea);
 }
 
@@ -139,50 +108,25 @@ p {
 }
 
 .sidebar-nav li {
-    margin: 20px 0;
+    margin: 15px 0;
     position: relative;
 }
 
-/* Styling for standalone links similar to dropdown parent links */
-.sidebar-nav li > a.neon-link {
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.1em;
-    padding: 12px;
-    border-radius: 5px;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.sidebar-nav li > a.neon-link:hover,
-.sidebar-nav li > a.neon-link:focus {
-    background-color: rgba(0, 255, 234, 0.2);
-    box-shadow: 0 0 10px #00ffea;
-    outline: none;
-}
-
-/* Ensure alignment consistency with dropdown arrow icon spacing */
-.sidebar-nav li > a.neon-link::after {
-    content: '';
-    display: inline-block;
-    width: 15px; /* Align with dropdown icon width */
-}
-
-/* Parent links with submenus */
+.sidebar-nav li > a.neon-link,
 .has-submenu > a {
     color: #fff;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.1em;
-    padding: 12px;
+    font-size: 1em;
+    padding: 10px;
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s;
 }
 
+.sidebar-nav li > a.neon-link:hover,
+.sidebar-nav li > a.neon-link:focus,
 .has-submenu > a:hover,
 .has-submenu > a:focus {
     background-color: rgba(0, 255, 234, 0.2);
@@ -190,38 +134,39 @@ p {
     outline: none;
 }
 
-/* Add arrow to indicate submenu */
+.sidebar-nav li > a.neon-link::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+}
+
 .has-submenu > a .fas {
     transition: transform 0.3s ease;
 }
 
-/* Rotate arrow on hover to indicate expansion */
 .has-submenu:hover > a .fas,
 .has-submenu:focus-within > a .fas {
     transform: rotate(180deg);
 }
 
-/* Submenu Dropdown */
 .has-submenu > ul {
     list-style: none;
-    padding-left: 20px;
+    padding-left: 15px;
     display: none;
     margin-top: 10px;
 }
 
-/* Show submenu on hover */
 .has-submenu:hover > ul,
 .has-submenu:focus-within > ul {
     display: block;
 }
 
-/* Styling Submenu Links */
 .sidebar-nav ul li a {
     color: #fff;
     text-decoration: none;
     display: block;
-    font-size: 1em;
-    padding: 8px 12px;
+    font-size: 0.9em;
+    padding: 8px 10px;
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s;
 }
@@ -233,12 +178,32 @@ p {
     outline: none;
 }
 
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 60px; /* Space for fixed header/menu */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
 /* Neon Button */
 .neon-button {
     background-color: #00ffea;
     color: #111;
-    padding: 10px 25px;
-    font-size: 1.2em;
+    padding: 10px 20px;
+    font-size: 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -253,45 +218,18 @@ p {
     outline: none;
 }
 
-/* Footer */
-.neon-footer {
-    background-color: #1a1a1a;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 -5px 20px #00ffea;
-}
-
-.neon-footer p {
-    color: #aaa;
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    color: #00ffea;
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-
-.social-icons a:hover,
-.social-icons a:focus {
-    color: #ff00c8;
-    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
-    outline: none;
-}
-
 /* Service Grid */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .service-category {
     background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 8px;
     text-align: center;
     box-shadow: 0 0 15px #00ffea;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -306,7 +244,7 @@ p {
 .service-category img {
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
@@ -315,11 +253,99 @@ p {
     text-shadow: 0 0 10px #00ffea;
 }
 
+/* Footer */
+.neon-footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 20px #00ffea;
+}
+
+.neon-footer p {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #00ffea;
+    margin: 0 8px;
+    font-size: 1.2em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+    color: #ff00c8;
+    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+    outline: none;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00ffea;
+}
+
+/* Project and Track Styles */
+.project, .track {
+    margin-bottom: 15px;
+}
+
+.project img, .track img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.project h2, .track h2 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+/* Button Container */
+.button {
+    text-align: center;
+    margin-top: 15px;
+}
+
 /* Additional Neon Effects */
 a.neon-link {
     position: relative;
     color: #00ffea;
     text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
+    font-size: 1em;
 }
 
 a.neon-link::before {
@@ -327,7 +353,7 @@ a.neon-link::before {
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     background-color: #00ffea;
     visibility: hidden;
@@ -341,76 +367,85 @@ a.neon-link:focus::before {
     transform: scaleX(1);
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+/* Media Queries for Larger Screens */
+@media (min-width: 600px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
 }
 
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
+@media (min-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
 
-form label {
-    margin-bottom: 5px;
-    color: #fff;
-}
+    main {
+        margin-top: 0;
+        margin-left: 0;
+    }
 
-form input,
-form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-}
+    /* Adjust Sidebar for Larger Screens */
+    #menuToggle:checked ~ .neon-sidebar {
+        left: -250px;
+    }
 
-form input:focus,
-form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px #00ffea;
-}
+    main {
+        margin-left: 0;
+    }
 
-/* Overlay for Mobile Menu */
-.overlay {
-    display: none;
-}
-
-/* Project and Track Styles */
-.project, .track {
-    margin-bottom: 20px;
-}
-
-.project img, .track img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project h2, .track h2 {
-    margin-bottom: 5px;
-}
-
-.button {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Ensure sidebar remains fixed on larger screens */
-@media (min-width: 769px) {
+    /* Ensure sidebar is always visible on larger screens */
     .neon-sidebar {
-        position: fixed;
-        top: 0;
         left: 0;
-        height: 100vh;
+    }
+
+    /* Hide menu toggle button */
+    .menu-toggle-label {
+        display: none;
+    }
+
+    #menuToggle:checked ~ main {
+        margin-left: 250px;
+    }
+
+    /* Adjust main padding */
+    main {
+        padding: 40px 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .neon-sidebar {
         width: 250px;
     }
-    
+
     main {
         margin-left: 250px;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .neon-footer {
+        padding: 30px;
+    }
+
+    .service-category {
+        padding: 20px;
+    }
+
+    .neon-sidebar .logo h1 {
+        font-size: 1.8em;
+    }
+
+    .neon-sidebar .logo img {
+        width: 100px;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        margin: 0 10px;
     }
 }
