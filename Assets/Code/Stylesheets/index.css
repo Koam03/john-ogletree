@@ -1,19 +1,57 @@
-/* Menu Toggle */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Layout & Container */
+.	container {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Header & Menu Toggle */
 .menu-toggle-label {
     position: fixed;
     top: 20px;
-    left: 20px; /* or right: 20px; */
-    z-index: 1101; /* Ensure this is higher than other elements */
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2em;
+    left: 20px;
+    z-index: 1101;
+    background-color: rgba(0, 255, 234, 0.1); /* Added circular background */
+    border-radius: 50%; /* Makes the background circular */
+    padding: 15px; /* Adjusts the size of the circle */
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-toggle-label:hover,
+.menu-toggle-label:focus {
+    background-color: rgba(0, 255, 234, 0.2); /* Darker on hover/focus */
+    box-shadow: 0 0 10px #00ffea;
+    outline: none;
 }
 
 .menu-toggle-label i {
     color: #00ffea;
+    font-size: 1.5em; /* Adjust icon size if necessary */
 }
 
 /* Hidden Checkbox for Menu Toggle */
@@ -57,15 +95,290 @@
     z-index: 999;
 }
 
+/* Logo Section */
+.neon-sidebar .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.neon-sidebar .logo h1 {
+    font-size: 1.5em;
+    color: #00ffea;
+    text-shadow: 0 0 15px #00ffea, 0 0 25px #00ffea;
+}
+
+.neon-sidebar .logo img {
+    width: 80px;
+    margin-top: 15px;
+    filter: drop-shadow(0 0 10px #00ffea);
+}
+
+/* Navigation Menu */
+.sidebar-nav {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin: 15px 0;
+    position: relative;
+}
+
+.sidebar-nav li > a.neon-link,
+.has-submenu > a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-nav li > a.neon-link:hover,
+.sidebar-nav li > a.neon-link:focus,
+.has-submenu > a:hover,
+.has-submenu > a:focus {
+    background-color: rgba(0, 255, 234, 0.2);
+    box-shadow: 0 0 10px #00ffea;
+    outline: none;
+}
+
+.sidebar-nav li > a.neon-link::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+}
+
+.has-submenu > a .fas {
+    transition: transform 0.3s ease;
+}
+
+.has-submenu:hover > a .fas,
+.has-submenu:focus-within > a .fas {
+    transform: rotate(180deg);
+}
+
+.has-submenu > ul {
+    list-style: none;
+    padding-left: 15px;
+    display: none;
+    margin-top: 10px;
+}
+
+.has-submenu:hover > ul,
+.has-submenu:focus-within > ul {
+    display: block;
+}
+
+.sidebar-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9em;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a:focus {
+    background-color: rgba(0, 255, 234, 0.2);
+    box-shadow: 0 0 10px #00ffea;
+    outline: none;
+}
+
 /* Main Content */
 main {
     flex: 1;
     padding: 20px;
     margin-top: 60px; /* Space for fixed header/menu */
-    padding-left: 60px; /* Space for menu toggle */
     transition: margin-left 0.3s ease-in-out;
 }
 
+h1, h2, h3 {
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Neon Button */
+.neon-button {
+    background-color: #00ffea;
+    color: #111;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
+    outline: none;
+}
+
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.service-category {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 15px #00ffea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-category:hover,
+.service-category:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ffea;
+}
+
+.service-category img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.service-category h3 {
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea;
+}
+
+/* Footer */
+.neon-footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -5px 20px #00ffea;
+}
+
+.neon-footer p {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #00ffea;
+    margin: 0 8px;
+    font-size: 1.2em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+    color: #ff00c8;
+    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+    outline: none;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00ffea;
+}
+
+/* Project and Track Styles */
+.project, .track {
+    margin-bottom: 15px;
+}
+
+.project img, .track img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.project h2, .track h2 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+/* Button Container */
+.button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Additional Neon Effects */
+a.neon-link {
+    position: relative;
+    color: #00ffea;
+    text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
+    font-size: 1em;
+}
+
+a.neon-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ffea;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a.neon-link:hover::before,
+a.neon-link:focus::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Media Queries for Responsive Design */
 @media (min-width: 600px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -92,7 +405,6 @@ main {
     /* Remove any margin-left adjustments on main */
     main {
         margin-left: 0;
-        padding-left: 60px; /* Maintain padding for menu toggle */
     }
 
     /* Ensure overlay works on larger screens */
@@ -135,18 +447,5 @@ main {
     .social-icons a {
         font-size: 1.5em;
         margin: 0 10px;
-    }
-}
-
-/* Responsive Menu Toggle */
-@media (max-width: 599px) {
-    .menu-toggle-label {
-        font-size: 1.5em; /* Smaller toggle on small screens */
-        top: 15px;
-        left: 15px;
-    }
-
-    main {
-        padding-left: 50px; /* Adjust padding for smaller toggle */
     }
 }
