@@ -99,8 +99,6 @@ body {
 .neon-sidebar .logo {
     text-align: center;
     margin-bottom: 30px;
-    height: 25%;
-    width: auto;
 }
 
 .neon-sidebar .logo h1 {
@@ -110,9 +108,10 @@ body {
 }
 
 .neon-sidebar .logo img {
-    width: 80px;
     margin-top: 15px;
     filter: drop-shadow(0 0 10px #00ffea);
+    height: 25%;
+    width: auto;
 }
 
 /* Navigation Menu */
