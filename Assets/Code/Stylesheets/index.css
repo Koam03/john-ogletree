@@ -1,226 +1,367 @@
 /* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #111;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Layout & Grid */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-main {
-    flex: 1;
-    padding: 40px 20px;
-}
-
-h1, h2, h3 {
-    color: #00ffea;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    margin-bottom: 20px;
-}
-
-p {
-    color: #ccc;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Neon Sidebar */
-.neon-sidebar {
-    background-color: #1a1a1a;
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px #00ffea;
-    overflow-y: auto;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-}
-
-.neon-sidebar .logo {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.neon-sidebar .logo h1 {
-    font-size: 1.8em;
-    color: #00ffea;
-    text-shadow: 0 0 15px #00ffea, 0 0 25px #00ffea;
-}
-
-.neon-sidebar .logo img {
-    width: 100px;
-    margin-top: 20px;
-    filter: drop-shadow(0 0 10px #00ffea);
-}
-
-.neon-sidebar .sidebar-nav {
-    list-style: none;
-}
-
-.neon-sidebar .sidebar-nav li {
-    margin: 20px 0;
-}
-
-.neon-sidebar .sidebar-nav a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    font-size: 1.1em;
-    padding: 12px;
-    border-radius: 5px;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.neon-sidebar .sidebar-nav a:hover {
-    background-color: rgba(0, 255, 234, 0.2);
-    box-shadow: 0 0 10px #00ffea;
-}
-
-/* Neon Button */
-.neon-button {
-    background-color: #00ffea;
-    color: #111;
-    padding: 10px 25px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.neon-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
-}
-
-/* Footer */
-.neon-footer {
-    background-color: #1a1a1a;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 -5px 20px #00ffea;
-}
-
-.neon-footer p {
-    color: #aaa;
-    margin-bottom: 10px;
-}
-
-.neon-footer .social-icons a {
-    color: #00ffea;
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.neon-footer .social-icons a:hover {
-    color: #ff00c8;
-    text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
-}
-
-/* Service Grid */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.service-category {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 15px #00ffea;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea;
-}
-
-.service-category img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-.service-category h3 {
-    color: #00ffea;
-    text-shadow: 0 0 10px #00ffea;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .neon-sidebar {
-        width: 80%;
-        transform: translateX(-100%);
-    }
-
-    .neon-sidebar.open {
-        transform: translateX(0);
-    }
-
-    main {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    main {
-        margin-left: 250px;
-        padding: 40px;
-    }
-}
-
-/* Additional Neon Effects */
-a.neon-link {
-    position: relative;
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
-}
-
-a.neon-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #00ffea;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-a.neon-link:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
- 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Layout & Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        
+        h1, h2, h3 {
+            color: #00ffea;
+            text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* Hidden Checkbox for Menu Toggle */
+        #menuToggle {
+            display: none;
+        }
+        
+        /* Label for Menu Toggle */
+        .menu-toggle-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1101;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.8em;
+            cursor: pointer;
+            display: none; /* Hidden on larger screens */
+        }
+        
+        /* Show menu toggle on small screens */
+        @media (max-width: 768px) {
+            .menu-toggle-label {
+                display: block;
+            }
+            
+            /* Sidebar positioning for mobile */
+            .neon-sidebar {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                height: 100vh;
+                width: 250px;
+                transition: left 0.3s ease-in-out;
+            }
+            
+            /* When menu is checked, show sidebar */
+            #menuToggle:checked ~ .neon-sidebar {
+                left: 0;
+            }
+            
+            /* Adjust main content when sidebar is open */
+            #menuToggle:checked ~ main {
+                margin-left: 0;
+            }
+            
+            /* Overlay for mobile menu */
+            .overlay {
+                display: none;
+            }
+            
+            #menuToggle:checked ~ .overlay {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.7);
+                z-index: 1000;
+            }
+        }
+        
+        /* Neon Sidebar */
+        .neon-sidebar {
+            background-color: #1a1a1a;
+            width: 250px;
+            height: 100vh;
+            padding: 40px 20px;
+            box-shadow: 0 0 20px #00ffea;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        /* Logo Section */
+        .neon-sidebar .logo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .neon-sidebar .logo h1 {
+            font-size: 1.8em;
+            color: #00ffea;
+            text-shadow: 0 0 15px #00ffea, 0 0 25px #00ffea;
+        }
+        
+        .neon-sidebar .logo img {
+            width: 100px;
+            margin-top: 20px;
+            filter: drop-shadow(0 0 10px #00ffea);
+        }
+        
+        /* Navigation Menu */
+        .sidebar-nav {
+            list-style: none;
+        }
+        
+        .sidebar-nav li {
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        /* Hidden Checkboxes for Submenus */
+        .has-submenu > input {
+            display: none;
+        }
+        
+        /* Labels for Submenus */
+        .has-submenu > label {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1em;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        
+        .has-submenu > label:hover,
+        .has-submenu > label:focus {
+            background-color: rgba(0, 255, 234, 0.2);
+            box-shadow: 0 0 10px #00ffea;
+            outline: none;
+        }
+        
+        /* Submenu Dropdown */
+        .has-submenu > ul {
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+            margin-top: 10px;
+        }
+        
+        /* Show submenu when checkbox is checked */
+        .has-submenu > input:checked + label + ul {
+            display: block;
+        }
+        
+        /* Styling Submenu Links */
+        .sidebar-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            font-size: 1em;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        
+        .sidebar-nav ul li a:hover,
+        .sidebar-nav ul li a:focus {
+            background-color: rgba(0, 255, 234, 0.2);
+            box-shadow: 0 0 10px #00ffea;
+            outline: none;
+        }
+        
+        /* Neon Button */
+        .neon-button {
+            background-color: #00ffea;
+            color: #111;
+            padding: 10px 25px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .neon-button:hover,
+        .neon-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
+            outline: none;
+        }
+        
+        /* Footer */
+        .neon-footer {
+            background-color: #1a1a1a;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 -5px 20px #00ffea;
+        }
+        
+        .neon-footer p {
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+        
+        .social-icons a {
+            color: #00ffea;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        
+        .social-icons a:hover,
+        .social-icons a:focus {
+            color: #ff00c8;
+            text-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+            outline: none;
+        }
+        
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .service-category {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px #00ffea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-category:hover,
+        .service-category:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px #00ffea;
+        }
+        
+        .service-category img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .service-category h3 {
+            color: #00ffea;
+            text-shadow: 0 0 10px #00ffea;
+        }
+        
+        /* Additional Neon Effects */
+        a.neon-link {
+            position: relative;
+            color: #00ffea;
+            text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
+        }
+        
+        a.neon-link::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #00ffea;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        a.neon-link:hover::before,
+        a.neon-link:focus::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        form label {
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        form input,
+        form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px #00ffea;
+        }
+        
+        /* Overlay for Mobile Menu */
+        .overlay {
+            display: none;
+        }
+        
+        /* Project and Track Styles */
+        .project, .track {
+            margin-bottom: 20px;
+        }
+        
+        .project img, .track img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .project h2, .track h2 {
+            margin-bottom: 5px;
+        }
+        
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
