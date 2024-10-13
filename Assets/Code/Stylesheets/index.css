@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     background-color: #111;
     color: #fff;
+    flex-direction: column;
 }
 
 /* Sidebar Styles */
@@ -76,7 +77,12 @@ body {
     box-shadow: 0 0 10px #00ffea;
 }
 
-.neon-sidebar .sidebar-nav .has-submenu > a::after {
+/* Dropdown Menus using CSS only */
+.neon-sidebar .has-submenu {
+    position: relative;
+}
+
+.neon-sidebar .has-submenu > a::after {
     content: '\f078'; /* Font Awesome caret-down */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
@@ -87,19 +93,21 @@ body {
     transition: transform 0.3s;
 }
 
-.neon-sidebar .sidebar-nav .has-submenu.open > a::after {
+.neon-sidebar .has-submenu:hover > a::after {
     transform: translateY(-50%) rotate(180deg);
 }
 
+/* Hidden dropdown by default */
 .neon-sidebar .dropdown {
-    list-style: none;
-    padding-left: 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    list-style: none;
+    padding-left: 20px;
 }
 
-.neon-sidebar .has-submenu.open > .dropdown {
+/* Reveal dropdown on hover */
+.neon-sidebar .has-submenu:hover > .dropdown {
     max-height: 1000px; /* Arbitrary large value for expansion */
 }
 
@@ -124,36 +132,61 @@ main {
     width: 80%;
     padding: 20px;
     transition: margin-left 0.3s ease-in-out;
+    flex: 1;
 }
 
-/* Header and Menu Toggle */
-.menu-toggle {
-    display: none;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1100;
-    cursor: pointer;
+main section {
+    margin-bottom: 40px;
+}
+
+main h1 {
+    font-size: 2em;
     color: #00ffea;
-    font-size: 1.5em;
+    text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
+    margin-bottom: 10px;
+}
+
+main h2, main h3 {
+    color: #00ffea;
+    text-shadow: 0 0 5px #00ffea;
+}
+
+main p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+main hr {
+    border: 0;
+    height: 1px;
+    background: #444;
+    margin: 20px 0;
+}
+
+/* Footer at the end of main content */
+.neon-footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 10px #00ffea;
+    margin-top: 20px;
+}
+
+.neon-footer .footer-content p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.neon-footer .social-icons a {
+    color: #00ffea;
+    margin: 0 10px;
+    font-size: 1.2em;
     transition: color 0.3s;
 }
 
-.menu-toggle:hover {
+.neon-footer .social-icons a:hover {
     color: #ff00c8;
-}
-
-/* Overlay Styles for Mobile */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 900;
-    transition: opacity 0.3s;
+    text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8;
 }
 
 /* Responsive Styles */
@@ -199,35 +232,6 @@ main {
     box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
 }
 
-/* Main Content Sections */
-main section {
-    margin-bottom: 40px;
-}
-
-main h1 {
-    font-size: 2em;
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
-    margin-bottom: 10px;
-}
-
-main h2, main h3 {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea;
-}
-
-main p {
-    line-height: 1.6;
-    color: #ccc;
-}
-
-main hr {
-    border: 0;
-    height: 1px;
-    background: #444;
-    margin: 20px 0;
-}
-
 /* Service Grid */
 .service-grid {
     display: grid;
@@ -261,94 +265,7 @@ main hr {
     text-shadow: 0 0 5px #00ffea;
 }
 
-/* Project and Track Styles */
-.project, .track {
-    background-color: #1a1a1a;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px #00ffea;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover, .track:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #00ffea;
-}
-
-.project img, .track img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project h2, .track h2 {
-    color: #00ffea;
-    text-shadow: 0 0 5px #00ffea;
-    margin-bottom: 5px;
-}
-
-.project p, .track p {
-    color: #ccc;
-}
-
-/* Contact Form Styles */
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact label {
-    margin: 10px 0 5px;
-    color: #00ffea;
-}
-
-.contact input, .contact textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    resize: vertical;
-    font-size: 1em;
-}
-
-.contact input:focus, .contact textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px #00ffea;
-}
-
-.contact button {
-    margin-top: 15px;
-}
-
-/* Footer Styles */
-.neon-footer {
-    background-color: #1a1a1a;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 -2px 10px #00ffea;
-}
-
-.neon-footer .footer-content p {
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-.neon-footer .social-icons a {
-    color: #00ffea;
-    margin: 0 10px;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-.neon-footer .social-icons a:hover {
-    color: #ff00c8;
-    text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8;
-}
-
-/* Additional Styles for Neon Effects */
+/* Additional Neon Effects */
 h1, h2, h3, .neon-link {
     color: #00ffea;
     text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
@@ -374,25 +291,6 @@ a.neon-link::before {
 a.neon-link:hover::before {
     visibility: visible;
     transform: scaleX(1);
-}
-
-/* Checkbox Toggle for Sidebar (for Accessibility) */
-#menuToggle {
-    display: none;
-}
-
-#menuToggle:checked ~ .overlay {
-    display: block;
-    opacity: 1;
-}
-
-#menuToggle:checked ~ nav.neon-sidebar {
-    transform: translateX(0);
-}
-
-#menuToggle:checked ~ main {
-    margin-left: 0;
-    width: 100%;
 }
 
 /* Smooth Scroll Behavior */
