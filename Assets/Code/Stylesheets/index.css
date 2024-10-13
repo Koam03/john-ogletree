@@ -77,24 +77,9 @@ body {
     box-shadow: 0 0 10px #00ffea;
 }
 
-/* Dropdown Menus using CSS only */
+/* Dropdown Menus */
 .neon-sidebar .has-submenu {
     position: relative;
-}
-
-.neon-sidebar .has-submenu > a::after {
-    content: '\f078'; /* Font Awesome caret-down */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s;
-}
-
-.neon-sidebar .has-submenu:hover > a::after {
-    transform: translateY(-50%) rotate(180deg);
 }
 
 /* Hidden dropdown by default */
