@@ -11,6 +11,22 @@ body {
     min-height: 100vh;
 }
 
+#menuToggle {
+    display: none;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+}
+
 /* Sidebar (20% of the width) */
 .neon-sidebar {
     width: 20%;
@@ -22,22 +38,13 @@ body {
     bottom: 0;
     left: 0;
     overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 999;
 }
 
-/* Sidebar Links */
-.sidebar-nav li {
-    list-style: none;
-    margin: 15px 0;
-}
-
-.sidebar-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.sidebar-nav a:hover {
-    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
+/* Sidebar hidden for mobile (default state) */
+#menuToggle:checked ~ .neon-sidebar {
+    transform: translateX(0);
 }
 
 /* Main Content (80% of the width) */
@@ -47,6 +54,11 @@ main {
     padding: 20px;
     background-color: #f4f4f4;
     overflow-y: auto;
+    transition: margin-left 0.3s ease;
+}
+
+#menuToggle:checked ~ main {
+    margin-left: 20%;
 }
 
 /* Sections Styling */
@@ -92,14 +104,20 @@ section p {
     margin: 0;
 }
 
+/* Responsive: Mobile View */
 @media screen and (max-width: 768px) {
-    /* Responsive adjustments */
-    .neon-sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
     }
 
+    /* Hide the sidebar by default */
+    .neon-sidebar {
+        transform: translateX(-100%);
+        width: 70%;
+    }
+
+    /* Main content takes full width when sidebar is hidden */
     main {
         width: 100%;
         margin-left: 0;
