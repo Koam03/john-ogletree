@@ -24,7 +24,7 @@ body {
 main {
     flex: 1;
     padding: 40px 20px;
-    margin-left: 250px;
+    margin-left: 250px; /* Space for the sidebar */
     transition: margin-left 0.3s ease-in-out;
 }
 
@@ -45,7 +45,7 @@ p {
     display: none;
 }
 
-/* Label for Menu Toggle */
+/* Label for Menu Toggle (Hamburger Icon) */
 .menu-toggle-label {
     position: fixed;
     top: 20px;
@@ -105,6 +105,9 @@ p {
 /* Neon Sidebar */
 .neon-sidebar {
     background-color: #1a1a1a;
+    position: fixed; /* Fixed positioning for all screen sizes */
+    top: 0;
+    left: 0;
     width: 250px;
     height: 100vh;
     padding: 40px 20px;
@@ -142,8 +145,8 @@ p {
     position: relative;
 }
 
-/* Parent Links with Submenus */
-.sidebar-nav li.has-submenu > a {
+/* Parent links with submenus */
+.has-submenu > a {
     color: #fff;
     text-decoration: none;
     display: flex;
@@ -152,28 +155,38 @@ p {
     font-size: 1.1em;
     padding: 12px;
     border-radius: 5px;
-    cursor: pointer;
     transition: background 0.3s, box-shadow 0.3s;
 }
 
-.sidebar-nav li.has-submenu > a:hover,
-.sidebar-nav li.has-submenu > a:focus {
+.has-submenu > a:hover,
+.has-submenu > a:focus {
     background-color: rgba(0, 255, 234, 0.2);
     box-shadow: 0 0 10px #00ffea;
     outline: none;
 }
 
+/* Add arrow to indicate submenu */
+.has-submenu > a .fas {
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow on hover to indicate expansion */
+.has-submenu:hover > a .fas,
+.has-submenu:focus-within > a .fas {
+    transform: rotate(180deg);
+}
+
 /* Submenu Dropdown */
-.sidebar-nav li.has-submenu > ul {
+.has-submenu > ul {
     list-style: none;
     padding-left: 20px;
     display: none;
     margin-top: 10px;
 }
 
-/* Show submenu on hover or focus */
-.sidebar-nav li.has-submenu:hover > ul,
-.sidebar-nav li.has-submenu:focus-within > ul {
+/* Show submenu on hover */
+.has-submenu:hover > ul,
+.has-submenu:focus-within > ul {
     display: block;
 }
 
@@ -362,21 +375,17 @@ form textarea:focus {
     margin-top: 20px;
 }
 
-/* Arrow Rotation for Open Submenus */
-.sidebar-nav li.has-submenu > a .fa-caret-down {
-    transition: transform 0.3s ease;
-}
-
-.sidebar-nav li.has-submenu:hover > a .fa-caret-down,
-.sidebar-nav li.has-submenu:focus-within > a .fa-caret-down {
-    transform: rotate(180deg);
-}
-
-/* Nested Submenu Indentation */
-.sidebar-nav ul li.has-submenu > a {
-    font-size: 0.95em;
-}
-
-.sidebar-nav ul ul li.has-submenu > a {
-    padding-left: 24px;
+/* Ensure sidebar remains fixed on larger screens */
+@media (min-width: 769px) {
+    .neon-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+    }
+    
+    main {
+        margin-left: 250px;
+    }
 }
