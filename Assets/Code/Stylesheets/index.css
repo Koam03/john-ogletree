@@ -1,172 +1,174 @@
-/* Reset Styles */
-* {
+/* Neon Glow Effects */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
-  }
-  
-  body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Orbitron', sans-serif;
-  }
-  
-  h1, h2, h3, p, button {
-    color: #0ff; /* Neon cyan color */
-  }
-  
-  a {
-    color: #0ff;
-    text-decoration: none;
-  }
-  
-  /* Neon Glow Effect */
-  .neon-link {
-    color: #0ff;
-    transition: 0.3s;
-  }
-  
-  .neon-link:hover {
-    text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
-  }
-  
-  /* Menu Toggle Button */
-  .menu-toggle {
-    background-color: #000;
-    border: 2px solid #0ff;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .menu-toggle:hover {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
-  }
-  
-  .neon-toggle i {
-    color: #0ff;
-  }
-  
-  /* Navigation Sidebar */
-  .neon-sidebar {
-    background-color: #111;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p, a {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+}
+
+/* Hidden Checkbox for Toggle */
+#menuToggle {
+    display: none;
+}
+
+/* Navigation */
+.neon-sidebar {
+    background-color: rgba(13, 13, 13, 0.9);
+    color: #00ffcc;
     width: 250px;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
-    left: -100%;
-    transition: 0.5s;
-    padding: 20px;
-    box-shadow: 0 0 20px #0ff;
-  }
-  
-  .neon-sidebar.active {
     left: 0;
-  }
-  
-  .sidebar-nav li {
-    list-style: none;
-    padding: 10px 0;
-  }
-  
-  .sidebar-nav .dropdown {
-    display: none;
-  }
-  
-  .has-submenu:hover .dropdown {
-    display: block;
-  }
-  
-  .has-submenu i {
-    margin-left: 10px;
-  }
-  
-  .neon-sidebar h1 {
-    color: #fff;
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-  }
-  
-  .neon-sidebar img {
-    width: 100px;
-    margin: 20px 0;
-  }
-  
-  /* Buttons */
-  .neon-button {
-    background-color: transparent;
-    border: 2px solid #0ff;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #0ff;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .neon-button:hover {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
-  }
-  
-  /* Sections */
-  .introduction, .about, .services, .projects, .music, .contact {
-    padding: 50px;
+    z-index: 1000;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+#menuToggle:checked ~ .neon-sidebar {
+    transform: translateX(0);
+}
+
+.neon-sidebar h1 {
     text-align: center;
-  }
-  
-  hr {
-    border: 1px solid #0ff;
-    width: 80%;
-    margin: 20px auto;
-  }
-  
-  .project img, .track img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+}
+
+.neon-link {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    display: block;
+    padding: 10px 20px;
     transition: 0.3s;
-  }
-  
-  .project img:hover, .track img:hover {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
-  }
-  
-  /* Footer */
-  .neon-footer {
-    background-color: #111;
+}
+
+.neon-link:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+}
+
+/* Neon Button */
+.neon-button {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    transition: all 0.3s ease-in-out;
+}
+
+.neon-button:hover {
+    background-color: #fff;
+    color: #00ffcc;
+}
+
+/* Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #00ffcc;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 0 0 20px #00ffcc;
+    display: block;
+}
+
+/* Label for Menu Toggle */
+.menu-toggle label {
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Dropdown */
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #0d0d0d;
+    left: 100%;
+    top: 0;
+    padding: 0;
+    border-left: 2px solid #00ffcc;
+    z-index: 1000;
+}
+
+.has-submenu:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    padding: 10px 20px;
+    text-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #00ffcc;
+    margin: 20px 0;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+/* Footer */
+.neon-footer {
+    background-color: #0d0d0d;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 0 20px #0ff;
-  }
-  
-  .neon-footer p {
-    color: #0ff;
-  }
-  
-  .social-icons i {
-    font-size: 24px;
-    color: #0ff;
+}
+
+.neon-footer .footer-content p {
+    font-size: 1em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.social-icons i {
+    font-size: 1.5em;
     margin: 0 10px;
-    transition: 0.3s;
-  }
-  
-  .social-icons i:hover {
-    text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.social-icons i:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #00ffcc;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
     .neon-sidebar {
-      width: 200px;
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%);
     }
-  
-    .introduction, .about, .services, .projects, .music, .contact {
-      padding: 20px;
+
+    #menuToggle:checked ~ .neon-sidebar {
+        transform: translateY(0);
     }
-  
-    .project img, .track img {
-      width: 80px;
-      height: 80px;
-    }
-  }
-  
+}
