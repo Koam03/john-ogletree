@@ -56,7 +56,7 @@ p {
     color: #fff;
     font-size: 2em;
     cursor: pointer;
-    display: none; /* Hidden on larger screens */
+    display: block; /* Visible on all screen sizes */
 }
 
 /* Hamburger icon bars */
@@ -64,53 +64,46 @@ p {
     color: #00ffea;
 }
 
-/* Show menu toggle on small screens */
-@media (max-width: 768px) {
-    .menu-toggle-label {
-        display: block;
-    }
-    
-    /* Sidebar positioning for mobile */
-    .neon-sidebar {
-        position: fixed;
-        top: 0;
-        left: -250px;
-        height: 100vh;
-        width: 250px;
-        transition: left 0.3s ease-in-out;
-    }
-    
-    /* When menu is checked, show sidebar */
-    #menuToggle:checked ~ .neon-sidebar {
-        left: 0;
-    }
-    
-    /* Adjust main content when sidebar is open */
-    #menuToggle:checked ~ main {
-        margin-left: 0;
-    }
-    
-    /* Overlay for mobile menu */
-    .overlay {
-        display: none;
-    }
-    
-    #menuToggle:checked ~ .overlay {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.7);
-        z-index: 1000;
-    }
+/* Sidebar positioning for all screens */
+.neon-sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    width: 250px;
+    transition: left 0.3s ease-in-out;
+}
+
+/* When menu is checked, show sidebar */
+#menuToggle:checked ~ .neon-sidebar {
+    left: 0;
+}
+
+/* Adjust main content when sidebar is open */
+#menuToggle:checked ~ main {
+    margin-left: 250px;
+}
+
+/* Overlay for menu */
+.overlay {
+    display: none;
+}
+
+#menuToggle:checked ~ .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
 }
 
 /* Neon Sidebar */
 .neon-sidebar {
     background-color: #1a1a1a;
-    position: fixed; /* Fixed positioning for all screen sizes */
+    position: fixed;
     top: 0;
     left: 0;
     width: 250px;
