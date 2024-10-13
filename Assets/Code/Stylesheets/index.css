@@ -1,0 +1,172 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  h1, h2, h3, p, button {
+    color: #0ff; /* Neon cyan color */
+  }
+  
+  a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  
+  /* Neon Glow Effect */
+  .neon-link {
+    color: #0ff;
+    transition: 0.3s;
+  }
+  
+  .neon-link:hover {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+  }
+  
+  /* Menu Toggle Button */
+  .menu-toggle {
+    background-color: #000;
+    border: 2px solid #0ff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .menu-toggle:hover {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+  }
+  
+  .neon-toggle i {
+    color: #0ff;
+  }
+  
+  /* Navigation Sidebar */
+  .neon-sidebar {
+    background-color: #111;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+    padding: 20px;
+    box-shadow: 0 0 20px #0ff;
+  }
+  
+  .neon-sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar-nav li {
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .sidebar-nav .dropdown {
+    display: none;
+  }
+  
+  .has-submenu:hover .dropdown {
+    display: block;
+  }
+  
+  .has-submenu i {
+    margin-left: 10px;
+  }
+  
+  .neon-sidebar h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  
+  .neon-sidebar img {
+    width: 100px;
+    margin: 20px 0;
+  }
+  
+  /* Buttons */
+  .neon-button {
+    background-color: transparent;
+    border: 2px solid #0ff;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0ff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .neon-button:hover {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+  }
+  
+  /* Sections */
+  .introduction, .about, .services, .projects, .music, .contact {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  hr {
+    border: 1px solid #0ff;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .project img, .track img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .project img:hover, .track img:hover {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+  }
+  
+  /* Footer */
+  .neon-footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #0ff;
+  }
+  
+  .neon-footer p {
+    color: #0ff;
+  }
+  
+  .social-icons i {
+    font-size: 24px;
+    color: #0ff;
+    margin: 0 10px;
+    transition: 0.3s;
+  }
+  
+  .social-icons i:hover {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .neon-sidebar {
+      width: 200px;
+    }
+  
+    .introduction, .about, .services, .projects, .music, .contact {
+      padding: 20px;
+    }
+  
+    .project img, .track img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
