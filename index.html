@@ -20,11 +20,11 @@
     <meta property="og:locale" content="en_US">
     
     <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Favicon/favicon-16x16.png">
-    <link rel="manifest" href="/Assets/Favicon/site.webmanifest">
-    <link rel="mask-icon" href="/Assets/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
     
@@ -63,7 +63,7 @@
         main {
             flex: 1;
             padding: 40px 20px;
-            margin-left: 250px;
+            margin-left: 250px; /* Space for the sidebar */
             transition: margin-left 0.3s ease-in-out;
         }
         
@@ -84,7 +84,7 @@
             display: none;
         }
         
-        /* Label for Menu Toggle */
+        /* Label for Menu Toggle (Hamburger Icon) */
         .menu-toggle-label {
             position: fixed;
             top: 20px;
@@ -144,6 +144,9 @@
         /* Neon Sidebar */
         .neon-sidebar {
             background-color: #1a1a1a;
+            position: fixed; /* Fixed positioning for all screen sizes */
+            top: 0;
+            left: 0;
             width: 250px;
             height: 100vh;
             padding: 40px 20px;
@@ -181,8 +184,8 @@
             position: relative;
         }
         
-        /* Parent Links with Submenus */
-        .sidebar-nav li.has-submenu > a {
+        /* Parent links with submenus */
+        .has-submenu > a {
             color: #fff;
             text-decoration: none;
             display: flex;
@@ -191,28 +194,38 @@
             font-size: 1.1em;
             padding: 12px;
             border-radius: 5px;
-            cursor: pointer;
             transition: background 0.3s, box-shadow 0.3s;
         }
         
-        .sidebar-nav li.has-submenu > a:hover,
-        .sidebar-nav li.has-submenu > a:focus {
+        .has-submenu > a:hover,
+        .has-submenu > a:focus {
             background-color: rgba(0, 255, 234, 0.2);
             box-shadow: 0 0 10px #00ffea;
             outline: none;
         }
         
+        /* Add arrow to indicate submenu */
+        .has-submenu > a .fas {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Rotate arrow on hover to indicate expansion */
+        .has-submenu:hover > a .fas,
+        .has-submenu:focus-within > a .fas {
+            transform: rotate(180deg);
+        }
+        
         /* Submenu Dropdown */
-        .sidebar-nav li.has-submenu > ul {
+        .has-submenu > ul {
             list-style: none;
             padding-left: 20px;
             display: none;
             margin-top: 10px;
         }
         
-        /* Show submenu on hover or focus */
-        .sidebar-nav li.has-submenu:hover > ul,
-        .sidebar-nav li.has-submenu:focus-within > ul {
+        /* Show submenu on hover */
+        .has-submenu:hover > ul,
+        .has-submenu:focus-within > ul {
             display: block;
         }
         
@@ -400,24 +413,20 @@
             text-align: center;
             margin-top: 20px;
         }
-        
-        /* Arrow Rotation for Open Submenus */
-        .sidebar-nav li.has-submenu > a .fa-caret-down {
-            transition: transform 0.3s ease;
-        }
-        
-        .sidebar-nav li.has-submenu:hover > a .fa-caret-down,
-        .sidebar-nav li.has-submenu:focus-within > a .fa-caret-down {
-            transform: rotate(180deg);
-        }
-        
-        /* Nested Submenu Indentation */
-        .sidebar-nav ul li.has-submenu > a {
-            font-size: 0.95em;
-        }
-        
-        .sidebar-nav ul ul li.has-submenu > a {
-            padding-left: 24px;
+
+        /* Ensure sidebar remains fixed on larger screens */
+        @media (min-width: 769px) {
+            .neon-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 250px;
+            }
+            
+            main {
+                margin-left: 250px;
+            }
         }
     </style>
 </head>
@@ -447,17 +456,11 @@
             
             <!-- Services Dropdown -->
             <li class="has-submenu">
-                <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                    Services
-                    <i class="fas fa-caret-down"></i>
-                </a>
+                <a href="#" class="neon-link">Services <i class="fas fa-caret-down"></i></a>
                 <ul>
                     <!-- Design And Print Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Design And Print
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Design And Print <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/services/design-and-print/logo-design" class="neon-link">Logo Design</a></li>
                             <li><a href="/services/design-and-print/brand-style-guides" class="neon-link">Brand Style Guides</a></li>
@@ -488,10 +491,7 @@
                     
                     <!-- Digital Media Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Digital Media
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Digital Media <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/services/digital-media/website-design" class="neon-link">Website Design</a></li>
                             <li><a href="/services/digital-media/presentation-design" class="neon-link">Presentation Design</a></li>
@@ -510,10 +510,7 @@
                     
                     <!-- Video And Animations Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Video And Animations
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Video And Animations <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/services/video-and-animation/video-editing" class="neon-link">Video Editing</a></li>
                             <li><a href="/services/video-and-animation/video-ads" class="neon-link">Video Ads</a></li>
@@ -533,10 +530,7 @@
                     
                     <!-- Audio Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Audio
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Audio <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/services/audio/beat-making" class="neon-link">Beat Making</a></li>
                             <li><a href="/services/audio/intro-songs" class="neon-link">Intro Songs</a></li>
@@ -553,17 +547,11 @@
             
             <!-- Pricing Dropdown -->
             <li class="has-submenu">
-                <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                    Pricing
-                    <i class="fas fa-caret-down"></i>
-                </a>
+                <a href="#" class="neon-link">Pricing <i class="fas fa-caret-down"></i></a>
                 <ul>
                     <!-- Design And Print Pricing Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Design And Print
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Design And Print <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/pricing/design-and-print/logo-design" class="neon-link">Logo Design</a></li>
                             <li><a href="/pricing/design-and-print/brand-style-guides" class="neon-link">Brand Style Guides</a></li>
@@ -594,10 +582,7 @@
                     
                     <!-- Digital Media Pricing Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Digital Media
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Digital Media <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/pricing/digital-media/website-design" class="neon-link">Website Design</a></li>
                             <li><a href="/pricing/digital-media/presentation-design" class="neon-link">Presentation Design</a></li>
@@ -616,10 +601,7 @@
                     
                     <!-- Video And Animations Pricing Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Video And Animations
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Video And Animations <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/pricing/video-and-animation/video-editing" class="neon-link">Video Editing</a></li>
                             <li><a href="/pricing/video-and-animation/video-ads" class="neon-link">Video Ads</a></li>
@@ -639,10 +621,7 @@
                     
                     <!-- Audio Pricing Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Audio
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Audio <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/pricing/audio/beat-making" class="neon-link">Beat Making</a></li>
                             <li><a href="/pricing/audio/intro-songs" class="neon-link">Intro Songs</a></li>
@@ -659,24 +638,15 @@
             
             <!-- Project Vault Dropdown -->
             <li class="has-submenu">
-                <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                    Project Vault
-                    <i class="fas fa-caret-down"></i>
-                </a>
+                <a href="#" class="neon-link">Project Vault <i class="fas fa-caret-down"></i></a>
                 <ul>
                     <!-- Graphics Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Graphics
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Graphics <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <!-- Logoverse Submenu -->
                             <li class="has-submenu">
-                                <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                                    Logoverse
-                                    <i class="fas fa-caret-down"></i>
-                                </a>
+                                <a href="#" class="neon-link">Logoverse <i class="fas fa-caret-right"></i></a>
                                 <ul>
                                     <li><a href="/projects/graphics/logoverse/burst-through" class="neon-link">Burst Through</a></li>
                                     <li><a href="/projects/graphics/logoverse/vust-reservations" class="neon-link">Vust Reservations</a></li>
@@ -702,10 +672,7 @@
                             
                             <!-- Visions Unveiled Submenu -->
                             <li class="has-submenu">
-                                <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                                    Visions Unveiled
-                                    <i class="fas fa-caret-down"></i>
-                                </a>
+                                <a href="#" class="neon-link">Visions Unveiled <i class="fas fa-caret-right"></i></a>
                                 <ul>
                                     <li><a href="/projects/graphics/visions-unveiled/fallen-angel" class="neon-link">Fallen Angel</a></li>
                                     <li><a href="/projects/graphics/visions-unveiled/death-is-only-the-beginning" class="neon-link">Death Is Only The Beginning</a></li>
@@ -730,10 +697,7 @@
                     
                     <!-- Videos Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Videos
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Videos <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <li><a href="/projects/videos/movie-trailers" class="neon-link">Movie Trailers</a></li>
                             <li><a href="/projects/videos/book-trailers" class="neon-link">Book Trailers</a></li>
@@ -748,17 +712,11 @@
                     
                     <!-- Books Submenu -->
                     <li class="has-submenu">
-                        <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                            Books
-                            <i class="fas fa-caret-down"></i>
-                        </a>
+                        <a href="#" class="neon-link">Books <i class="fas fa-caret-right"></i></a>
                         <ul>
                             <!-- Inside The Storm Submenu -->
                             <li class="has-submenu">
-                                <a href="#" class="neon-link" aria-haspopup="true" aria-expanded="false">
-                                    Inside The Storm
-                                    <i class="fas fa-caret-down"></i>
-                                </a>
+                                <a href="#" class="neon-link">Inside The Storm <i class="fas fa-caret-right"></i></a>
                                 <ul>
                                     <li><a href="/projects/books/inside-the-storm/the-awakening" class="neon-link">The Awakening</a></li>
                                     <!-- Add other Inside The Storm projects here -->
