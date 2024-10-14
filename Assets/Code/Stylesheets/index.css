@@ -28,48 +28,16 @@ body {
     margin: 0 auto;
 }
 
-/* Header & Menu Toggle */
+/* Remove Menu Toggle */
 .menu-toggle-label {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1101;
-    background: radial-gradient(circle, rgba(0,255,234,0.2) 0%, rgba(0,0,0,0) 70%);
-    border: 2px solid #00ffea;
-    border-radius: 50%;
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(5px);
-}
-
-.menu-toggle-label:hover,
-.menu-toggle-label:focus {
-    background: radial-gradient(circle, rgba(0,255,234,0.3) 0%, rgba(0,0,0,0) 70%);
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
-    transform: scale(1.1);
-    outline: none;
-}
-
-.menu-toggle-label i {
-    color: #00ffea;
-    font-size: 1.5em;
-    /* Removed text-shadow to eliminate animations */
-}
-
-/* Hidden Checkbox for Menu Toggle */
-#menuToggle {
     display: none;
 }
 
-/* Sidebar */
+/* Sidebar - Always Visible */
 .neon-sidebar {
     position: fixed;
     top: 0;
-    left: -300px; /* Increased width for more content */
+    left: 0; /* Sidebar is visible */
     width: 300px;
     height: 100vh;
     background-color: #1a1a1a;
@@ -77,29 +45,17 @@ body {
     box-shadow: 0 0 30px #00ffea;
     overflow-y: auto;
     z-index: 1000;
-    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* More dynamic transition */
+    transition: none; /* No need for transitions as the sidebar is always visible */
 }
 
-/* Show Sidebar When Menu Toggle is Checked */
-#menuToggle:checked ~ .neon-sidebar {
-    left: 0;
-}
-
-/* Overlay for Sidebar */
-.overlay {
+/* Remove Hidden Checkbox for Menu Toggle */
+#menuToggle {
     display: none;
 }
 
-#menuToggle:checked ~ .overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    z-index: 999;
-    /* Removed animation for fadeIn */
+/* Remove Overlay for Sidebar */
+.overlay {
+    display: none;
 }
 
 /* Logo Section */
@@ -113,7 +69,6 @@ body {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Removed text-shadow and animation */
 }
 
 .neon-sidebar .logo img {
@@ -121,9 +76,6 @@ body {
     filter: drop-shadow(0 0 20px #00ffea);
     height: 180px;
     width: auto;
-    /* Removed animation */
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    /* Optional: Add gradient overlay if desired */
 }
 
 /* Navigation Menu */
@@ -160,31 +112,11 @@ body {
     outline: none;
 }
 
-.sidebar-nav li > a.neon-link::after {
-    content: '';
-    display: inline-block;
-    width: 15px;
-}
-
-.has-submenu > a .fas {
-    transition: transform 0.3s ease;
-}
-
-.has-submenu:hover > a .fas,
-.has-submenu:focus-within > a .fas {
-    transform: rotate(180deg);
-}
-
 .has-submenu > ul {
     list-style: none;
     padding-left: 20px;
-    display: none;
     margin-top: 15px;
-}
-
-.has-submenu:hover > ul,
-.has-submenu:focus-within > ul {
-    display: block;
+    display: block; /* Submenus are always visible */
 }
 
 .sidebar-nav ul li a {
@@ -210,17 +142,14 @@ body {
 main {
     flex: 1;
     padding: 20px;
-    margin-top: 60px; /* Space for fixed header/menu */
-    transition: margin-left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    margin-left: 320px; /* Adjusted to account for the always-visible sidebar */
 }
 
 h1, h2, h3 {
-    /* Apply gradient to text */
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
-    /* Removed text-shadow and animation */
 }
 
 p {
@@ -228,28 +157,6 @@ p {
     line-height: 1.8;
     margin-bottom: 20px;
     font-size: 1.05em;
-}
-
-/* Neon Button */
-.neon-button {
-    background: linear-gradient(45deg, #00ffe9, #ff00c8);
-    color: #0a0a0a;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    /* Removed gradientShift animation */
-}
-
-.neon-button:hover,
-.neon-button:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
-    outline: none;
-    /* Removed background-position change */
 }
 
 /* Service Grid */
@@ -291,11 +198,9 @@ p {
 }
 
 .service-category h3 {
-    /* Apply gradient to text */
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Removed text-shadow and animation */
 }
 
 /* Footer */
@@ -328,160 +233,11 @@ p {
     outline: none;
 }
 
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-form label {
-    margin-bottom: 8px;
-    color: #fff;
-    font-size: 1em;
-    /* Removed text-shadow */
-}
-
-form input,
-form textarea {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.05em;
-    background-color: #2a2a2a;
-    color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-    color: #aaa;
-}
-
-form input:focus,
-form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
-}
-
-/* Project and Track Styles */
-.project, .track {
-    margin-bottom: 20px;
-    background-color: rgba(26, 26, 26, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover, .track:hover,
-.project:focus-within, .track:focus-within {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
-}
-
-.project img, .track img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 15px #00ffea);
-}
-
-.project h2, .track h2 {
-    margin-bottom: 8px;
-    font-size: 1.3em;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* Removed text-shadow */
-}
-
-/* Button Container */
-.button {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Additional Neon Effects */
-a.neon-link {
-    position: relative;
-    color: #00ffea;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.1em;
-    transition: color 0.3s, text-shadow 0.3s;
-    /* Removed text-shadow and animations */
-}
-
-a.neon-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: -3px;
-    left: 0;
-    background: linear-gradient(90deg, #00ffea, #ff00c8);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-a.neon-link:hover::before,
-a.neon-link:focus::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-a.neon-link:hover,
-a.neon-link:focus {
-    /* Changed text color to match gradient */
-    /* Removed text-shadow */
-}
-
 /* Media Queries for Responsive Design */
-@media (min-width: 600px) {
-    .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 25px;
-    }
-}
-
 @media (min-width: 768px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
-    }
-
-    /* Ensure sidebar remains hidden on larger screens */
-    .neon-sidebar {
-        left: -300px;
-    }
-
-    /* Keep menu toggle visible on all screens */
-    .menu-toggle-label {
-        display: block;
-    }
-
-    /* Remove any margin-left adjustments on main */
-    main {
-        margin-left: 0;
-    }
-
-    /* Ensure overlay works on larger screens */
-    #menuToggle:checked ~ .overlay {
-        display: block;
-    }
-
-    /* Adjust main padding */
-    main {
-        padding: 50px 30px;
     }
 }
 
