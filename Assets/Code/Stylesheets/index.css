@@ -342,12 +342,25 @@ p {
     color: #00ffea;
     margin: 0 10px;
     transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
 }
 
 .neon-footer .social-icons a img {
     width: 30px;
     height: 30px;
     transition: transform 0.3s;
+}
+
+.neon-footer .social-icons a .social-label {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #fff;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .neon-footer .social-icons a:hover img,
