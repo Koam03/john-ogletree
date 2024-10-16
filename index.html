@@ -332,6 +332,7 @@
             </li>
             
             <li><a href="/contact" class="neon-link">Contact Me</a></li>
+          <li><a href="/resume" class="neon-link">Resume</a></li>
         </ul>
     </nav>
     
@@ -591,13 +592,24 @@
     <div class="footer-container">
         <!-- Footer Heading -->
         <h2 class="footer-heading">Stay Connected</h2>
-        
-        <!-- Footer Columns -->
-        <div class="footer-columns">
-            <!-- Social Icons Column -->
-            <div class="social-column">
+
+        <!-- Newsletter Signup -->
+        <div class="newsletter-column">
+            <h3>Subscribe for Updates</h3>
+            <form id="newsletter-form" action="/Assets/Code/php/newsletter-form.php" method="POST" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required />
+                <button type="submit">Join Now</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+
+        <!-- Social Icons in Side-by-Side Cells Underneath the Newsletter Signup -->
+        <div class="social-icons-columns">
+            <!-- Column 1 -->
+            <div class="social-icons-column">
                 <h3>Follow Me</h3>
                 <div class="social-icons">
+                    <!-- First Half of Social Icons -->
                     <a href="https://www.backstage.com/tal/john-ogletree/" title="Backstage" aria-label="Backstage">
                         <img src="/Assets/Social Icons/Backstage.svg" alt="Backstage" />
                         <span class="social-label">Backstage</span>
@@ -642,6 +654,14 @@
                         <img src="/Assets/Social Icons/Instagram.svg" alt="Instagram">
                         <span class="social-label">Instagram</span>
                     </a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="social-icons-column">
+                <!-- Continuation of Social Icons -->
+                <h3>&nbsp;</h3> <!-- Empty heading to align with the first column -->
+                <div class="social-icons">
                     <a href="https://www.paypal.me/OgletreeMartinezGA" title="PayPal" aria-label="PayPal">
                         <img src="/Assets/Social Icons/Paypal.svg" alt="PayPal">
                         <span class="social-label">PayPal</span>
@@ -688,19 +708,12 @@
                     </a>
                 </div>
             </div>
-            
-            <!-- Newsletter Signup Column -->
-<div class="newsletter-column">
-    <h3>Subscribe for Updates</h3>
-    <form id="newsletter-form" action="/Assets/Code/php/newsletter-form.php" method="POST" class="newsletter-form">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Join Now</button>
-    </form>
-    <div id="form-message"></div>
-</div>
+        </div>
+
         <!-- Footer Bottom Text -->
         <p class="footer-bottom-text">© 2024 John Ogletree | Crafted with pixelated passion</p>
     </div>
 </footer>
+
 </body>
 </html>
