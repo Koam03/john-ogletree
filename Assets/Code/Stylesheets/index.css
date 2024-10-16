@@ -332,6 +332,11 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+/* Add margin-top to buttons in service-category */
+.service-category .neon-button {
+    margin-top: 15px; /* Adds space above the button */
+}
+
 /* =========================================================
    Footer
    ========================================================= */
@@ -541,6 +546,11 @@ p {
     .sidebar-nav ul li a {
         font-size: 1.4em; /* Further increased font size */
         padding: 18px 22px; /* Further increased padding */
+    }
+
+    /* Add margin-top to buttons in service-category */
+    .service-category .neon-button {
+        margin-top: 15px; /* Adds space above the button */
     }
 }
 
@@ -802,4 +812,27 @@ a.neon-link:focus::before {
     transform: translateY(-5px);
     box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
     outline: none;
+}
+
+/* =========================================================
+   Services Section Buttons
+   ========================================================= */
+
+/* Using Existing .neon-button Class */
+/* No additional CSS needed if using .neon-button */
+
+/* Add margin-top to buttons in service-category */
+.service-category .neon-button {
+    margin-top: 15px; /* Adds space above the button */
+}
+
+/* =========================================================
+   Responsive Grid Layout (Continued)
+   ========================================================= */
+
+/* Ensure buttons maintain proper spacing and alignment on large screens */
+@media (min-width: 1024px) {
+    .service-category .neon-button {
+        margin-top: 20px; /* Slightly increased space on larger screens */
+    }
 }
