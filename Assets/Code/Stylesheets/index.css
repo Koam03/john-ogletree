@@ -1,5 +1,7 @@
-/* Reset and Base Styles */
-* {
+/* ========================================================
+   Reset and Base Styles
+   ======================================================== */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,14 +23,18 @@ body {
     overflow-x: hidden;
 }
 
-/* Layout & Container */
+/* ========================================================
+   Layout & Container
+   ======================================================== */
 .container {
     width: 100%;
     padding: 20px;
     margin: 0 auto;
 }
 
-/* Header & Menu Toggle */
+/* ========================================================
+   Header & Menu Toggle
+   ======================================================== */
 .menu-toggle-label {
     position: fixed;
     top: 20px;
@@ -64,7 +70,9 @@ body {
     display: none;
 }
 
-/* Sidebar */
+/* ========================================================
+   Sidebar
+   ======================================================== */
 .neon-sidebar {
     position: fixed;
     top: 0;
@@ -119,7 +127,9 @@ body {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
 }
 
-/* Navigation Menu */
+/* ========================================================
+   Navigation Menu
+   ======================================================== */
 .sidebar-nav {
     list-style: none;
 }
@@ -201,7 +211,9 @@ body {
     outline: none;
 }
 
-/* Main Content */
+/* ========================================================
+   Main Content
+   ======================================================== */
 main {
     flex: 1;
     padding: 20px;
@@ -223,7 +235,9 @@ p {
     font-size: 1.05em;
 }
 
-/* Neon Button */
+/* ========================================================
+   Neon Button
+   ======================================================== */
 .neon-button {
     background: linear-gradient(45deg, #00ffe9, #ff00c8);
     color: #0a0a0a;
@@ -243,7 +257,18 @@ p {
     outline: none;
 }
 
-/* Service Grid */
+/* Responsive Button Adjustment */
+@media (max-width: 599px) {
+    .neon-button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* ========================================================
+   Services Section
+   ======================================================== */
 .service-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -253,7 +278,7 @@ p {
 
 .service-category {
     background-color: rgba(26, 26, 26, 0.9);
-    padding: 25px; /* Increased padding for better spacing */
+    padding: 25px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
@@ -287,7 +312,9 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-/* Projects Section */
+/* ========================================================
+   Projects Section
+   ======================================================== */
 .projects .project {
     background-color: rgba(26, 26, 26, 0.9);
     padding: 25px;
@@ -332,7 +359,9 @@ p {
     margin-bottom: 15px;
 }
 
-/* Music Section */
+/* ========================================================
+   Music Section
+   ======================================================== */
 .music .track {
     background-color: rgba(26, 26, 26, 0.9);
     padding: 25px;
@@ -377,10 +406,195 @@ p {
     margin-bottom: 15px;
 }
 
-/* Footer */
+/* ========================================================
+   Contact Section Styling
+   ======================================================== */
+.contact {
+    padding: 80px 20px;
+    background-color: #0a0a0a; /* Consistent dark background */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(0, 255, 234, 0.2), rgba(255, 0, 200, 0.2));
+    transform: rotate(45deg);
+    z-index: 0;
+    animation: rotateBackground 10s linear infinite;
+}
+
+@keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contact h1,
+.contact h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact hr {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00ffea, #ff00c8);
+    margin: 20px auto;
+    width: 60px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Neon Form Styling */
+.neon-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.half-width .form-group {
+    flex: 1 1 48%;
+}
+
+.full-width .form-group {
+    flex: 1 1 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.form-group label::after {
+    content: '*';
+    color: #e50914;
+    margin-left: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1em;
+    box-shadow: inset 0 0 10px #00ffea;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
+    transform: translateY(-2px);
+}
+
+.neon-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Submit Button Styling */
+.neon-form button[type="submit"] {
+    align-self: center;
+    background: linear-gradient(45deg, #00ffe9, #ff00c8);
+    color: #0a0a0a;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00c8;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.neon-form button[type="submit"]:hover,
+.neon-form button[type="submit"]:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
+    outline: none;
+    background: linear-gradient(45deg, #00ffd4, #ff00da);
+}
+
+/* Responsive Adjustments for Contact Form */
+@media (max-width: 767px) {
+    .half-width .form-group {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .neon-form {
+        gap: 35px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact {
+        padding: 100px 20px;
+    }
+
+    .neon-form button[type="submit"] {
+        padding: 18px 35px;
+        font-size: 1.3em;
+    }
+}
+
+/* ========================================================
+   Footer
+   ======================================================== */
 .neon-footer {
     background-color: #1a1a1a;
-    padding: 40px 20px; /* Adjusted padding for smaller screens */
+    padding: 40px 20px;
     text-align: center;
     box-shadow: 0 -5px 25px #00ffea, 0 -5px 50px #ff00c8;
     position: relative;
@@ -557,172 +771,43 @@ p {
     margin-top: 20px;
 }
 
-/* Responsive Grid Layout */
-@media (min-width: 600px) {
-    .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 25px;
-    }
-
-    /* Further increase font size and padding for navigation links */
-    .sidebar-nav li > a.neon-link,
-    .has-submenu > a,
-    .sidebar-nav ul li a {
-        font-size: 1.4em; /* Further increased font size */
-        padding: 18px 22px; /* Further increased padding */
-    }
-}
-
-@media (min-width: 768px) {
-    .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-
-    .neon-sidebar {
-        left: -300px;
-    }
-
-    .menu-toggle-label {
-        display: block;
-    }
-
-    main {
-        margin-left: 0;
-    }
-
-    #menuToggle:checked ~ .overlay {
-        display: block;
-    }
-
-    main {
-        padding: 50px 30px;
-    }
-
-    /* Further increase font size and padding for navigation links */
-    .sidebar-nav li > a.neon-link,
-    .has-submenu > a,
-    .sidebar-nav ul li a {
-        font-size: 1.5em; /* Further increased font size */
-        padding: 20px 25px; /* Further increased padding */
-    }
-
-    /* Contact Form Enhancements */
-    .contact form {
-        max-width: 800px; /* Increased max-width for larger screens */
-    }
-}
-
-@media (min-width: 1024px) {
-    .neon-footer {
-        padding: 60px;
-    }
-
-    .footer-heading {
-        font-size: 2.5em;
-    }
-
-    .footer-grid {
-        gap: 50px;
-    }
-
-    .newsletter-column,
-    .footer-text-column {
-        padding: 30px;
-    }
-
-    .newsletter-column h3,
-    .footer-text-column h3,
-    .social-icons-row h3 {
-        font-size: 1.8em;
-    }
-
-    .newsletter-form input[type="email"] {
-        max-width: 500px;
-    }
-
-    .newsletter-form button {
-        padding: 14px 30px;
-        font-size: 1.2em;
-    }
-
-    .social-icons a img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .social-icons a .social-label {
-        font-size: 1em;
-    }
-
-    /* Further increase padding for larger screens */
-    .neon-footer {
-        padding: 80px 40px;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 35px;
-    }
-
-    .neon-sidebar {
-        width: 300px;
-    }
-
-    .service-category {
-        padding: 30px; /* Increased padding */
-    }
-
-    .neon-sidebar .logo h1 {
-        font-size: 3em; /* Increased font size */
-    }
-
-    .neon-sidebar .logo img {
-        width: 150px; /* Adjusted image width */
-    }
-
-    .social-icons a {
-        font-size: 1.8em; /* Increased font size */
-        margin: 0 12px; /* Adjusted margin */
-    }
-
-    /* Further increase font size and padding for navigation links */
-    .sidebar-nav li > a.neon-link,
-    .has-submenu > a,
-    .sidebar-nav ul li a {
-        font-size: 1.6em; /* Further increased font size */
-        padding: 22px 28px; /* Further increased padding */
-    }
-
-    /* Social Icons */
-    .social-icons a img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .social-icons a .social-label {
-        font-size: 1em;
-    }
-}
-
-/* Additional Sections */
-#even-section {
-    background-color: black;
-}
-
-#odd-section {
-    background-color: grey;
-}
-
+/* ========================================================
+   Additional Sections
+   ======================================================== */
 section {
-    padding: 20px;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Additional Neon Effects */
+section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(0, 255, 234, 0.1), rgba(255, 0, 200, 0.1));
+    transform: rotate(45deg);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+section:nth-of-type(even)::before {
+    background: linear-gradient(45deg, rgba(255, 0, 200, 0.1), rgba(0, 255, 234, 0.1));
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================================
+   Additional Neon Effects
+   ======================================================== */
 a.neon-link {
     position: relative;
     color: #ffffff; /* Solid white text for better contrast */
-    /* Removed gradient background and text clipping */
     font-size: 1.3em; /* Increased font size */
     transition: color 0.3s, text-shadow 0.3s;
     font-weight: 600; /* Semi-bold font weight */
@@ -748,7 +833,9 @@ a.neon-link:focus::before {
     transform: scaleX(1);
 }
 
-/* Service Grid Responsive Adjustments */
+/* ========================================================
+   Responsive Grid Layout
+   ======================================================== */
 @media (min-width: 600px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -759,8 +846,8 @@ a.neon-link:focus::before {
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.4em; /* Further increased font size */
-        padding: 18px 22px; /* Further increased padding */
+        font-size: 1.4em;
+        padding: 18px 22px;
     }
 }
 
@@ -794,13 +881,13 @@ a.neon-link:focus::before {
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.5em; /* Further increased font size */
-        padding: 20px 25px; /* Further increased padding */
+        font-size: 1.5em;
+        padding: 20px 25px;
     }
 
     /* Contact Form Enhancements */
     .contact form {
-        max-width: 800px; /* Increased max-width for larger screens */
+        max-width: 800px;
     }
 }
 
@@ -861,28 +948,28 @@ a.neon-link:focus::before {
     }
 
     .service-category {
-        padding: 30px; /* Increased padding */
+        padding: 30px;
     }
 
     .neon-sidebar .logo h1 {
-        font-size: 3em; /* Increased font size */
+        font-size: 3em;
     }
 
     .neon-sidebar .logo img {
-        width: 150px; /* Adjusted image width */
+        width: 150px;
     }
 
     .social-icons a {
-        font-size: 1.8em; /* Increased font size */
-        margin: 0 12px; /* Adjusted margin */
+        font-size: 1.8em;
+        margin: 0 12px;
     }
 
     /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.6em; /* Further increased font size */
-        padding: 22px 28px; /* Further increased padding */
+        font-size: 1.6em;
+        padding: 22px 28px;
     }
 
     /* Social Icons */
@@ -896,7 +983,9 @@ a.neon-link:focus::before {
     }
 }
 
-/* Additional Responsive Styles */
+/* ========================================================
+   Additional Responsive Styles
+   ======================================================== */
 @media (max-width: 599px) {
     .neon-footer {
         padding: 20px;
