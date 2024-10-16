@@ -111,14 +111,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.neon-sidebar .logo img {
-    margin-top: 20px;
-    filter: drop-shadow(0 0 20px #00ffea);
-    height: 180px;
-    width: auto;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-}
-
 /* Navigation Menu */
 .sidebar-nav {
     list-style: none;
@@ -267,169 +259,13 @@ p {
     background-color: rgba(26, 26, 26, 1);
 }
 
-.service-category img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    filter: drop-shadow(0 0 15px #00ffea);
-    transition: transform 0.3s;
-}
-
-.service-category:hover img,
-.service-category:focus-within img {
-    transform: scale(1.05);
-}
-
 .service-category h3 {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Footer */
-.neon-footer {
-    background-color: #1a1a1a;
-    padding: 40px 20px; /* Adjusted padding for smaller screens */
-    text-align: center;
-    box-shadow: 0 -5px 25px #00ffea, 0 -5px 50px #ff00c8;
-    position: relative;
-}
-
-.neon-footer .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.neon-footer .footer-heading {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.neon-footer .footer-columns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 20px;
-}
-
-.neon-footer .social-column,
-.neon-footer .newsletter-column {
-    width: 100%;
-}
-
-.neon-footer .social-column h3,
-.neon-footer .newsletter-column h3 {
-    margin-bottom: 15px;
-    font-size: 1.6em;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.neon-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.neon-footer .social-icons a {
-    color: #00ffea;
-    margin: 0 10px;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none; /* Remove underline */
-}
-
-.neon-footer .social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.neon-footer .social-icons a .social-label {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #fff;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.neon-footer .social-icons a:hover img,
-.neon-footer .social-icons a:focus img {
-    transform: scale(1.1);
-}
-
-.neon-footer .social-icons a:hover,
-.neon-footer .social-icons a:focus {
-    color: #ff00c8;
-    text-shadow: 0 0 15px #ff00c8, 0 0 25px #ff00c8;
-    transform: scale(1.2);
-    outline: none;
-}
-
-.neon-footer .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.neon-footer .newsletter-form input[type="email"] {
-    padding: 12px;
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    background-color: #2a2a2a;
-    color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.neon-footer .newsletter-form input[type="email"]::placeholder {
-    color: #aaa;
-}
-
-.neon-footer .newsletter-form input[type="email"]:focus {
-    outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
-}
-
-.neon-footer .newsletter-form button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background-color: #e50914;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.1em;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-}
-
-.neon-footer .newsletter-form button:hover,
-.neon-footer .newsletter-form button:focus {
-    background-color: #f6121d;
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
-    outline: none;
-}
-
-.neon-footer .footer-bottom-text {
-    font-size: 0.9em;
-    color: #aaa;
-}
+/* Footer styles removed */
 
 /* Contact Section Styles */
 .contact {
@@ -598,14 +434,6 @@ form textarea:focus {
     box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
 }
 
-.project img, .track img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 15px #00ffea);
-}
-
 .project h2, .track h2 {
     margin-bottom: 8px;
     font-size: 1.3em;
@@ -699,32 +527,6 @@ a.neon-link:focus::before {
         font-size: 1.5em; /* Further increased font size */
         padding: 20px 25px; /* Further increased padding */
     }
-
-    /* Footer Columns Layout */
-    .neon-footer .footer-columns {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .neon-footer .social-column,
-    .neon-footer .newsletter-column {
-        width: 45%;
-    }
-
-    .neon-footer .newsletter-column h3 {
-        font-size: 1.6em;
-    }
-
-    .neon-footer .newsletter-form input[type="email"] {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* Contact Form Enhancements */
-    .contact form {
-        max-width: 800px; /* Increased max-width for larger screens */
-    }
 }
 
 @media (min-width: 1024px) {
@@ -735,27 +537,6 @@ a.neon-link:focus::before {
 
     .neon-sidebar {
         width: 300px;
-    }
-
-    .neon-footer {
-        padding: 60px; /* Further increased padding for larger screens */
-    }
-
-    .service-category {
-        padding: 25px; /* Increased padding */
-    }
-
-    .neon-sidebar .logo h1 {
-        font-size: 2.5em; /* Increased font size */
-    }
-
-    .neon-sidebar .logo img {
-        width: 120px; /* Adjusted image width */
-    }
-
-    .social-icons a {
-        font-size: 1.8em; /* Increased font size */
-        margin: 0 12px; /* Adjusted margin */
     }
 
     /* Further increase font size and padding for navigation links */
