@@ -309,21 +309,35 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-.neon-footer .footer-columns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Footer Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.neon-footer .social-column,
-.neon-footer .newsletter-column {
-    width: 100%;
+/* Newsletter and Footer Text Columns */
+.footer-grid .newsletter-column,
+.footer-grid .footer-text-column {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
-.neon-footer .social-column h3,
-.neon-footer .newsletter-column h3 {
+.footer-grid .newsletter-column:hover,
+.footer-grid .newsletter-column:focus-within,
+.footer-grid .footer-text-column:hover,
+.footer-grid .footer-text-column:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px #00ffea, 0 0 70px #ff00c8;
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.footer-grid .newsletter-column h3,
+.footer-grid .footer-text-column h3 {
     margin-bottom: 15px;
     font-size: 1.6em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
@@ -331,51 +345,13 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-.neon-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.footer-grid .footer-text-column p {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.05em;
 }
 
-.neon-footer .social-icons a {
-    color: #00ffea;
-    margin: 0 10px;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none; /* Remove underline */
-}
-
-.neon-footer .social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.neon-footer .social-icons a .social-label {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #fff;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.neon-footer .social-icons a:hover img,
-.neon-footer .social-icons a:focus img {
-    transform: scale(1.1);
-}
-
-.neon-footer .social-icons a:hover,
-.neon-footer .social-icons a:focus {
-    color: #ff00c8;
-    text-shadow: 0 0 15px #ff00c8, 0 0 25px #ff00c8;
-    transform: scale(1.2);
-    outline: none;
-}
-
+/* Newsletter Form */
 .neon-footer .newsletter-form {
     display: flex;
     flex-direction: column;
@@ -426,198 +402,137 @@ p {
     outline: none;
 }
 
-.neon-footer .footer-bottom-text {
-    font-size: 0.9em;
-    color: #aaa;
+/* Social Icons Row */
+.social-icons-row {
+    grid-column: 1 / -1; /* Span the entire grid */
 }
 
-/* Contact Section Styles */
-.contact {
-    padding: 40px 20px;
-    background-color: #0a0a0a; /* Match the body background or adjust as needed */
-    color: #fff;
-    text-align: center;
-}
-
-.contact h1,
-.contact h3 {
-    margin-bottom: 20px;
-}
-
-.contact p {
-    color: #ccc;
-    margin-bottom: 30px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between form elements */
-    width: 100%;
-    max-width: 600px; /* Adjust based on design preference */
-    margin: 0 auto;
-}
-
-.contact label {
-    font-size: 1em;
-    margin-bottom: 5px;
-    display: block;
-    text-align: left;
-    padding-left: 10px; /* Optional: Adds spacing to the left */
-}
-
-.contact input[type="text"],
-.contact input[type="email"],
-.contact input[type="tel"],
-.contact textarea {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: #2a2a2a;
-    color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
-    width: 100%;
-}
-
-.contact textarea {
-    resize: vertical; /* Allows users to adjust the height */
-    min-height: 150px; /* Ensures adequate space for messages */
-}
-
-.contact input::placeholder,
-.contact textarea::placeholder {
-    color: #aaa;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
-}
-
-.form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    flex: 1;
-}
-
-@media (min-width: 768px) {
-    .form-row {
-        flex-direction: row;
-        gap: 20px;
-    }
-    
-    .form-group {
-        flex: 1;
-    }
-}
-
-/* Submit Button - Full Width */
-.contact .neon-button {
-    width: 100%;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #00ffe9, #ff00c8);
-    color: #0a0a0a;
-    font-size: 1.1em;
-    cursor: pointer;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-}
-
-.contact .neon-button:hover,
-.contact .neon-button:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
-    outline: none;
-}
-
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-form label {
-    margin-bottom: 8px;
-    color: #fff;
-    font-size: 1em;
-}
-
-form input,
-form textarea {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.05em;
-    background-color: #2a2a2a;
-    color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-    color: #aaa;
-}
-
-form input:focus,
-form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
-}
-
-/* Project and Track Styles */
-.project, .track {
-    margin-bottom: 20px;
-    background-color: rgba(26, 26, 26, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover, .track:hover,
-.project:focus-within, .track:focus-within {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
-}
-
-.project img, .track img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 15px #00ffea);
-}
-
-.project h2, .track h2 {
-    margin-bottom: 8px;
-    font-size: 1.3em;
+.social-icons-row h3 {
+    margin-bottom: 15px;
+    font-size: 1.6em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Button Container */
-.button {
-    text-align: center;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #00ffea;
+    margin: 0 10px;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a .social-label {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #fff;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-icons a:hover img,
+.social-icons a:focus img {
+    transform: scale(1.1);
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+    color: #ff00c8;
+    text-shadow: 0 0 15px #ff00c8, 0 0 25px #ff00c8;
+    transform: scale(1.2);
+    outline: none;
+}
+
+/* Footer Bottom Text */
+.footer-bottom-text {
+    font-size: 0.9em;
+    color: #aaa;
     margin-top: 20px;
+}
+
+/* Responsive Grid Layout */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .social-icons-row {
+        grid-column: 1 / -1; /* Ensure it spans both columns */
+    }
+}
+
+@media (min-width: 1024px) {
+    .neon-footer {
+        padding: 60px;
+    }
+
+    .footer-heading {
+        font-size: 2.5em;
+    }
+
+    .footer-grid {
+        gap: 50px;
+    }
+
+    .newsletter-column,
+    .footer-text-column {
+        padding: 30px;
+    }
+
+    .newsletter-column h3,
+    .footer-text-column h3,
+    .social-icons-row h3 {
+        font-size: 1.8em;
+    }
+
+    .newsletter-form input[type="email"] {
+        max-width: 500px;
+    }
+
+    .newsletter-form button {
+        padding: 14px 30px;
+        font-size: 1.2em;
+    }
+
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons a .social-label {
+        font-size: 1em;
+    }
+}
+
+/* Additional Sections */
+#even-section {
+    background-color: black;
+}
+
+#odd-section {
+    background-color: grey;
+}
+
+section {
+    padding: 20px;
 }
 
 /* Additional Neon Effects */
@@ -650,7 +565,7 @@ a.neon-link:focus::before {
     transform: scaleX(1);
 }
 
-/* Media Queries for Responsive Design */
+/* Service Grid Responsive Adjustments */
 @media (min-width: 600px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -700,27 +615,6 @@ a.neon-link:focus::before {
         padding: 20px 25px; /* Further increased padding */
     }
 
-    /* Footer Columns Layout */
-    .neon-footer .footer-columns {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .neon-footer .social-column,
-    .neon-footer .newsletter-column {
-        width: 45%;
-    }
-
-    .neon-footer .newsletter-column h3 {
-        font-size: 1.6em;
-    }
-
-    .neon-footer .newsletter-form input[type="email"] {
-        width: 100%;
-        max-width: 100%;
-    }
-
     /* Contact Form Enhancements */
     .contact form {
         max-width: 800px; /* Increased max-width for larger screens */
@@ -737,20 +631,21 @@ a.neon-link:focus::before {
         width: 300px;
     }
 
+    /* Further increase padding for larger screens */
     .neon-footer {
-        padding: 60px; /* Further increased padding for larger screens */
+        padding: 80px 40px;
     }
 
     .service-category {
-        padding: 25px; /* Increased padding */
+        padding: 30px; /* Increased padding */
     }
 
     .neon-sidebar .logo h1 {
-        font-size: 2.5em; /* Increased font size */
+        font-size: 3em; /* Increased font size */
     }
 
     .neon-sidebar .logo img {
-        width: 120px; /* Adjusted image width */
+        width: 150px; /* Adjusted image width */
     }
 
     .social-icons a {
@@ -765,17 +660,14 @@ a.neon-link:focus::before {
         font-size: 1.6em; /* Further increased font size */
         padding: 22px 28px; /* Further increased padding */
     }
-}
 
-/* Additional Sections */
-#even-section {
-    background-color: black;
-}
+    /* Social Icons */
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
 
-#odd-section {
-    background-color: grey;
-}
-
-section {
-    padding: 20px;
+    .social-icons a .social-label {
+        font-size: 1em;
+    }
 }
