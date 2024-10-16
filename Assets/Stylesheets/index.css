@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #0a0a0a;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
     overflow-x: hidden;
 }
 
@@ -34,7 +34,7 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1101;
-    background-color: #1a1a1a;
+    background: radial-gradient(circle, rgba(0,255,234,0.1) 0%, rgba(0,0,0,0) 70%);
     border: 1px solid #00ffea;
     border-radius: 50%;
     padding: 12px;
@@ -42,12 +42,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .menu-toggle-label:hover,
 .menu-toggle-label:focus {
-    background-color: #2a2a2a;
+    background: radial-gradient(circle, rgba(0,255,234,0.15) 0%, rgba(0,0,0,0) 70%);
+    box-shadow: 0 0 5px #00ffea;
+    transform: scale(1.05);
     outline: none;
 }
 
@@ -70,6 +72,7 @@ body {
     height: 100vh;
     background-color: #1a1a1a;
     padding: 60px 20px;
+    box-shadow: 0 0 5px #00ffea;
     overflow-y: auto;
     z-index: 1000;
     transition: left 0.3s ease;
@@ -102,11 +105,14 @@ body {
 
 .neon-sidebar .logo h1 {
     font-size: 2em;
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .neon-sidebar .logo img {
     margin-top: 20px;
+    filter: drop-shadow(0 0 5px #00ffea);
     height: 150px;
     width: auto;
 }
@@ -127,8 +133,8 @@ body {
     font-size: 1.2em;
     padding: 12px 16px;
     border-radius: 5px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
+    transition: background 0.2s, box-shadow 0.2s;
+    background-color: rgba(0, 255, 234, 0.05);
     font-weight: 600;
 }
 
@@ -136,7 +142,8 @@ body {
 .sidebar-nav li > a.neon-link:focus,
 .has-submenu > a:hover,
 .has-submenu > a:focus {
-    background-color: #2a2a2a;
+    background-color: rgba(0, 255, 234, 0.1);
+    box-shadow: 0 0 5px #00ffea;
     outline: none;
 }
 
@@ -167,14 +174,15 @@ body {
     font-size: 1em;
     padding: 10px 16px;
     border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
+    transition: background 0.2s, box-shadow 0.2s;
+    background-color: rgba(0, 255, 234, 0.05);
     font-weight: 600;
 }
 
 .sidebar-nav ul li a:hover,
 .sidebar-nav ul li a:focus {
-    background-color: #2a2a2a;
+    background-color: rgba(0, 255, 234, 0.1);
+    box-shadow: 0 0 3px #00ffea;
     outline: none;
 }
 
@@ -187,7 +195,9 @@ main {
 
 /* Headings */
 h1, h2, h3 {
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
@@ -201,20 +211,22 @@ p {
 
 /* Neon Button */
 .neon-button {
-    background-color: #00ffea;
+    background: linear-gradient(45deg, #00ffe9, #ff00c8);
     color: #0a0a0a;
     padding: 12px 20px;
     font-size: 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background 0.2s, box-shadow 0.2s;
     width: 100%;
 }
 
 .neon-button:hover,
 .neon-button:focus {
-    background-color: #00e6d9;
+    background: linear-gradient(45deg, #00e6d9, #e600b5);
+    box-shadow: 0 0 7px #00ffea;
     outline: none;
 }
 
@@ -273,11 +285,12 @@ p {
 .service-category,
 .portfolio-category,
 .music-category {
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.9);
     padding: 20px;
     border-radius: 6px;
     text-align: center;
-    transition: background-color 0.2s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .service-category:hover,
@@ -286,7 +299,8 @@ p {
 .portfolio-category:focus-within,
 .music-category:hover,
 .music-category:focus-within {
-    background-color: #2a2a2a;
+    background-color: rgba(26, 26, 26, 1);
+    box-shadow: 0 0 7px #00ffea;
 }
 
 .service-category img,
@@ -296,6 +310,7 @@ p {
     height: auto;
     margin-bottom: 15px;
     border-radius: 6px;
+    filter: drop-shadow(0 0 3px #00ffea);
     transition: transform 0.2s;
 }
 
@@ -311,7 +326,9 @@ p {
 .service-category h3,
 .portfolio-category h3,
 .music-category h3 {
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
 }
 
@@ -325,15 +342,17 @@ p {
 /* Project and Track Styles */
 .project, .track {
     margin-bottom: 20px;
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.9);
     padding: 15px;
     border-radius: 6px;
-    transition: background-color 0.2s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .project:hover, .track:hover,
 .project:focus-within, .track:focus-within {
-    background-color: #2a2a2a;
+    background-color: rgba(26, 26, 26, 1);
+    box-shadow: 0 0 7px #00ffea;
 }
 
 .project img, .track img {
@@ -341,6 +360,7 @@ p {
     height: auto;
     border-radius: 6px;
     margin-bottom: 12px;
+    filter: drop-shadow(0 0 3px #00ffea);
     display: block;
     margin: 0 auto;
 }
@@ -348,7 +368,9 @@ p {
 .project h2, .track h2 {
     margin-bottom: 10px;
     font-size: 1.2em;
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Image Alignment */
@@ -366,6 +388,7 @@ p {
     background-color: #1a1a1a;
     padding: 40px 20px;
     text-align: center;
+    box-shadow: 0 -3px 7px #00ffea;
     position: relative;
 }
 
@@ -377,7 +400,9 @@ p {
 .neon-footer .footer-heading {
     font-size: 2em;
     margin-bottom: 30px;
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Newsletter Column */
@@ -389,7 +414,9 @@ p {
 .neon-footer .newsletter-column h3 {
     margin-bottom: 15px;
     font-size: 1.4em;
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Newsletter Form */
@@ -409,7 +436,8 @@ p {
     font-size: 1em;
     background-color: #2a2a2a;
     color: #fff;
-    transition: background 0.2s;
+    box-shadow: inset 0 0 3px #00ffea;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .neon-footer .newsletter-form input[type="email"]::placeholder {
@@ -418,24 +446,27 @@ p {
 
 .neon-footer .newsletter-form input[type="email"]:focus {
     outline: none;
-    background-color: #333;
+    box-shadow: 0 0 5px #00ffea;
+    transform: translateY(-1px);
 }
 
 .neon-footer .newsletter-form button {
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #e50914;
+    background: linear-gradient(45deg, #e50914, #ff0a1c);
     color: #fff;
     cursor: pointer;
     font-size: 1em;
-    transition: background 0.2s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background 0.2s, box-shadow 0.2s;
     width: 100%;
 }
 
 .neon-footer .newsletter-form button:hover,
 .neon-footer .newsletter-form button:focus {
-    background-color: #f6121d;
+    background: linear-gradient(45deg, #d40813, #e50914);
+    box-shadow: 0 0 7px #00ffea;
     outline: none;
 }
 
@@ -455,7 +486,9 @@ p {
 .neon-footer .social-icons-column h3 {
     margin-bottom: 15px;
     font-size: 1.4em;
-    color: #00ffea;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .neon-footer .social-icons-column .social-icons {
@@ -470,24 +503,34 @@ p {
     text-align: center;
     margin-bottom: 10px;
     color: #00ffea;
-    transition: color 0.2s;
+    transition: color 0.2s, transform 0.2s;
     text-decoration: none;
 }
 
 .neon-footer .social-icons-column .social-icons a img {
     width: 30px;
     height: 30px;
+    transition: transform 0.2s;
 }
 
 .neon-footer .social-icons-column .social-icons a .social-label {
     margin-top: 5px;
     font-size: 0.9em;
     color: #fff;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.neon-footer .social-icons-column .social-icons a:hover img,
+.neon-footer .social-icons-column .social-icons a:focus img {
+    transform: scale(1.05);
 }
 
 .neon-footer .social-icons-column .social-icons a:hover,
 .neon-footer .social-icons-column .social-icons a:focus {
-    color: #00e6d9;
+    color: #ff00c8;
+    transform: translateY(-2px);
     outline: none;
 }
 
@@ -522,6 +565,9 @@ p {
 .contact h1,
 .contact h3 {
     margin-bottom: 20px;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact p {
@@ -546,6 +592,7 @@ p {
     display: block;
     text-align: left;
     padding-left: 10px;
+    color: #fff;
 }
 
 .contact input[type="text"],
@@ -558,7 +605,8 @@ p {
     font-size: 1em;
     background-color: #2a2a2a;
     color: #fff;
-    transition: background 0.2s;
+    box-shadow: inset 0 0 3px #00ffea;
+    transition: box-shadow 0.2s, transform 0.2s;
     width: 100%;
 }
 
@@ -575,7 +623,8 @@ p {
 .contact input:focus,
 .contact textarea:focus {
     outline: none;
-    background-color: #333;
+    box-shadow: 0 0 5px #00ffea;
+    transform: translateY(-1px);
 }
 
 /* Form Rows and Groups */
@@ -606,16 +655,18 @@ p {
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #00ffea;
+    background: linear-gradient(45deg, #00ffe9, #ff00c8);
     color: #0a0a0a;
     font-size: 1em;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
 .contact .neon-button:hover,
 .contact .neon-button:focus {
-    background-color: #00e6d9;
+    background: linear-gradient(45deg, #00e6d9, #e600b5);
+    box-shadow: 0 0 7px #00ffea;
     outline: none;
 }
 
@@ -643,7 +694,8 @@ form textarea {
     font-size: 1em;
     background-color: #2a2a2a;
     color: #fff;
-    transition: background 0.2s;
+    box-shadow: inset 0 0 3px #00ffea;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 form input::placeholder,
@@ -654,20 +706,23 @@ form textarea::placeholder {
 form input:focus,
 form textarea:focus {
     outline: none;
-    background-color: #333;
+    box-shadow: 0 0 5px #00ffea;
+    transform: translateY(-1px);
 }
 
 /* Additional Neon Effects */
 a.neon-link {
     color: #ffffff;
     font-size: 1.2em;
-    transition: color 0.2s;
+    transition: color 0.2s, box-shadow 0.2s;
     font-weight: 600;
 }
 
 a.neon-link:hover,
 a.neon-link:focus {
     color: #00ffea;
+    box-shadow: 0 0 5px #00ffea;
+    outline: none;
 }
 
 /* Media Queries for Responsive Design */
