@@ -1,49 +1,40 @@
-/* =========================================================
-   Reset and Base Styles
-   ========================================================= */
-
-/* Reset all default margins and paddings */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base HTML styles */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
-/* Body styles */
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background-color: #0a0a0a; /* Darker background for better contrast */
     color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
     overflow-x: hidden;
 }
 
-/* Container for consistent padding and alignment */
+/* Layout & Container */
 .container {
     width: 100%;
     padding: 20px;
     margin: 0 auto;
 }
 
-/* =========================================================
-   Header & Menu Toggle
-   ========================================================= */
-
-/* Menu Toggle Button */
+/* Header & Menu Toggle */
 .menu-toggle-label {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1101;
-    background: radial-gradient(circle, rgba(0, 255, 234, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(0,255,234,0.2) 0%, rgba(0,0,0,0) 70%);
     border: 2px solid #00ffea;
     border-radius: 50%;
     padding: 15px;
@@ -57,7 +48,7 @@ body {
 
 .menu-toggle-label:hover,
 .menu-toggle-label:focus {
-    background: radial-gradient(circle, rgba(0, 255, 234, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(0,255,234,0.3) 0%, rgba(0,0,0,0) 70%);
     box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
     transform: scale(1.1);
     outline: none;
@@ -73,11 +64,7 @@ body {
     display: none;
 }
 
-/* =========================================================
-   Sidebar
-   ========================================================= */
-
-/* Sidebar Styles */
+/* Sidebar */
 .neon-sidebar {
     position: fixed;
     top: 0;
@@ -96,7 +83,6 @@ body {
     left: 0;
 }
 
-/* Overlay for Sidebar */
 .overlay {
     display: none;
 }
@@ -108,15 +94,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0,0,0,0.8);
     z-index: 999;
 }
 
-/* =========================================================
-   Logo Section
-   ========================================================= */
-
-/* Logo Container */
+/* Logo Section */
 .neon-sidebar .logo {
     text-align: center;
     margin-bottom: 40px;
@@ -135,25 +117,18 @@ body {
     height: 180px;
     width: auto;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
-    border-radius: 8px;
 }
 
-/* =========================================================
-   Navigation Menu
-   ========================================================= */
-
-/* Navigation List */
+/* Navigation Menu */
 .sidebar-nav {
     list-style: none;
 }
 
-/* Navigation Items */
 .sidebar-nav li {
     margin: 20px 0;
     position: relative;
 }
 
-/* Navigation Links */
 .sidebar-nav li > a.neon-link,
 .has-submenu > a {
     color: #ffffff; /* White text for better contrast */
@@ -179,7 +154,6 @@ body {
     outline: none;
 }
 
-/* Submenu Toggle Icon */
 .sidebar-nav li > a.neon-link::after {
     content: '';
     display: inline-block;
@@ -195,7 +169,6 @@ body {
     transform: rotate(180deg);
 }
 
-/* Submenu List */
 .has-submenu > ul {
     list-style: none;
     padding-left: 20px;
@@ -208,7 +181,6 @@ body {
     display: block;
 }
 
-/* Submenu Links */
 .sidebar-nav ul li a {
     color: #ffffff; /* White text */
     text-decoration: none;
@@ -229,11 +201,7 @@ body {
     outline: none;
 }
 
-/* =========================================================
-   Main Content
-   ========================================================= */
-
-/* Main Container */
+/* Main Content */
 main {
     flex: 1;
     padding: 20px;
@@ -241,17 +209,13 @@ main {
     transition: margin-left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* Headings */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
-/* Paragraphs */
 p {
     color: #ccc;
     line-height: 1.8;
@@ -259,11 +223,7 @@ p {
     font-size: 1.05em;
 }
 
-/* =========================================================
-   Neon Button
-   ========================================================= */
-
-/* Button Styles */
+/* Neon Button */
 .neon-button {
     background: linear-gradient(45deg, #00ffe9, #ff00c8);
     color: #0a0a0a;
@@ -283,11 +243,7 @@ p {
     outline: none;
 }
 
-/* =========================================================
-   Service Grid
-   ========================================================= */
-
-/* Service Grid Container */
+/* Service Grid */
 .service-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -295,7 +251,6 @@ p {
     margin-top: 40px;
 }
 
-/* Individual Service Category */
 .service-category {
     background-color: rgba(26, 26, 26, 0.9);
     padding: 25px; /* Increased padding for better spacing */
@@ -332,16 +287,7 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-/* Add margin-top to buttons in service-category */
-.service-category .neon-button {
-    margin-top: 15px; /* Adds space above the button */
-}
-
-/* =========================================================
-   Footer
-   ========================================================= */
-
-/* Footer Container */
+/* Footer */
 .neon-footer {
     background-color: #1a1a1a;
     padding: 40px 20px; /* Adjusted padding for smaller screens */
@@ -456,10 +402,6 @@ p {
     outline: none;
 }
 
-/* =========================================================
-   Social Icons
-   ========================================================= */
-
 /* Social Icons Row */
 .social-icons-row {
     grid-column: 1 / -1; /* Span the entire grid */
@@ -473,7 +415,6 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-/* Social Icons Container */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -519,21 +460,112 @@ p {
     outline: none;
 }
 
-/* =========================================================
-   Footer Bottom Text
-   ========================================================= */
-
+/* Footer Bottom Text */
 .footer-bottom-text {
     font-size: 0.9em;
     color: #aaa;
     margin-top: 20px;
 }
 
-/* =========================================================
-   Responsive Grid Layout
-   ========================================================= */
+/* Responsive Grid Layout */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
 
-/* Small Screens (≥600px) */
+    .social-icons-row {
+        grid-column: 1 / -1; /* Ensure it spans both columns */
+    }
+}
+
+@media (min-width: 1024px) {
+    .neon-footer {
+        padding: 60px;
+    }
+
+    .footer-heading {
+        font-size: 2.5em;
+    }
+
+    .footer-grid {
+        gap: 50px;
+    }
+
+    .newsletter-column,
+    .footer-text-column {
+        padding: 30px;
+    }
+
+    .newsletter-column h3,
+    .footer-text-column h3,
+    .social-icons-row h3 {
+        font-size: 1.8em;
+    }
+
+    .newsletter-form input[type="email"] {
+        max-width: 500px;
+    }
+
+    .newsletter-form button {
+        padding: 14px 30px;
+        font-size: 1.2em;
+    }
+
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons a .social-label {
+        font-size: 1em;
+    }
+}
+
+/* Additional Sections */
+#even-section {
+    background-color: black;
+}
+
+#odd-section {
+    background-color: grey;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Additional Neon Effects */
+a.neon-link {
+    position: relative;
+    color: #ffffff; /* Solid white text for better contrast */
+    /* Removed gradient background and text clipping */
+    font-size: 1.3em; /* Increased font size */
+    transition: color 0.3s, text-shadow 0.3s;
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+/* Remove the gradient line under the link */
+a.neon-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(90deg, #00ffea, #ff00c8);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a.neon-link:hover::before,
+a.neon-link:focus::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Service Grid Responsive Adjustments */
 @media (min-width: 600px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -547,14 +579,8 @@ p {
         font-size: 1.4em; /* Further increased font size */
         padding: 18px 22px; /* Further increased padding */
     }
-
-    /* Add margin-top to buttons in service-category */
-    .service-category .neon-button {
-        margin-top: 15px; /* Adds space above the button */
-    }
 }
 
-/* Medium Screens (≥768px) */
 @media (min-width: 768px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -595,7 +621,6 @@ p {
     }
 }
 
-/* Large Screens (≥1024px) */
 @media (min-width: 1024px) {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -644,195 +669,5 @@ p {
 
     .social-icons a .social-label {
         font-size: 1em;
-    }
-}
-
-/* =========================================================
-   Additional Sections
-   ========================================================= */
-
-/* Even Section Background */
-#even-section {
-    background-color: black;
-}
-
-/* Odd Section Background */
-#odd-section {
-    background-color: grey;
-}
-
-/* General Section Padding */
-section {
-    padding: 20px;
-}
-
-/* =========================================================
-   Additional Neon Effects
-   ========================================================= */
-
-/* Neon Links */
-a.neon-link {
-    position: relative;
-    color: #ffffff; /* Solid white text for better contrast */
-    font-size: 1.3em; /* Increased font size */
-    transition: color 0.3s, text-shadow 0.3s;
-    font-weight: 600; /* Semi-bold font weight */
-}
-
-/* Underline Effect for Neon Links */
-a.neon-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: -3px;
-    left: 0;
-    background: linear-gradient(90deg, #00ffea, #ff00c8);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-a.neon-link:hover::before,
-a.neon-link:focus::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-/* =========================================================
-   Contact Section Styles
-   ========================================================= */
-
-/* Contact Section Styling */
-.contact {
-    padding: 40px 20px;
-    background-color: #0a0a0a; /* Match the body background or adjust as needed */
-    color: #fff;
-    text-align: center;
-}
-
-.contact h1,
-.contact h3 {
-    margin-bottom: 20px;
-}
-
-.contact p {
-    color: #ccc;
-    margin-bottom: 30px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between form elements */
-    width: 100%;
-    max-width: 600px; /* Adjust based on design preference */
-    margin: 0 auto;
-}
-
-.contact label {
-    font-size: 1em;
-    margin-bottom: 5px;
-    display: block;
-    text-align: left;
-    padding-left: 10px; /* Optional: Adds spacing to the left */
-}
-
-.contact input[type="text"],
-.contact input[type="email"],
-.contact input[type="tel"],
-.contact textarea {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: #2a2a2a;
-    color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
-    width: 100%;
-}
-
-.contact textarea {
-    resize: vertical; /* Allows users to adjust the height */
-    min-height: 150px; /* Ensures adequate space for messages */
-}
-
-.contact input::placeholder,
-.contact textarea::placeholder {
-    color: #aaa;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
-}
-
-.form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    flex: 1;
-}
-
-@media (min-width: 768px) {
-    .form-row {
-        flex-direction: row;
-        gap: 20px;
-    }
-    
-    .form-group {
-        flex: 1;
-    }
-}
-
-/* Submit Button - Full Width */
-.contact .neon-button {
-    width: 100%;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #00ffe9, #ff00c8);
-    color: #0a0a0a;
-    font-size: 1.1em;
-    cursor: pointer;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-}
-
-.contact .neon-button:hover,
-.contact .neon-button:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
-    outline: none;
-}
-
-/* =========================================================
-   Services Section Buttons
-   ========================================================= */
-
-/* Using Existing .neon-button Class */
-/* No additional CSS needed if using .neon-button */
-
-/* Add margin-top to buttons in service-category */
-.service-category .neon-button {
-    margin-top: 15px; /* Adds space above the button */
-}
-
-/* =========================================================
-   Responsive Grid Layout (Continued)
-   ========================================================= */
-
-/* Ensure buttons maintain proper spacing and alignment on large screens */
-@media (min-width: 1024px) {
-    .service-category .neon-button {
-        margin-top: 20px; /* Slightly increased space on larger screens */
     }
 }
