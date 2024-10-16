@@ -209,6 +209,7 @@ main {
     transition: margin-left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+/* Headings */
 h1, h2, h3 {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
@@ -216,6 +217,7 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
+/* Paragraphs */
 p {
     color: #ccc;
     line-height: 1.8;
@@ -249,7 +251,23 @@ p {
     margin-top: 20px;
 }
 
-/* Styles for Buttons Under Images */
+/* Centered Button Underneath the Grid */
+.center-button {
+    text-align: center;
+    margin-top: 30px; /* Increased margin for better spacing */
+}
+
+.center-button a {
+    display: inline-block;
+}
+
+.center-button .neon-button {
+    width: auto; /* Adjust width as needed */
+    padding: 12px 30px;
+    font-size: 1.1em;
+}
+
+/* Styles for Buttons Underneath Images */
 .service-category .button,
 .portfolio-category .button,
 .music-category .button,
@@ -822,9 +840,28 @@ a.neon-link:focus::before {
 }
 
 #odd-section {
-    background-color: grey;
+    background-color: #565656;
 }
 
 section {
     padding: 20px;
+}
+
+/* Center Button Enhancements */
+.center-button .neon-button {
+    /* Optional: Add hover effects specific to center buttons if needed */
+}
+
+/* Responsive Center Button */
+@media (max-width: 599px) {
+    .center-button .neon-button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 600px) {
+    .center-button .neon-button {
+        width: auto;
+    }
 }
