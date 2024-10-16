@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0a0a0a; /* Darker background for better contrast */
+    background-color: #0a0a0a;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -105,7 +105,7 @@ body {
 }
 
 .neon-sidebar .logo h1 {
-    font-size: 2.5em; /* Increased font size for better visibility */
+    font-size: 2.5em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -131,25 +131,25 @@ body {
 
 .sidebar-nav li > a.neon-link,
 .has-submenu > a {
-    color: #ffffff; /* White text for better contrast */
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3em; /* Increased font size */
-    padding: 16px 20px; /* Increased padding */
+    font-size: 1.3em;
+    padding: 16px 20px;
     border-radius: 8px;
     transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    background: rgba(0, 255, 234, 0.1); /* Increased background opacity */
-    font-weight: 600; /* Semi-bold font weight */
+    background: rgba(0, 255, 234, 0.1);
+    font-weight: 600;
 }
 
 .sidebar-nav li > a.neon-link:hover,
 .sidebar-nav li > a.neon-link:focus,
 .has-submenu > a:hover,
 .has-submenu > a:focus {
-    background-color: rgba(0, 255, 234, 0.3); /* Enhanced hover background */
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea; /* Enhanced shadow */
+    background-color: rgba(0, 255, 234, 0.3);
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
     transform: translateX(5px);
     outline: none;
 }
@@ -182,21 +182,21 @@ body {
 }
 
 .sidebar-nav ul li a {
-    color: #ffffff; /* White text */
+    color: #ffffff;
     text-decoration: none;
     display: block;
-    font-size: 1.2em; /* Increased font size */
-    padding: 14px 20px; /* Increased padding */
+    font-size: 1.2em;
+    padding: 14px 20px;
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    background: rgba(0, 255, 234, 0.1); /* Increased background opacity */
-    font-weight: 600; /* Semi-bold font weight */
+    background: rgba(0, 255, 234, 0.1);
+    font-weight: 600;
 }
 
 .sidebar-nav ul li a:hover,
 .sidebar-nav ul li a:focus {
-    background-color: rgba(0, 255, 234, 0.3); /* Enhanced hover background */
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea; /* Enhanced shadow */
+    background-color: rgba(0, 255, 234, 0.3);
+    box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
     transform: translateX(3px);
     outline: none;
 }
@@ -251,12 +251,16 @@ p {
 
 /* Styles for Buttons Under Images */
 .service-category .button,
+.portfolio-category .button,
+.music-category .button,
 .project .button,
 .track .button {
     margin-top: 15px;
 }
 
 .service-category .button .neon-button,
+.portfolio-category .button .neon-button,
+.music-category .button .neon-button,
 .project .button .neon-button,
 .track .button .neon-button {
     width: 100%;
@@ -264,23 +268,21 @@ p {
     font-size: 1em;
 }
 
-.service-category .button .neon-button:hover,
-.project .button .neon-button:hover,
-.track .button .neon-button:hover {
-    /* Optional: Add any specific hover effects */
-}
-
-/* Service Grid */
-.service-grid {
+/* Category Grids */
+.service-grid,
+.portfolio-grid,
+.music-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     margin-top: 40px;
 }
 
-.service-category {
+.service-category,
+.portfolio-category,
+.music-category {
     background-color: rgba(26, 26, 26, 0.9);
-    padding: 25px; /* Increased padding for better spacing */
+    padding: 25px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
@@ -288,13 +290,19 @@ p {
 }
 
 .service-category:hover,
-.service-category:focus-within {
+.service-category:focus-within,
+.portfolio-category:hover,
+.portfolio-category:focus-within,
+.music-category:hover,
+.music-category:focus-within {
     transform: translateY(-10px);
     box-shadow: 0 0 35px #00ffea, 0 0 70px #ff00c8;
     background-color: rgba(26, 26, 26, 1);
 }
 
-.service-category img {
+.service-category img,
+.portfolio-category img,
+.music-category img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
@@ -304,11 +312,17 @@ p {
 }
 
 .service-category:hover img,
-.service-category:focus-within img {
+.service-category:focus-within img,
+.portfolio-category:hover img,
+.portfolio-category:focus-within img,
+.music-category:hover img,
+.music-category:focus-within img {
     transform: scale(1.05);
 }
 
-.service-category h3 {
+.service-category h3,
+.portfolio-category h3,
+.music-category h3 {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -342,33 +356,27 @@ p {
 }
 
 .project h2, .track h2 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 1.3em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
 }
 
 /* Image Alignment */
 .service-category img,
+.portfolio-category img,
+.music-category img,
 .project img,
 .track img {
     display: block;
     margin: 0 auto;
 }
 
-/* Adjust margins for headings */
-.service-category h3,
-.project h2,
-.track h2 {
-    margin-bottom: 10px;
-}
-
 /* Footer */
 .neon-footer {
     background-color: #1a1a1a;
-    padding: 40px 20px; /* Adjusted padding for smaller screens */
+    padding: 40px 20px;
     text-align: center;
     box-shadow: 0 -5px 25px #00ffea, 0 -5px 50px #ff00c8;
     position: relative;
@@ -423,7 +431,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .neon-footer .social-icons a img {
@@ -512,7 +520,7 @@ p {
 /* Contact Section Styles */
 .contact {
     padding: 40px 20px;
-    background-color: #0a0a0a; /* Match the body background or adjust as needed */
+    background-color: #0a0a0a;
     color: #fff;
     text-align: center;
 }
@@ -532,9 +540,9 @@ p {
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between form elements */
+    gap: 20px;
     width: 100%;
-    max-width: 600px; /* Adjust based on design preference */
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -543,7 +551,7 @@ p {
     margin-bottom: 5px;
     display: block;
     text-align: left;
-    padding-left: 10px; /* Optional: Adds spacing to the left */
+    padding-left: 10px;
 }
 
 .contact input[type="text"],
@@ -562,8 +570,8 @@ p {
 }
 
 .contact textarea {
-    resize: vertical; /* Allows users to adjust the height */
-    min-height: 150px; /* Ensures adequate space for messages */
+    resize: vertical;
+    min-height: 150px;
 }
 
 .contact input::placeholder,
@@ -593,7 +601,7 @@ p {
         flex-direction: row;
         gap: 20px;
     }
-    
+
     .form-group {
         flex: 1;
     }
@@ -663,14 +671,12 @@ form textarea:focus {
 /* Additional Neon Effects */
 a.neon-link {
     position: relative;
-    color: #ffffff; /* Solid white text for better contrast */
-    /* Removed gradient background and text clipping */
-    font-size: 1.3em; /* Increased font size */
+    color: #ffffff;
+    font-size: 1.3em;
     transition: color 0.3s, text-shadow 0.3s;
-    font-weight: 600; /* Semi-bold font weight */
+    font-weight: 600;
 }
 
-/* Remove the gradient line under the link */
 a.neon-link::before {
     content: '';
     position: absolute;
@@ -692,22 +698,25 @@ a.neon-link:focus::before {
 
 /* Media Queries for Responsive Design */
 @media (min-width: 600px) {
-    .service-grid {
+    .service-grid,
+    .portfolio-grid,
+    .music-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 25px;
     }
 
-    /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.4em; /* Further increased font size */
-        padding: 18px 22px; /* Further increased padding */
+        font-size: 1.4em;
+        padding: 18px 22px;
     }
 }
 
 @media (min-width: 768px) {
-    .service-grid {
+    .service-grid,
+    .portfolio-grid,
+    .music-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
     }
@@ -732,15 +741,13 @@ a.neon-link:focus::before {
         padding: 50px 30px;
     }
 
-    /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.5em; /* Further increased font size */
-        padding: 20px 25px; /* Further increased padding */
+        font-size: 1.5em;
+        padding: 20px 25px;
     }
 
-    /* Footer Columns Layout */
     .neon-footer .footer-columns {
         flex-direction: row;
         justify-content: space-between;
@@ -761,14 +768,15 @@ a.neon-link:focus::before {
         max-width: 100%;
     }
 
-    /* Contact Form Enhancements */
     .contact form {
-        max-width: 800px; /* Increased max-width for larger screens */
+        max-width: 800px;
     }
 }
 
 @media (min-width: 1024px) {
-    .service-grid {
+    .service-grid,
+    .portfolio-grid,
+    .music-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 35px;
     }
@@ -778,32 +786,33 @@ a.neon-link:focus::before {
     }
 
     .neon-footer {
-        padding: 60px; /* Further increased padding for larger screens */
+        padding: 60px;
     }
 
-    .service-category {
-        padding: 25px; /* Increased padding */
+    .service-category,
+    .portfolio-category,
+    .music-category {
+        padding: 25px;
     }
 
     .neon-sidebar .logo h1 {
-        font-size: 2.5em; /* Increased font size */
+        font-size: 2.5em;
     }
 
     .neon-sidebar .logo img {
-        width: 120px; /* Adjusted image width */
+        width: 120px;
     }
 
     .social-icons a {
-        font-size: 1.8em; /* Increased font size */
-        margin: 0 12px; /* Adjusted margin */
+        font-size: 1.8em;
+        margin: 0 12px;
     }
 
-    /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.6em; /* Further increased font size */
-        padding: 22px 28px; /* Further increased padding */
+        font-size: 1.6em;
+        padding: 22px 28px;
     }
 }
 
