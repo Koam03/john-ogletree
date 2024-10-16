@@ -309,76 +309,71 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-/* Updated: Social Carousel Styles */
-.neon-footer .social-carousel {
-    margin-bottom: 40px;
-}
-
-.swiper-container {
-    width: 100%;
-    padding: 20px 0;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide a {
+.neon-footer .footer-columns {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: #fff;
-    transition: transform 0.3s;
+    gap: 40px;
+    margin-bottom: 20px;
 }
 
-.swiper-slide a:hover {
-    transform: scale(1.1);
+.neon-footer .social-column,
+.neon-footer .newsletter-column {
+    width: 100%;
 }
 
-.swiper-slide img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-/* Swiper Navigation and Pagination */
-.swiper-pagination {
-    bottom: 10px !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #00ffea;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    color: #ff00c8;
-}
-
-/* Updated: Footer Grid Styles */
-.neon-footer .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.neon-footer .newsletter-column,
-.neon-footer .footer-text-column {
-    flex: 1 1 45%;
-    min-width: 250px;
-}
-
+.neon-footer .social-column h3,
 .neon-footer .newsletter-column h3 {
     margin-bottom: 15px;
     font-size: 1.6em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.neon-footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.neon-footer .social-icons a {
+    color: #00ffea;
+    margin: 0 10px;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.neon-footer .social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.neon-footer .social-icons a .social-label {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #fff;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.neon-footer .social-icons a:hover img,
+.neon-footer .social-icons a:focus img {
+    transform: scale(1.1);
+}
+
+.neon-footer .social-icons a:hover,
+.neon-footer .social-icons a:focus {
+    color: #ff00c8;
+    text-shadow: 0 0 15px #ff00c8, 0 0 25px #ff00c8;
+    transform: scale(1.2);
+    outline: none;
 }
 
 .neon-footer .newsletter-form {
@@ -431,70 +426,10 @@ p {
     outline: none;
 }
 
-.neon-footer .footer-text-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .neon-footer .footer-bottom-text {
     font-size: 0.9em;
     color: #aaa;
 }
-
-/* Remove or Override Existing Social Icons Styles */
-.neon-footer .social-icons {
-    display: none; /* Hide the old social icons */
-}
-
-/* Additional Footer Carousel Styles */
-@media (min-width: 768px) {
-    .neon-footer .footer-grid {
-        flex-direction: row;
-    }
-
-    .neon-footer .social-carousel {
-        margin-bottom: 60px;
-    }
-}
-
-/* Responsive Styles for Footer */
-@media (max-width: 768px) {
-    .neon-footer .footer-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .neon-footer .newsletter-column,
-    .neon-footer .footer-text-column {
-        flex: 1 1 100%;
-        max-width: 500px;
-    }
-
-    /* Adjust Swiper slides on smaller screens */
-    .swiper-container {
-        padding: 10px 0;
-    }
-
-    .swiper-slide img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Responsive Styles for Swiper */
-@media (min-width: 640px) {
-    .swiper-container {
-        padding: 20px 0;
-    }
-
-    .swiper-slide img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-/* Rest of Your Existing CSS */
 
 /* Contact Section Styles */
 .contact {
@@ -843,34 +778,4 @@ a.neon-link:focus::before {
 
 section {
     padding: 20px;
-}
-
-/* Responsive Swiper Slides */
-@media (min-width: 320px) {
-    .swiper-container {
-        padding: 10px 0;
-    }
-
-    .swiper-slide img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (min-width: 480px) {
-    .swiper-slide img {
-        width: 45px;
-        height: 45px;
-    }
-}
-
-@media (min-width: 640px) {
-    .swiper-container {
-        padding: 20px 0;
-    }
-
-    .swiper-slide img {
-        width: 50px;
-        height: 50px;
-    }
 }
