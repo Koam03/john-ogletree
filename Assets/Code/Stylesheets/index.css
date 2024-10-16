@@ -243,6 +243,33 @@ p {
     outline: none;
 }
 
+/* Button Container */
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styles for Buttons Under Images */
+.service-category .button,
+.project .button,
+.track .button {
+    margin-top: 15px;
+}
+
+.service-category .button .neon-button,
+.project .button .neon-button,
+.track .button .neon-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.service-category .button .neon-button:hover,
+.project .button .neon-button:hover,
+.track .button .neon-button:hover {
+    /* Optional: Add any specific hover effects */
+}
+
 /* Service Grid */
 .service-grid {
     display: grid;
@@ -285,6 +312,57 @@ p {
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Project and Track Styles */
+.project, .track {
+    margin-bottom: 20px;
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00c8;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover, .track:hover,
+.project:focus-within, .track:focus-within {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
+}
+
+.project img, .track img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 15px #00ffea);
+    display: block;
+    margin: 0 auto;
+}
+
+.project h2, .track h2 {
+    margin-bottom: 8px;
+    font-size: 1.3em;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Image Alignment */
+.service-category img,
+.project img,
+.track img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Adjust margins for headings */
+.service-category h3,
+.project h2,
+.track h2 {
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -580,44 +658,6 @@ form textarea:focus {
     outline: none;
     box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
     transform: translateY(-2px);
-}
-
-/* Project and Track Styles */
-.project, .track {
-    margin-bottom: 20px;
-    background-color: rgba(26, 26, 26, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover, .track:hover,
-.project:focus-within, .track:focus-within {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
-}
-
-.project img, .track img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 15px #00ffea);
-}
-
-.project h2, .track h2 {
-    margin-bottom: 8px;
-    font-size: 1.3em;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Button Container */
-.button {
-    text-align: center;
-    margin-top: 20px;
 }
 
 /* Additional Neon Effects */
