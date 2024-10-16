@@ -287,6 +287,96 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+/* Projects Section */
+.projects .project {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.projects .project:hover,
+.projects .project:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px #00ffea, 0 0 70px #ff00c8;
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.projects .project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 15px #00ffea);
+    transition: transform 0.3s;
+}
+
+.projects .project:hover img,
+.projects .project:focus-within img {
+    transform: scale(1.05);
+}
+
+.projects .project h2 {
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.projects .project p {
+    color: #ccc;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Music Section */
+.music .track {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.music .track:hover,
+.music .track:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px #00ffea, 0 0 70px #ff00c8;
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.music .track img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 15px #00ffea);
+    transition: transform 0.3s;
+}
+
+.music .track:hover img,
+.music .track:focus-within img {
+    transform: scale(1.05);
+}
+
+.music .track h2 {
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.music .track p {
+    color: #ccc;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
 /* Footer */
 .neon-footer {
     background-color: #1a1a1a;
@@ -468,14 +558,58 @@ p {
 }
 
 /* Responsive Grid Layout */
-@media (min-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+@media (min-width: 600px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
     }
 
-    .social-icons-row {
-        grid-column: 1 / -1; /* Ensure it spans both columns */
+    /* Further increase font size and padding for navigation links */
+    .sidebar-nav li > a.neon-link,
+    .has-submenu > a,
+    .sidebar-nav ul li a {
+        font-size: 1.4em; /* Further increased font size */
+        padding: 18px 22px; /* Further increased padding */
+    }
+}
+
+@media (min-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .neon-sidebar {
+        left: -300px;
+    }
+
+    .menu-toggle-label {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    #menuToggle:checked ~ .overlay {
+        display: block;
+    }
+
+    main {
+        padding: 50px 30px;
+    }
+
+    /* Further increase font size and padding for navigation links */
+    .sidebar-nav li > a.neon-link,
+    .has-submenu > a,
+    .sidebar-nav ul li a {
+        font-size: 1.5em; /* Further increased font size */
+        padding: 20px 25px; /* Further increased padding */
+    }
+
+    /* Contact Form Enhancements */
+    .contact form {
+        max-width: 800px; /* Increased max-width for larger screens */
     }
 }
 
@@ -512,6 +646,55 @@ p {
         font-size: 1.2em;
     }
 
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons a .social-label {
+        font-size: 1em;
+    }
+
+    /* Further increase padding for larger screens */
+    .neon-footer {
+        padding: 80px 40px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 35px;
+    }
+
+    .neon-sidebar {
+        width: 300px;
+    }
+
+    .service-category {
+        padding: 30px; /* Increased padding */
+    }
+
+    .neon-sidebar .logo h1 {
+        font-size: 3em; /* Increased font size */
+    }
+
+    .neon-sidebar .logo img {
+        width: 150px; /* Adjusted image width */
+    }
+
+    .social-icons a {
+        font-size: 1.8em; /* Increased font size */
+        margin: 0 12px; /* Adjusted margin */
+    }
+
+    /* Further increase font size and padding for navigation links */
+    .sidebar-nav li > a.neon-link,
+    .has-submenu > a,
+    .sidebar-nav ul li a {
+        font-size: 1.6em; /* Further increased font size */
+        padding: 22px 28px; /* Further increased padding */
+    }
+
+    /* Social Icons */
     .social-icons a img {
         width: 35px;
         height: 35px;
@@ -622,6 +805,52 @@ a.neon-link:focus::before {
 }
 
 @media (min-width: 1024px) {
+    .neon-footer {
+        padding: 60px;
+    }
+
+    .footer-heading {
+        font-size: 2.5em;
+    }
+
+    .footer-grid {
+        gap: 50px;
+    }
+
+    .newsletter-column,
+    .footer-text-column {
+        padding: 30px;
+    }
+
+    .newsletter-column h3,
+    .footer-text-column h3,
+    .social-icons-row h3 {
+        font-size: 1.8em;
+    }
+
+    .newsletter-form input[type="email"] {
+        max-width: 500px;
+    }
+
+    .newsletter-form button {
+        padding: 14px 30px;
+        font-size: 1.2em;
+    }
+
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons a .social-label {
+        font-size: 1em;
+    }
+
+    /* Further increase padding for larger screens */
+    .neon-footer {
+        padding: 80px 40px;
+    }
+
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 35px;
@@ -629,11 +858,6 @@ a.neon-link:focus::before {
 
     .neon-sidebar {
         width: 300px;
-    }
-
-    /* Further increase padding for larger screens */
-    .neon-footer {
-        padding: 80px 40px;
     }
 
     .service-category {
@@ -669,5 +893,39 @@ a.neon-link:focus::before {
 
     .social-icons a .social-label {
         font-size: 1em;
+    }
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 599px) {
+    .neon-footer {
+        padding: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .neon-button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .service-category,
+    .projects .project,
+    .music .track {
+        padding: 20px;
+    }
+
+    .service-category h3,
+    .projects .project h2,
+    .music .track h2 {
+        font-size: 1.5em;
     }
 }
