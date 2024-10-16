@@ -437,45 +437,35 @@
         
         <!-- Contact Section -->
         <section class="contact" id="even-section">
-          <div class="container">
-              <h1>Contact</h1>
-              <h3>Get in touch with me</h3>
-              <hr>
-              <p>Interested in working together? Have a question or just want to say hi? Feel free to reach out to me using the form below.</p>
-              <form action="/contact" method="POST" aria-label="Contact Form" class="neon-form">
-                  <!-- First and Last Name - Two Columns -->
-                  <div class="form-row half-width">
-                      <div class="form-group">
-                          <label for="firstName">First Name:</label>
-                          <input type="text" id="firstName" name="firstName" required aria-required="true" placeholder="Enter your first name">
-                      </div>
-                      <div class="form-group">
-                          <label for="lastName">Last Name:</label>
-                          <input type="text" id="lastName" name="lastName" required aria-required="true" placeholder="Enter your last name">
-                      </div>
-                  </div>
-                  
-                  <!-- Phone, Email, and Message/Inquery - Three Full Width Fields -->
-                  <div class="form-row full-width">
-                      <div class="form-group">
-                          <label for="phone">Phone Number:</label>
-                          <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number">
-                      </div>
-                      <div class="form-group">
-                          <label for="email">Email Address:</label>
-                          <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email address">
-                      </div>
-                      <div class="form-group">
-                          <label for="message">Message/Inquery:</label>
-                          <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Enter your message or inquiry"></textarea>
-                      </div>
-                  </div>
-                  
-                  <!-- Submit Button -->
-                  <button type="submit" class="neon-button">Send Message</button>
-              </form>
-          </div>
-      </section>          
+            <h1>Contact</h1>
+            <h3>Get in touch with me</h3>
+            <hr>
+            <p>Interested in working together? Have a question or just want to say hi? Feel free to reach out to me using the form below.</p>
+            <form action="/contact" method="POST" aria-label="Contact Form">
+                <!-- Full Name - Full Width -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required aria-required="true" placeholder="Enter your full name">
+                
+                <!-- Email and Phone Number - Two Columns -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number">
+                    </div>
+                </div>
+                
+                <!-- Message/Inquery - Full Width -->
+                <label for="message">Message/Inquery:</label>
+                <textarea id="message" name="message" required aria-required="true" placeholder="Enter your message or inquiry"></textarea>
+                
+                <!-- Submit Button - Full Width -->
+                <button type="submit" class="neon-button">Send Message</button>
+            </form>
+        </section>        
     </main>
     
 <!-- Footer -->

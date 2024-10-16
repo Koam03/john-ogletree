@@ -123,7 +123,7 @@ body {
 }
 
 .neon-sidebar .logo h1 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Increased font size for better visibility */
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -156,25 +156,25 @@ body {
 /* Navigation Links */
 .sidebar-nav li > a.neon-link,
 .has-submenu > a {
-    color: #ffffff;
+    color: #ffffff; /* White text for better contrast */
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3em;
-    padding: 16px 20px;
+    font-size: 1.3em; /* Increased font size */
+    padding: 16px 20px; /* Increased padding */
     border-radius: 8px;
     transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    background: rgba(0, 255, 234, 0.1);
-    font-weight: 600;
+    background: rgba(0, 255, 234, 0.1); /* Increased background opacity */
+    font-weight: 600; /* Semi-bold font weight */
 }
 
 .sidebar-nav li > a.neon-link:hover,
 .sidebar-nav li > a.neon-link:focus,
 .has-submenu > a:hover,
 .has-submenu > a:focus {
-    background-color: rgba(0, 255, 234, 0.3);
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
+    background-color: rgba(0, 255, 234, 0.3); /* Enhanced hover background */
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea; /* Enhanced shadow */
     transform: translateX(5px);
     outline: none;
 }
@@ -210,21 +210,21 @@ body {
 
 /* Submenu Links */
 .sidebar-nav ul li a {
-    color: #ffffff;
+    color: #ffffff; /* White text */
     text-decoration: none;
     display: block;
-    font-size: 1.2em;
-    padding: 14px 20px;
+    font-size: 1.2em; /* Increased font size */
+    padding: 14px 20px; /* Increased padding */
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    background: rgba(0, 255, 234, 0.1);
-    font-weight: 600;
+    background: rgba(0, 255, 234, 0.1); /* Increased background opacity */
+    font-weight: 600; /* Semi-bold font weight */
 }
 
 .sidebar-nav ul li a:hover,
 .sidebar-nav ul li a:focus {
-    background-color: rgba(0, 255, 234, 0.3);
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
+    background-color: rgba(0, 255, 234, 0.3); /* Enhanced hover background */
+    box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea; /* Enhanced shadow */
     transform: translateX(3px);
     outline: none;
 }
@@ -298,7 +298,7 @@ p {
 /* Individual Service Category */
 .service-category {
     background-color: rgba(26, 26, 26, 0.9);
-    padding: 25px;
+    padding: 25px; /* Increased padding for better spacing */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
@@ -339,7 +339,7 @@ p {
 /* Footer Container */
 .neon-footer {
     background-color: #1a1a1a;
-    padding: 40px 20px;
+    padding: 40px 20px; /* Adjusted padding for smaller screens */
     text-align: center;
     box-shadow: 0 -5px 25px #00ffea, 0 -5px 50px #ff00c8;
     position: relative;
@@ -457,7 +457,7 @@ p {
 
 /* Social Icons Row */
 .social-icons-row {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* Span the entire grid */
 }
 
 .social-icons-row h3 {
@@ -483,7 +483,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
 }
 
 .social-icons a img {
@@ -528,62 +528,6 @@ p {
    Responsive Grid Layout
    ========================================================= */
 
-/* Medium Screens (≥768px) */
-@media (min-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-
-    .social-icons-row {
-        grid-column: 1 / -1;
-    }
-}
-
-/* Large Screens (≥1024px) */
-@media (min-width: 1024px) {
-    .neon-footer {
-        padding: 60px;
-    }
-
-    .footer-heading {
-        font-size: 2.5em;
-    }
-
-    .footer-grid {
-        gap: 50px;
-    }
-
-    .newsletter-column,
-    .footer-text-column {
-        padding: 30px;
-    }
-
-    .newsletter-column h3,
-    .footer-text-column h3,
-    .social-icons-row h3 {
-        font-size: 1.8em;
-    }
-
-    .newsletter-form input[type="email"] {
-        max-width: 500px;
-    }
-
-    .newsletter-form button {
-        padding: 14px 30px;
-        font-size: 1.2em;
-    }
-
-    .social-icons a img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .social-icons a .social-label {
-        font-size: 1em;
-    }
-}
-
 /* Small Screens (≥600px) */
 @media (min-width: 600px) {
     .service-grid {
@@ -591,12 +535,12 @@ p {
         gap: 25px;
     }
 
-    /* Navigation Links */
+    /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.4em;
-        padding: 18px 22px;
+        font-size: 1.4em; /* Further increased font size */
+        padding: 18px 22px; /* Further increased padding */
     }
 }
 
@@ -627,17 +571,17 @@ p {
         padding: 50px 30px;
     }
 
-    /* Navigation Links */
+    /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.5em;
-        padding: 20px 25px;
+        font-size: 1.5em; /* Further increased font size */
+        padding: 20px 25px; /* Further increased padding */
     }
 
-    /* Contact Form */
+    /* Contact Form Enhancements */
     .contact form {
-        max-width: 800px;
+        max-width: 800px; /* Increased max-width for larger screens */
     }
 }
 
@@ -652,40 +596,37 @@ p {
         width: 300px;
     }
 
-    /* Footer Padding */
+    /* Further increase padding for larger screens */
     .neon-footer {
         padding: 80px 40px;
     }
 
-    /* Service Category Padding */
     .service-category {
-        padding: 30px;
+        padding: 30px; /* Increased padding */
     }
 
-    /* Logo Adjustments */
     .neon-sidebar .logo h1 {
-        font-size: 3em;
+        font-size: 3em; /* Increased font size */
     }
 
     .neon-sidebar .logo img {
-        width: 150px;
+        width: 150px; /* Adjusted image width */
     }
 
-    /* Social Icons */
     .social-icons a {
-        font-size: 1.8em;
-        margin: 0 12px;
+        font-size: 1.8em; /* Increased font size */
+        margin: 0 12px; /* Adjusted margin */
     }
 
-    /* Navigation Links */
+    /* Further increase font size and padding for navigation links */
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.6em;
-        padding: 22px 28px;
+        font-size: 1.6em; /* Further increased font size */
+        padding: 22px 28px; /* Further increased padding */
     }
 
-    /* Social Icons Images */
+    /* Social Icons */
     .social-icons a img {
         width: 35px;
         height: 35px;
@@ -722,10 +663,10 @@ section {
 /* Neon Links */
 a.neon-link {
     position: relative;
-    color: #ffffff;
-    font-size: 1.3em;
+    color: #ffffff; /* Solid white text for better contrast */
+    font-size: 1.3em; /* Increased font size */
     transition: color 0.3s, text-shadow 0.3s;
-    font-weight: 600;
+    font-weight: 600; /* Semi-bold font weight */
 }
 
 /* Underline Effect for Neon Links */
@@ -749,106 +690,116 @@ a.neon-link:focus::before {
 }
 
 /* =========================================================
-   Contact Form Enhancements
+   Contact Section Styles
    ========================================================= */
 
 /* Contact Section Styling */
 .contact {
-    padding: 60px 20px;
-    background-color: #0a0a0a;
+    padding: 40px 20px;
+    background-color: #0a0a0a; /* Match the body background or adjust as needed */
     color: #fff;
+    text-align: center;
 }
 
 .contact h1,
 .contact h3 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
-.contact hr {
-    border: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #00ffea, #ff00c8);
-    margin: 20px auto;
-    width: 50px;
-}
-
 .contact p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
     color: #ccc;
+    margin-bottom: 30px;
+    font-size: 1.1em;
     line-height: 1.6;
-    font-size: 1.1em;
 }
 
-/* Neon Form Styling */
-.neon-form {
-    max-width: 800px;
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form elements */
+    width: 100%;
+    max-width: 600px; /* Adjust based on design preference */
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
 }
 
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.half-width .form-group {
-    flex: 1 1 48%;
-}
-
-.full-width .form-group {
-    flex: 1 1 100%;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    margin-bottom: 8px;
-    font-size: 1.1em;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 12px 15px;
-    border: none;
-    border-radius: 6px;
-    background-color: #1a1a1a;
-    color: #fff;
+.contact label {
     font-size: 1em;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    padding-left: 10px; /* Optional: Adds spacing to the left */
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #2a2a2a;
+    color: #fff;
     box-shadow: inset 0 0 10px #00ffea;
     transition: box-shadow 0.3s, transform 0.3s;
+    width: 100%;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.contact textarea {
+    resize: vertical; /* Allows users to adjust the height */
+    min-height: 150px; /* Ensures adequate space for messages */
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
     color: #aaa;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
     outline: none;
     box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
     transform: translateY(-2px);
 }
 
-/* =========================================================
-   Responsive Adjustments
-   ========================================================= */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-/* Stack First and Last Name on Small Screens */
-@media (max-width: 768px) {
-    .half-width .form-group {
-        flex: 1 1 100%;
+.form-group {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        flex-direction: row;
+        gap: 20px;
     }
+    
+    .form-group {
+        flex: 1;
+    }
+}
+
+/* Submit Button - Full Width */
+.contact .neon-button {
+    width: 100%;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #00ffe9, #ff00c8);
+    color: #0a0a0a;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.contact .neon-button:hover,
+.contact .neon-button:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    outline: none;
 }
