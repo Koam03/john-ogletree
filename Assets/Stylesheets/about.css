@@ -891,3 +891,15 @@ section {
     font-size: 1em;
     color: #ccc;
 }
+
+#even-section {
+    background-color: black;
+}
+
+#odd-section {
+    background-color: #565656;
+}
+
+section {
+    padding: 20px;
+}
