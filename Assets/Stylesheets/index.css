@@ -34,23 +34,22 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1101;
-    background: radial-gradient(circle, rgba(0,255,234,0.2) 0%, rgba(0,0,0,0) 70%);
-    border: 2px solid #00ffea;
+    background: radial-gradient(circle, rgba(0,255,234,0.1) 0%, rgba(0,0,0,0) 70%);
+    border: 1px solid #00ffea;
     border-radius: 50%;
-    padding: 15px;
+    padding: 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in-out;
 }
 
 .menu-toggle-label:hover,
 .menu-toggle-label:focus {
-    background: radial-gradient(circle, rgba(0,255,234,0.3) 0%, rgba(0,0,0,0) 70%);
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
-    transform: scale(1.1);
+    background: radial-gradient(circle, rgba(0,255,234,0.15) 0%, rgba(0,0,0,0) 70%);
+    box-shadow: 0 0 5px #00ffea;
+    transform: scale(1.05);
     outline: none;
 }
 
@@ -68,15 +67,15 @@ body {
 .neon-sidebar {
     position: fixed;
     top: 0;
-    left: -300px;
-    width: 300px;
+    left: -280px;
+    width: 280px;
     height: 100vh;
     background-color: #1a1a1a;
     padding: 60px 20px;
-    box-shadow: 0 0 30px #00ffea;
+    box-shadow: 0 0 5px #00ffea;
     overflow-y: auto;
     z-index: 1000;
-    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: left 0.3s ease;
 }
 
 #menuToggle:checked ~ .neon-sidebar {
@@ -94,7 +93,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     z-index: 999;
 }
 
@@ -105,7 +104,7 @@ body {
 }
 
 .neon-sidebar .logo h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -113,10 +112,9 @@ body {
 
 .neon-sidebar .logo img {
     margin-top: 20px;
-    filter: drop-shadow(0 0 20px #00ffea);
-    height: 180px;
+    filter: drop-shadow(0 0 5px #00ffea);
+    height: 150px;
     width: auto;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
 }
 
 /* Navigation Menu */
@@ -125,22 +123,18 @@ body {
 }
 
 .sidebar-nav li {
-    margin: 20px 0;
-    position: relative;
+    margin: 15px 0;
 }
 
 .sidebar-nav li > a.neon-link,
 .has-submenu > a {
     color: #ffffff;
     text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.3em;
-    padding: 16px 20px;
-    border-radius: 8px;
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    background: rgba(0, 255, 234, 0.1);
+    font-size: 1.2em;
+    padding: 12px 16px;
+    border-radius: 5px;
+    transition: background 0.2s, box-shadow 0.2s;
+    background-color: rgba(0, 255, 234, 0.05);
     font-weight: 600;
 }
 
@@ -148,20 +142,13 @@ body {
 .sidebar-nav li > a.neon-link:focus,
 .has-submenu > a:hover,
 .has-submenu > a:focus {
-    background-color: rgba(0, 255, 234, 0.3);
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
-    transform: translateX(5px);
+    background-color: rgba(0, 255, 234, 0.1);
+    box-shadow: 0 0 5px #00ffea;
     outline: none;
 }
 
-.sidebar-nav li > a.neon-link::after {
-    content: '';
-    display: inline-block;
-    width: 15px;
-}
-
 .has-submenu > a .fas {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .has-submenu:hover > a .fas,
@@ -173,7 +160,7 @@ body {
     list-style: none;
     padding-left: 20px;
     display: none;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .has-submenu:hover > ul,
@@ -184,20 +171,18 @@ body {
 .sidebar-nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    display: block;
-    font-size: 1.2em;
-    padding: 14px 20px;
-    border-radius: 5px;
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    background: rgba(0, 255, 234, 0.1);
+    font-size: 1em;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+    background-color: rgba(0, 255, 234, 0.05);
     font-weight: 600;
 }
 
 .sidebar-nav ul li a:hover,
 .sidebar-nav ul li a:focus {
-    background-color: rgba(0, 255, 234, 0.3);
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
-    transform: translateX(3px);
+    background-color: rgba(0, 255, 234, 0.1);
+    box-shadow: 0 0 3px #00ffea;
     outline: none;
 }
 
@@ -206,7 +191,6 @@ main {
     flex: 1;
     padding: 20px;
     margin-top: 60px;
-    transition: margin-left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 /* Headings */
@@ -220,29 +204,29 @@ h1, h2, h3 {
 /* Paragraphs */
 p {
     color: #ccc;
-    line-height: 1.8;
+    line-height: 1.6;
     margin-bottom: 20px;
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
 /* Neon Button */
 .neon-button {
     background: linear-gradient(45deg, #00ffe9, #ff00c8);
     color: #0a0a0a;
-    padding: 12px 25px;
-    font-size: 1.1em;
+    padding: 12px 20px;
+    font-size: 1em;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background 0.2s, box-shadow 0.2s;
     width: 100%;
 }
 
 .neon-button:hover,
 .neon-button:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    background: linear-gradient(45deg, #00e6d9, #e600b5);
+    box-shadow: 0 0 7px #00ffea;
     outline: none;
 }
 
@@ -265,8 +249,8 @@ p {
 
 .center-button .neon-button {
     width: 100%;
-    padding: 12px 30px;
-    font-size: 1.1em;
+    padding: 12px 20px;
+    font-size: 1em;
 }
 
 /* Styles for Buttons Underneath Images */
@@ -285,7 +269,7 @@ p {
 .track .button .neon-button {
     width: 100%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
 /* Category Grids */
@@ -302,11 +286,11 @@ p {
 .portfolio-category,
 .music-category {
     background-color: rgba(26, 26, 26, 0.9);
-    padding: 25px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 6px;
     text-align: center;
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .service-category:hover,
@@ -315,9 +299,8 @@ p {
 .portfolio-category:focus-within,
 .music-category:hover,
 .music-category:focus-within {
-    transform: translateY(-10px);
-    box-shadow: 0 0 35px #00ffea, 0 0 70px #ff00c8;
     background-color: rgba(26, 26, 26, 1);
+    box-shadow: 0 0 7px #00ffea;
 }
 
 .service-category img,
@@ -326,9 +309,9 @@ p {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
-    border-radius: 8px;
-    filter: drop-shadow(0 0 15px #00ffea);
-    transition: transform 0.3s;
+    border-radius: 6px;
+    filter: drop-shadow(0 0 3px #00ffea);
+    transition: transform 0.2s;
 }
 
 .service-category:hover img,
@@ -337,7 +320,7 @@ p {
 .portfolio-category:focus-within img,
 .music-category:hover img,
 .music-category:focus-within img {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .service-category h3,
@@ -352,7 +335,7 @@ p {
 /* Artist and Duration Styling */
 .artist-duration {
     color: #ccc;
-    font-size: 0.95em;
+    font-size: 0.9em;
     margin-bottom: 10px;
 }
 
@@ -361,30 +344,30 @@ p {
     margin-bottom: 20px;
     background-color: rgba(26, 26, 26, 0.9);
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .project:hover, .track:hover,
 .project:focus-within, .track:focus-within {
-    transform: scale(1.02);
-    box-shadow: 0 0 30px #00ffea, 0 0 60px #ff00c8;
+    background-color: rgba(26, 26, 26, 1);
+    box-shadow: 0 0 7px #00ffea;
 }
 
 .project img, .track img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     margin-bottom: 12px;
-    filter: drop-shadow(0 0 15px #00ffea);
+    filter: drop-shadow(0 0 3px #00ffea);
     display: block;
     margin: 0 auto;
 }
 
 .project h2, .track h2 {
     margin-bottom: 10px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -405,7 +388,7 @@ p {
     background-color: #1a1a1a;
     padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 -5px 25px #00ffea, 0 -5px 50px #ff00c8;
+    box-shadow: 0 -3px 7px #00ffea;
     position: relative;
 }
 
@@ -415,80 +398,28 @@ p {
 }
 
 .neon-footer .footer-heading {
-    font-size: 2.2em;
+    font-size: 2em;
     margin-bottom: 30px;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.neon-footer .footer-columns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 20px;
-}
-
-.neon-footer .social-column,
+/* Newsletter Column */
 .neon-footer .newsletter-column {
     width: 100%;
+    margin-bottom: 30px;
 }
 
-.neon-footer .social-column h3,
 .neon-footer .newsletter-column h3 {
     margin-bottom: 15px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     background: linear-gradient(45deg, #00ffea, #ff00c8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.neon-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.neon-footer .social-icons a {
-    color: #00ffea;
-    margin: 0 10px;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-}
-
-.neon-footer .social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.neon-footer .social-icons a .social-label {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #fff;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.neon-footer .social-icons a:hover img,
-.neon-footer .social-icons a:focus img {
-    transform: scale(1.1);
-}
-
-.neon-footer .social-icons a:hover,
-.neon-footer .social-icons a:focus {
-    color: #ff00c8;
-    text-shadow: 0 0 15px #ff00c8, 0 0 25px #ff00c8;
-    transform: scale(1.2);
-    outline: none;
-}
-
+/* Newsletter Form */
 .neon-footer .newsletter-form {
     display: flex;
     flex-direction: column;
@@ -505,8 +436,8 @@ p {
     font-size: 1em;
     background-color: #2a2a2a;
     color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: inset 0 0 3px #00ffea;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .neon-footer .newsletter-form input[type="email"]::placeholder {
@@ -515,34 +446,112 @@ p {
 
 .neon-footer .newsletter-form input[type="email"]:focus {
     outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
+    box-shadow: 0 0 5px #00ffea;
+    transform: translateY(-1px);
 }
 
 .neon-footer .newsletter-form button {
-    padding: 12px 25px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 8px;
-    background-color: #e50914;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #e50914, #ff0a1c);
     color: #fff;
     cursor: pointer;
-    font-size: 1.1em;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    font-size: 1em;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background 0.2s, box-shadow 0.2s;
     width: 100%;
 }
 
 .neon-footer .newsletter-form button:hover,
 .neon-footer .newsletter-form button:focus {
-    background-color: #f6121d;
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    background: linear-gradient(45deg, #d40813, #e50914);
+    box-shadow: 0 0 7px #00ffea;
     outline: none;
 }
 
+/* Social Icons Columns */
+.neon-footer .social-icons-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.neon-footer .social-icons-column {
+    width: 100%;
+}
+
+.neon-footer .social-icons-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.neon-footer .social-icons-column .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.neon-footer .social-icons-column .social-icons a {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00ffea;
+    transition: color 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+
+.neon-footer .social-icons-column .social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.neon-footer .social-icons-column .social-icons a .social-label {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #fff;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.neon-footer .social-icons-column .social-icons a:hover img,
+.neon-footer .social-icons-column .social-icons a:focus img {
+    transform: scale(1.05);
+}
+
+.neon-footer .social-icons-column .social-icons a:hover,
+.neon-footer .social-icons-column .social-icons a:focus {
+    color: #ff00c8;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Responsive Styles for Social Icons Columns */
+@media (min-width: 600px) {
+    .neon-footer .social-icons-columns {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .neon-footer .social-icons-column {
+        width: 48%;
+    }
+}
+
+/* Footer Bottom Text */
 .neon-footer .footer-bottom-text {
     font-size: 0.9em;
     color: #aaa;
+    margin-top: 30px;
 }
 
 /* Contact Section Styles */
@@ -556,12 +565,15 @@ p {
 .contact h1,
 .contact h3 {
     margin-bottom: 20px;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact p {
     color: #ccc;
     margin-bottom: 30px;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.6;
 }
 
@@ -580,6 +592,7 @@ p {
     display: block;
     text-align: left;
     padding-left: 10px;
+    color: #fff;
 }
 
 .contact input[type="text"],
@@ -588,12 +601,12 @@ p {
 .contact textarea {
     padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 1em;
     background-color: #2a2a2a;
     color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: inset 0 0 3px #00ffea;
+    transition: box-shadow 0.2s, transform 0.2s;
     width: 100%;
 }
 
@@ -610,10 +623,11 @@ p {
 .contact input:focus,
 .contact textarea:focus {
     outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
+    box-shadow: 0 0 5px #00ffea;
+    transform: translateY(-1px);
 }
 
+/* Form Rows and Groups */
 .form-row {
     display: flex;
     flex-direction: column;
@@ -638,21 +652,21 @@ p {
 /* Submit Button - Full Width */
 .contact .neon-button {
     width: 100%;
-    padding: 12px 25px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     background: linear-gradient(45deg, #00ffe9, #ff00c8);
     color: #0a0a0a;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
-    box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00c8;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 0 5px #00ffea;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
 .contact .neon-button:hover,
 .contact .neon-button:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px #00ffea, 0 0 50px #ff00c8;
+    background: linear-gradient(45deg, #00e6d9, #e600b5);
+    box-shadow: 0 0 7px #00ffea;
     outline: none;
 }
 
@@ -676,12 +690,12 @@ form textarea {
     padding: 12px;
     margin-bottom: 20px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.05em;
+    border-radius: 5px;
+    font-size: 1em;
     background-color: #2a2a2a;
     color: #fff;
-    box-shadow: inset 0 0 10px #00ffea;
-    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: inset 0 0 3px #00ffea;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 form input::placeholder,
@@ -692,36 +706,23 @@ form textarea::placeholder {
 form input:focus,
 form textarea:focus {
     outline: none;
-    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-    transform: translateY(-2px);
+    box-shadow: 0 0 5px #00ffea;
+    transform: translateY(-1px);
 }
 
 /* Additional Neon Effects */
 a.neon-link {
-    position: relative;
     color: #ffffff;
-    font-size: 1.3em;
-    transition: color 0.3s, text-shadow 0.3s;
+    font-size: 1.2em;
+    transition: color 0.2s, box-shadow 0.2s;
     font-weight: 600;
 }
 
-a.neon-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: -3px;
-    left: 0;
-    background: linear-gradient(90deg, #00ffea, #ff00c8);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-a.neon-link:hover::before,
-a.neon-link:focus::before {
-    visibility: visible;
-    transform: scaleX(1);
+a.neon-link:hover,
+a.neon-link:focus {
+    color: #00ffea;
+    box-shadow: 0 0 5px #00ffea;
+    outline: none;
 }
 
 /* Media Queries for Responsive Design */
@@ -730,14 +731,14 @@ a.neon-link:focus::before {
     .portfolio-grid,
     .music-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 25px;
+        gap: 20px;
     }
 
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.4em;
-        padding: 18px 22px;
+        font-size: 1.3em;
+        padding: 14px 18px;
     }
 }
 
@@ -745,12 +746,12 @@ a.neon-link:focus::before {
     .service-grid,
     .portfolio-grid,
     .music-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
     }
 
     .neon-sidebar {
-        left: -300px;
+        left: -280px;
     }
 
     .menu-toggle-label {
@@ -766,34 +767,14 @@ a.neon-link:focus::before {
     }
 
     main {
-        padding: 50px 30px;
+        padding: 40px 30px;
     }
 
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.5em;
-        padding: 20px 25px;
-    }
-
-    .neon-footer .footer-columns {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .neon-footer .social-column,
-    .neon-footer .newsletter-column {
-        width: 45%;
-    }
-
-    .neon-footer .newsletter-column h3 {
-        font-size: 1.6em;
-    }
-
-    .neon-footer .newsletter-form input[type="email"] {
-        width: 100%;
-        max-width: 100%;
+        font-size: 1.4em;
+        padding: 16px 20px;
     }
 
     .contact form {
@@ -806,11 +787,11 @@ a.neon-link:focus::before {
     .portfolio-grid,
     .music-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 35px;
+        gap: 25px;
     }
 
     .neon-sidebar {
-        width: 300px;
+        width: 280px;
     }
 
     .neon-footer {
@@ -824,23 +805,18 @@ a.neon-link:focus::before {
     }
 
     .neon-sidebar .logo h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .neon-sidebar .logo img {
-        width: 120px;
-    }
-
-    .social-icons a {
-        font-size: 1.8em;
-        margin: 0 12px;
+        width: 100px;
     }
 
     .sidebar-nav li > a.neon-link,
     .has-submenu > a,
     .sidebar-nav ul li a {
-        font-size: 1.6em;
-        padding: 22px 28px;
+        font-size: 1.5em;
+        padding: 18px 22px;
     }
 }
 
@@ -855,23 +831,4 @@ a.neon-link:focus::before {
 
 section {
     padding: 20px;
-}
-
-/* Center Button Enhancements */
-.center-button .neon-button {
-    /* No additional styles needed since width is set to 100% */
-}
-
-/* Responsive Center Button */
-@media (max-width: 599px) {
-    .center-button .neon-button {
-        width: 100%;
-        padding: 12px;
-    }
-}
-
-@media (min-width: 600px) {
-    .center-button .neon-button {
-        width: 100%;
-    }
 }
