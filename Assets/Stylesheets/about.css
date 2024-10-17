@@ -43,7 +43,6 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in-out;
-    backdrop-filter: blur(10px); /* Adds blur effect behind the toggle */
 }
 
 .menu-toggle-label:hover,
@@ -137,8 +136,6 @@ body {
     transition: background 0.2s, box-shadow 0.2s;
     background-color: rgba(0, 255, 234, 0.05);
     font-weight: 600;
-    width: 100%; /* Make the link full width */
-    display: block; /* Ensures the link spans the full width */
 }
 
 .sidebar-nav li > a.neon-link:hover,
@@ -164,7 +161,6 @@ body {
     padding-left: 20px;
     display: none;
     margin-top: 10px;
-    width: 100%;
 }
 
 .has-submenu:hover > ul,
@@ -181,8 +177,6 @@ body {
     transition: background 0.2s, box-shadow 0.2s;
     background-color: rgba(0, 255, 234, 0.05);
     font-weight: 600;
-    width: 100%; /* Make the sub-menu links full width */
-    display: block; /* Ensures the link spans the full width */
 }
 
 .sidebar-nav ul li a:hover,
