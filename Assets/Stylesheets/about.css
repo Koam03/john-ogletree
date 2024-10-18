@@ -731,116 +731,7 @@ a.neon-link:focus {
     outline: none;
 }
 
-/* Creative Process Section */
-.creative-process {
-    padding: 60px 20px;
-    background-color: rgba(10, 10, 10, 0.95);
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00ffea;
-    margin-top: 40px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.creative-process:hover,
-.creative-process:focus-within {
-    background-color: rgba(10, 10, 10, 1);
-    box-shadow: 0 0 15px #00ffea;
-}
-
-.creative-process h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    text-align: center;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Process Steps Container */
-.process-steps {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-}
-
-/* First 4 Steps in 2x2 Grid */
-@media (min-width: 600px) {
-    .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    /* Fifth step full-width */
-    .process-step.full-width-step {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (min-width: 768px) {
-    /* Ensure grid columns remain for larger screens */
-    .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    /* Maintain grid structure on extra large screens */
-    .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.process-step {
-    background-color: rgba(26, 26, 26, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px #00ffea;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.process-step:hover,
-.process-step:focus-within {
-    background-color: rgba(26, 26, 26, 1);
-    box-shadow: 0 0 10px #00ffea;
-    outline: none;
-}
-
-.process-step .step-number {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #00ffea;
-    min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.process-step .step-number i {
-    font-size: 1.2em;
-}
-
-.process-step .step-content {
-    flex: 1;
-}
-
-.process-step .step-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    background: linear-gradient(45deg, #00ffea, #ff00c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.process-step .step-content p {
-    color: #ccc;
-    line-height: 1.6;
-    font-size: 1em;
-}
-
-/* Responsive Design */
+/* Media Queries for Responsive Design */
 @media (min-width: 600px) {
     .service-grid,
     .portfolio-grid,
@@ -936,6 +827,122 @@ a.neon-link:focus {
 }
 
 /* Additional Sections */
+
+/* Existing Sections */
+#even-section {
+    background-color: black;
+}
+
+#odd-section {
+    background-color: #565656;
+}
+
+section {
+    padding: 20px;
+}
+
+/* New Creative Process Sections */
+.inspiration,
+.ideation,
+.creation,
+.refinement,
+.completion {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ffea;
+    margin: 20px 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.inspiration:hover,
+.ideation:hover,
+.creation:hover,
+.refinement:hover,
+.completion:hover,
+.inspiration:focus-within,
+.ideation:focus-within,
+.creation:focus-within,
+.refinement:focus-within,
+.completion:focus-within {
+    background-color: rgba(26, 26, 26, 1);
+    box-shadow: 0 0 15px #00ffea;
+}
+
+.inspiration h1,
+.ideation h1,
+.creation h1,
+.refinement h1,
+.completion h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.inspiration p,
+.ideation p,
+.creation p,
+.refinement p,
+.completion p {
+    color: #ccc;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Responsive Adjustments for Sections */
+@media (min-width: 600px) {
+    .inspiration,
+    .ideation,
+    .creation,
+    .refinement,
+    .completion {
+        padding: 80px 40px;
+    }
+
+    .inspiration h1,
+    .ideation h1,
+   .creation h1,
+    .refinement h1,
+    .completion h1 {
+        font-size: 2.5em;
+    }
+
+    .inspiration p,
+    .ideation p,
+   .creation p,
+    .refinement p,
+    .completion p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .inspiration,
+    .ideation,
+   .creation,
+    .refinement,
+    .completion {
+        padding: 100px 60px;
+    }
+
+    .inspiration h1,
+    .ideation h1,
+   .creation h1,
+    .refinement h1,
+   .completion h1 {
+        font-size: 3em;
+    }
+
+    .inspiration p,
+    .ideation p,
+   .creation p,
+    .refinement p,
+   .completion p {
+        font-size: 1.3em;
+    }
+}
+
 #even-section {
     background-color: black;
 }
