@@ -564,3 +564,16 @@ p {
 section {
     padding: 20px;
 }
+
+
+#even-section {
+    background-color: black;
+}
+
+#odd-section {
+    background-color: #565656;
+}
+
+section {
+    padding: 20px;
+}
