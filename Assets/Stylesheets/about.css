@@ -842,7 +842,7 @@ section {
 /* 5-Step Creative Process Section */
 .creative-process {
     padding: 60px 20px;
-    background-color: #0a0a0a; /* Matching the body background */
+    background-color: #0a0a0a;
     color: #fff;
     text-align: center;
 }
@@ -850,38 +850,21 @@ section {
 .creative-process h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #00ffea; /* Neon color for heading */
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .creative-process hr {
     width: 60px;
     height: 3px;
-    background-color: #ff00c8; /* Example neon color */
+    background-color: #ff6347; /* Example color */
     border: none;
     margin: 20px auto 40px;
 }
 
-.creative-process p {
-    color: #ccc;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
 .step {
     margin-bottom: 40px;
-    padding: 20px;
-    background-color: rgba(26, 26, 26, 0.9);
-    border-radius: 6px;
-    box-shadow: 0 0 5px #00ffea;
-    transition: background-color 0.2s, box-shadow 0.2s;
-}
-
-.step:hover,
-.step:focus-within {
-    background-color: rgba(26, 26, 26, 1);
-    box-shadow: 0 0 7px #00ffea;
 }
 
 .step h2 {
@@ -893,11 +876,11 @@ section {
 }
 
 .step p {
+    font-size: 1.1em;
     color: #ccc;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
-    font-size: 1.1em;
 }
 
 /* Full Width Steps */
@@ -919,32 +902,72 @@ section {
 /* 3-Column Grid for Steps 2-4 */
 .steps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Centered Button Underneath the Grid */
+.center-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.center-button a {
+    display: block;
+    width: 100%;
+}
+
+.center-button .neon-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+}
+
+/* Responsive Adjustments */
+
+/* Ensure all steps are full width on screens narrower than 768px */
 @media (max-width: 768px) {
     .steps-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .creative-process {
+        padding: 40px 10px;
+    }
+    
+    .step h2 {
+        font-size: 1.5em;
+    }
+    
+    .step p {
+        font-size: 1em;
+    }
+    
+    .full-width {
+        padding: 15px;
     }
 }
 
-/* Integration with Existing Responsive Styles */
-@media (min-width: 600px) {
-    .steps-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .creative-process h1 {
+        font-size: 2em;
     }
-}
-
-@media (min-width: 768px) {
+    
     .steps-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
     }
-}
-
-@media (min-width: 1024px) {
-    .steps-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    .step h2 {
+        font-size: 1.3em;
+    }
+    
+    .step p {
+        font-size: 0.95em;
     }
 }
