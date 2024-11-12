@@ -1,0 +1,60 @@
+name: Deploy to Specific Subdomains
+
+on:
+  push:
+    branches:
+      - '*'  # Trigger on all branches
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js (optional, for JS projects)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Build the project
+      run: |
+        npm run build  # Adjust if using another build command
+
+    - name: Create CNAME file for subdomain
+      run: |
+        case "${GITHUB_REF#refs/heads/}" in
+          "main")
+            echo "john-ogletree.com" > CNAME
+            ;;
+          "about")
+            echo "about.john-ogletree.com" > CNAME
+            ;;
+          "services")
+            echo "services.john-ogletree.com" > CNAME
+            ;;
+          "services-designandprint")
+            echo "services-designandprint.john-ogletree.com" > CNAME
+            ;;
+          *)
+            echo "No CNAME defined for this branch" > CNAME
+            ;;
+        esac
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.DEPLOY_KEY }}  # Add your SSH deploy key in GitHub Secrets
+        publish_dir: ./dist  # Adjust based on your build output directory
+        user_name: "github-actions"
+        user_email: "github-actions@github.com"
+        branch: gh-pages  # Deploy to the gh-pages branch
+        cname: "$(cat CNAME)"  # Dynamically set the CNAME based on the branch
+
+    - name: Clean up
+      run: rm -f CNAME
