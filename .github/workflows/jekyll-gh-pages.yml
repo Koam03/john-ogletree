@@ -42,6 +42,60 @@ jobs:
           "services-designandprint")
             echo "services-designandprint.john-ogletree.com" > _site/CNAME
             ;;
+          "services-digitalmedia")
+            echo "services-digitalmedia.john-ogletree.com" > _site/CNAME
+            ;;
+          "services-videoandanimation")
+            echo "services-videoandanimation.john-ogletree.com" > _site/CNAME
+            ;;
+          "services-audio")
+            echo "services-audio.john-ogletree.com" > _site/CNAME
+            ;;
+          "pricing-designandprint")
+            echo "pricing-designandprint.john-ogletree.com" > _site/CNAME
+            ;;
+          "pricing-digitalmedia")
+            echo "pricing-digitalmedia.john-ogletree.com" > _site/CNAME
+            ;;
+          "pricing-videoandanimation")
+            echo "pricing-videoandanimation.john-ogletree.com" > _site/CNAME
+            ;;
+          "pricing-audio")
+            echo "pricing-audio.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects")
+            echo "projects.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-graphics")
+            echo "projects-graphics.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-graphics-logoverse")
+            echo "projects-graphics-logoverse.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-graphics-visionunveiled")
+            echo "projects-graphics-visionunveiled.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-videos")
+            echo "projects-videos.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-music")
+            echo "projects-music.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-books")
+            echo "projects-books.john-ogletree.com" > _site/CNAME
+            ;;
+          "projects-books-insidethestorm")
+            echo "projects-books-insidethestorm.john-ogletree.com" > _site/CNAME
+            ;;
+          "resume")
+            echo "resume.john-ogletree.com" > _site/CNAME
+            ;;
+          "contact")
+            echo "contact.john-ogletree.com" > _site/CNAME
+            ;;
+          "directory")
+            echo "directory.john-ogletree.com" > _site/CNAME
+            ;;
           *)
             echo "No CNAME defined for this branch" > _site/CNAME
             ;;
