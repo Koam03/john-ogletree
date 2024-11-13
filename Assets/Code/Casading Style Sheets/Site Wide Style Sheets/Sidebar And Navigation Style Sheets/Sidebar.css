@@ -1,0 +1,37 @@
+.neon-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    box-shadow: 0 0 5px #00ffea;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  
+  #menuToggle:checked ~ .neon-sidebar {
+    left: 0;
+  }
+  
+  .neon-sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .neon-sidebar .logo h1 {
+    font-size: 2em;
+    background: linear-gradient(45deg, #00ffea, #ff00c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .neon-sidebar .logo img {
+    margin-top: 20px;
+    filter: drop-shadow(0 0 5px #00ffea);
+    height: 150px;
+    width: auto;
+  }
+  

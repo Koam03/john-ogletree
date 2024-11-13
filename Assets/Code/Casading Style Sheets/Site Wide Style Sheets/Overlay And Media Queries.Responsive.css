@@ -1,0 +1,98 @@
+.overlay {
+    display: none;
+  }
+  
+  #menuToggle:checked ~ .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+  
+  @media (min-width: 600px) {
+    .sidebar-nav li > a.neon-link {
+      font-size: 1.3em;
+      padding: 14px 18px;
+    }
+  
+    .has-submenu > a {
+      font-size: 1.3em;
+      padding: 14px 18px;
+    }
+  
+    .sidebar-nav ul li a {
+      font-size: 1.3em;
+      padding: 14px 18px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .neon-sidebar {
+      left: -280px;
+    }
+  
+    .menu-toggle-label {
+      display: block;
+    }
+  
+    main {
+      margin-left: 0;
+    }
+  
+    #menuToggle:checked ~ .overlay {
+      display: block;
+    }
+  
+    main {
+      padding: 40px 30px;
+    }
+  
+    .sidebar-nav li > a.neon-link {
+      font-size: 1.4em;
+      padding: 16px 20px;
+    }
+  
+    .has-submenu > a {
+      font-size: 1.4em;
+      padding: 16px 20px;
+    }
+  
+    .sidebar-nav ul li a {
+      font-size: 1.4em;
+      padding: 16px 20px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .neon-sidebar {
+      width: 280px;
+    }
+  
+    .neon-sidebar .logo h1 {
+      font-size: 2em;
+    }
+  
+    .neon-sidebar .logo img {
+      width: 100px;
+    }
+  
+    .sidebar-nav li > a.neon-link {
+      font-size: 1.5em;
+      padding: 18px 22px;
+    }
+  
+    .has-submenu > a {
+      font-size: 1.5em;
+      padding: 18px 22px;
+    }
+  
+    .sidebar-nav ul li a {
+      font-size: 1.5em;
+      padding: 18px 22px;
+    }
+  }
+  

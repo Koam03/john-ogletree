@@ -1,0 +1,34 @@
+.menu-toggle-label {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1101;
+    background: radial-gradient(circle, rgba(0,255,234,0.1) 0%, rgba(0,0,0,0) 70%);
+    border: 1px solid #00ffea;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+  
+  .menu-toggle-label:hover,
+  .menu-toggle-label:focus {
+    background: radial-gradient(circle, rgba(0,255,234,0.15) 0%, rgba(0,0,0,0) 70%);
+    box-shadow: 0 0 5px #00ffea;
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  .menu-toggle-label i {
+    color: #00ffea;
+    font-size: 1.5em;
+  }
+  
+  #menuToggle {
+    display: none;
+  }
+  
