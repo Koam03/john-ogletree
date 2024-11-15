@@ -1,0 +1,6 @@
+{
+    "window.closeWhenEmpty": true,
+    "editor.tabSize": 2,
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.wrapTabs": true
+}
