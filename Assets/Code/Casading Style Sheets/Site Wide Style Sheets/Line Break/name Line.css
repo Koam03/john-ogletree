@@ -21,3 +21,18 @@
   transform: translateX(-50%); /* Adjust centering */
   top: -10px; /* Adjust the vertical position of the text */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .name-hr::before {
+    font-size: 18px; /* Decrease font size on smaller screens */
+    top: -8px; /* Adjust vertical positioning */
+  }
+}
+
+@media (max-width: 480px) {
+  .name-hr::before {
+    font-size: 16px; /* Further decrease font size on very small screens */
+    top: -6px; /* Adjust vertical positioning */
+  }
+}
