@@ -1,0 +1,23 @@
+/* Import the font */
+@font-face {
+  font-family: 'Retro Stacked';
+  src: url('Assets/Fonts/Retro Stacked/Retro Stacked.ttf') format('truetype');
+}
+
+/* Custom styling for the <hr> */
+.name-hr {
+  border: none; /* Remove default border */
+  height: 2px; /* Set the height of the line */
+  background: transparent; /* Make the background transparent */
+  position: relative; /* Position the text over the line */
+}
+
+.name-hr::before {
+  content: "—"; /* This is the custom character you want on the line */
+  font-family: 'Retro Stacked', sans-serif; /* Apply the custom font */
+  font-size: 24px; /* Adjust the font size */
+  position: absolute; /* Position it over the <hr> line */
+  left: 50%; /* Center the text horizontally */
+  transform: translateX(-50%); /* Adjust centering */
+  top: -10px; /* Adjust the vertical position of the text */
+}
