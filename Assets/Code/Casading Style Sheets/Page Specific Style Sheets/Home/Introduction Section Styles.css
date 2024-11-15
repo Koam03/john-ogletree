@@ -1,0 +1,94 @@
+/* Import the custom font */
+  @font-face {
+    font-family: 'PIXELCRASH TRIAL';
+    src: url('Assets/Fonts/Pixel Crash Trail/PIXELCRASH TRIAL.otf') format('opentype');
+  }
+
+  /* Section base styles */
+  section {
+    background-color: #121212;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: 'PIXELCRASH TRIAL', sans-serif;
+  }
+
+  /* Section tag in neon green */
+  .section-tag {
+    font-size: 36px;
+    color: #39FF14;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+  /* Grid container for 3-column layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Styling for each column */
+  .column {
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 28px;
+    color: #ff69b4;
+    margin: 0;
+  }
+
+  /* Subheading styles */
+  .subheading {
+    font-size: 22px;
+    color: #00FFFF;
+    margin: 0;
+  }
+
+  /* Button styles */
+  .explore-btn {
+    background-color: transparent;
+    border: 2px solid #39FF14;
+    color: #39FF14;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .explore-btn:hover {
+    background-color: #39FF14;
+    color: #121212;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .column.button-column {
+      grid-column: span 2; /* Make the button column full width */
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Mobile layout with full-width section tag */
+    .section-tag {
+      font-size: 28px;
+    }
+
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .column.button-column {
+      grid-column: span 2; /* Make the button column full width */
+    }
+  }
