@@ -1,23 +1,18 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the email from the form
+    $fullName = $_POST['full-name'];
     $email = $_POST['email'];
 
-    // Recipient email address (your Gmail)
-    $to = "john@john-ogletree.com";
-    $subject = "New Newsletter Subscription";
+    $to = "john.ogletree@john-ogletree.com"; // Your Gmail email address
+    $subject = "New Newsletter Submission from " . $fullName;
+    $message = "You have received a new newsletter sign-up.\n\nFull Name: $fullName\nEmail Address: $email";
+    $headers = "From: $email";
 
-    // Email content
-    $message = "A new user has subscribed to your newsletter:\n\nEmail: " . $email;
-    $headers = "From: no-reply@john-ogletree.com";
-
-    // Send the email
+    // Send email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Thank you for subscribing!";
+        echo "Thank you for subscribing to the newsletter!";
     } else {
-        echo "There was a problem with the submission. Please try again.";
+        echo "There was an issue with your submission. Please try again later.";
     }
-} else {
-    echo "Invalid request.";
 }
 ?>

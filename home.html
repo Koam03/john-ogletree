@@ -279,7 +279,1301 @@
                 </ul>
     </nav>
     <main>
-        
+        <section class="neon-introduction">
+            <div class="neon-introduction__section-tag neon-introduction__top-tag">< INTRODUCTION ></div>
+            <div class="neon-introduction__container">
+              <div class="neon-introduction__column neon-introduction__heading-column">
+                <h1>Welcome to My Pixelated Universe</h1>
+              </div>
+              <div class="neon-introduction__column neon-introduction__subheading-column">
+                <h2>Crafting Dreams into Digital Reality</h2>
+              </div>
+            </div>
+            <div class="neon-introduction__button-container">
+              <a href="/projects" class="neon-introduction__explore-button">Explore My Projects</a>
+            </div>
+            <div class="neon-introduction__section-tag neon-introduction__bottom-tag">< INTRODUCTION ></div>
+          
+            <style>
+              .neon-introduction {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #0ff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+              
+              .neon-introduction__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-introduction__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-introduction__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-introduction__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-introduction__heading-column h1 {
+                font-size: 2.5rem;
+                color: #ff00ff; /* Neon pink */
+                text-shadow: 0 0 10px #ff00ff;
+              }
+          
+              .neon-introduction__subheading-column h2 {
+                font-size: 2rem;
+                color: #00ffff; /* Neon cyan */
+                text-shadow: 0 0 10px #00ffff;
+              }
+          
+              .neon-introduction__button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-introduction__explore-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14; /* Neon green */
+                background: transparent;
+                border: 2px solid #39ff14;
+                text-decoration: none;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-introduction__explore-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-introduction__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-introduction__heading-column h1,
+                .neon-introduction__subheading-column h2 {
+                  font-size: 1.8rem;
+                }
+          
+                .neon-introduction__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          </section>
+          <hr>
+              <section class="neon-about">
+            <div class="neon-about__section-tag neon-about__top-tag">< ABOUT ></div>
+            <div class="neon-about__container">
+              <div class="neon-about__column neon-about__profile-card">
+                <div class="neon-about__profile">
+                  <img src="/Assets/Images/John Ogletree 2025 Logo.png" alt="Profile Picture" class="neon-about__profile-img">
+                  <h1>John Ogletree</h1>
+                  <p>Graphic Artist & Developer</p>
+                </div>
+              </div>
+              <div class="neon-about__column neon-about__skills-grid">
+                <div class="neon-about__skill-card">
+                  <h2>Web Development</h2>
+                  <p>🌐 Creating interactive websites</p>
+                </div>
+                <div class="neon-about__skill-card">
+                  <h2>Graphic Arts</h2>
+                  <p>🎨 Mastering digital design</p>
+                </div>
+                <div class="neon-about__skill-card">
+                  <h2>UI/UX</h2>
+                  <p>🖌️ Crafting user experiences</p>
+                </div>
+                <div class="neon-about__skill-card">
+                  <h2>Mobile Development</h2>
+                  <p>📱 Building responsive apps</p>
+                </div>
+              </div>
+            </div>
+            <div class="neon-about__button-container">
+              <a href="/about" class="neon-about__learn-more-button">Learn More About Me</a>
+            </div>
+            <div class="neon-about__section-tag neon-about__bottom-tag">< ABOUT ></div>
+          
+            <style>
+              .neon-about {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #0ff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-about__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-about__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-about__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-about__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-about__profile-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #1a1a1a;
+                padding: 1.5rem;
+                border: 2px solid #00ffff;
+                box-shadow: 0 0 15px #00ffff;
+              }
+          
+              .neon-about__profile-img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                margin-bottom: 1rem;
+              }
+          
+              .neon-about__profile h1 {
+                font-size: 2rem;
+                color: #ff00ff; /* Neon pink */
+                margin-bottom: 0.5rem;
+              }
+          
+              .neon-about__profile p {
+                font-size: 1.2rem;
+                color: #00ffff; /* Neon cyan */
+              }
+          
+              .neon-about__skills-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+              }
+          
+              .neon-about__skill-card {
+                background: #1a1a1a;
+                padding: 1rem;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+              }
+          
+              .neon-about__skill-card h2 {
+                font-size: 1.5rem;
+                color: #ff00ff; /* Neon pink */
+                margin-bottom: 0.5rem;
+              }
+          
+              .neon-about__skill-card p {
+                font-size: 1rem;
+                color: #00ffff; /* Neon cyan */
+              }
+          
+              .neon-about__button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-about__learn-more-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14; /* Neon green */
+                background: transparent;
+                border: 2px solid #39ff14;
+                text-decoration: none;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-about__learn-more-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-about__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-about__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          </section>
+          <hr>
+           <section class="neon-service">
+            <div class="neon-service__section-tag neon-service__top-tag">< SERVICES ></div>
+            <div class="neon-service__container">
+              <div class="neon-service__column neon-service__instructions-card">
+                <div class="neon-service__instructions">
+                  <h1>Explore Our Services</h1>
+                  <p>
+                    Click on any service category card to visit that category's page or use the button beneath each category's name.
+                  </p>
+                </div>
+              </div>
+              <div class="neon-service__column neon-service__categories-grid">
+                <a href="/web-development" class="neon-service__category-card">
+                  <div>
+                    <h2>Web Development</h2>
+                    <img src="/path/to/web-development.jpg" alt="Web Development" class="neon-service__category-img">
+                    <button class="neon-service__category-button">View Category</button>
+                  </div>
+                </a>
+                <a href="/graphic-design" class="neon-service__category-card">
+                  <div>
+                    <h2>Graphic Design</h2>
+                    <img src="/path/to/graphic-design.jpg" alt="Graphic Design" class="neon-service__category-img">
+                    <button class="neon-service__category-button">View Category</button>
+                  </div>
+                </a>
+                <a href="/ui-ux" class="neon-service__category-card">
+                  <div>
+                    <h2>UI/UX Design</h2>
+                    <img src="/path/to/ui-ux.jpg" alt="UI/UX Design" class="neon-service__category-img">
+                    <button class="neon-service__category-button">View Category</button>
+                  </div>
+                </a>
+                <a href="/mobile-development" class="neon-service__category-card">
+                  <div>
+                    <h2>Mobile Development</h2>
+                    <img src="/path/to/mobile-development.jpg" alt="Mobile Development" class="neon-service__category-img">
+                    <button class="neon-service__category-button">View Category</button>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="neon-service__button-container">
+              <a href="/services" class="neon-service__all-services-button">View All Services</a>
+            </div>
+            <div class="neon-service__section-tag neon-service__bottom-tag">< SERVICES ></div>
+          
+            <style>
+              .neon-service {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #0ff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-service__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-service__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-service__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-service__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-service__instructions-card {
+                background: #1a1a1a;
+                padding: 1.5rem;
+                border: 2px solid #00ffff;
+                box-shadow: 0 0 15px #00ffff;
+              }
+          
+              .neon-service__instructions h1 {
+                font-size: 2rem;
+                color: #ff00ff; /* Neon pink */
+                margin-bottom: 0.5rem;
+              }
+          
+              .neon-service__instructions p {
+                font-size: 1.2rem;
+                color: #00ffff; /* Neon cyan */
+              }
+          
+              .neon-service__categories-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+              }
+          
+              .neon-service__category-card {
+                display: block;
+                background: #1a1a1a;
+                padding: 1rem;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+                text-align: center;
+                text-decoration: none;
+                color: inherit;
+                transition: transform 0.3s;
+              }
+          
+              .neon-service__category-card:hover {
+                transform: scale(1.05);
+              }
+          
+              .neon-service__category-img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+              }
+          
+              .neon-service__category-button {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+                color: #39ff14; /* Neon green */
+                background: transparent;
+                border: 2px solid #39ff14;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-service__category-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              .neon-service__button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-service__all-services-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14; /* Neon green */
+                background: transparent;
+                border: 2px solid #39ff14;
+                text-decoration: none;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-service__all-services-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-service__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-service__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          </section>
+          <hr>
+          <section class="neon-projects">
+            <div class="neon-projects__section-tag neon-projects__top-tag">< PROJECTS ></div>
+            <div class="neon-projects__container">
+              <div class="neon-projects__column neon-projects__timer-card">
+                <div class="neon-projects__timer">
+                  <h1>Project Release Timer</h1>
+                  <p>Time remaining until next project release:</p>
+                  <div id="project-timer">
+                    <span id="weeks"></span>:<span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                  </div>
+                  <hr class="neon-projects__hr">
+                  <div class="neon-projects__instructions">
+                    <h2>Explore Our Latest Projects</h2>
+                    <p>
+                      Click on any project card to view its details, or use the button beneath the card to view more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="neon-projects__column neon-projects__projects-grid">
+                <a href="/project1" class="neon-projects__project-card">
+                  <div>
+                    <h2>Project One</h2>
+                    <img src="/path/to/project1-image.jpg" alt="Project One" class="neon-projects__project-img">
+                    <div class="neon-projects__collection-label">Collection 1</div>
+                    <button class="neon-projects__project-button">View Project</button>
+                  </div>
+                </a>
+                <a href="/project2" class="neon-projects__project-card">
+                  <div>
+                    <h2>Project Two</h2>
+                    <img src="/path/to/project2-image.jpg" alt="Project Two" class="neon-projects__project-img">
+                    <div class="neon-projects__collection-label">Collection 2</div>
+                    <button class="neon-projects__project-button">View Project</button>
+                  </div>
+                </a>
+                <a href="/project3" class="neon-projects__project-card">
+                  <div>
+                    <h2>Project Three</h2>
+                    <img src="/path/to/project3-image.jpg" alt="Project Three" class="neon-projects__project-img">
+                    <div class="neon-projects__collection-label">Collection 3</div>
+                    <button class="neon-projects__project-button">View Project</button>
+                  </div>
+                </a>
+                <a href="/project4" class="neon-projects__project-card">
+                  <div>
+                    <h2>Project Four</h2>
+                    <img src="/path/to/project4-image.jpg" alt="Project Four" class="neon-projects__project-img">
+                    <div class="neon-projects__collection-label">Collection 4</div>
+                    <button class="neon-projects__project-button">View Project</button>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="neon-projects__button-container">
+              <a href="/projects" class="neon-projects__view-all-projects-button">View All Projects</a>
+            </div>
+            <div class="neon-projects__section-tag neon-projects__bottom-tag">< PROJECTS ></div>
+          
+            <style>
+              .neon-projects {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #0ff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-projects__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-projects__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-projects__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-projects__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-projects__timer-card {
+                background: #1a1a1a;
+                padding: 1.5rem;
+                border: 2px solid #00ffff;
+                box-shadow: 0 0 15px #00ffff;
+              }
+          
+              .neon-projects__timer h1 {
+                font-size: 2rem;
+                color: #ff00ff; /* Neon pink */
+                margin-bottom: 0.5rem;
+              }
+          
+              .neon-projects__timer p {
+                font-size: 1.2rem;
+                color: #00ffff; /* Neon cyan */
+              }
+          
+              #project-timer {
+                font-size: 1.5rem;
+                color: #ff00ff; /* Neon pink */
+              }
+          
+              .neon-projects__hr {
+                border: 1px solid #39ff14;
+                margin: 1rem 0;
+              }
+          
+              .neon-projects__instructions h2 {
+                font-size: 1.8rem;
+                color: #39ff14; /* Neon green */
+              }
+          
+              .neon-projects__instructions p {
+                font-size: 1rem;
+                color: #00ffff; /* Neon cyan */
+              }
+          
+              .neon-projects__projects-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+              }
+          
+              .neon-projects__project-card {
+                display: block;
+                background: #1a1a1a;
+                padding: 1rem;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+                text-align: center;
+                text-decoration: none;
+                color: inherit;
+                transition: transform 0.3s;
+              }
+          
+              .neon-projects__project-card:hover {
+                transform: scale(1.05);
+              }
+          
+              .neon-projects__project-img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+              }
+          
+              .neon-projects__collection-label {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: rgba(0, 255, 255, 0.7);
+                color: #000;
+                padding: 0.5rem;
+                font-size: 1rem;
+                font-weight: bold;
+              }
+          
+              .neon-projects__project-button {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+                color: #39ff14; /* Neon green */
+                background: transparent;
+                border: 2px solid #39ff14;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-projects__project-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              .neon-projects__button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-projects__view-all-projects-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14; /* Neon green */
+                background: transparent;
+                border: 2px solid #39ff14;
+                text-decoration: none;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-projects__view-all-projects-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-projects__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-projects__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          
+            <script>
+              // Timer to reset every Friday after 12 AM
+              function startTimer() {
+                const releaseDate = new Date();
+                const currentDay = releaseDate.getDay();
+                const daysUntilFriday = (5 - currentDay + 7) % 7; // Calculate days until next Friday
+                releaseDate.setHours(24, 0, 0, 0); // Set to next Friday 12 AM
+                releaseDate.setDate(releaseDate.getDate() + daysUntilFriday); // Set date for next Friday
+          
+                function updateTimer() {
+                  const now = new Date();
+                  const timeDifference = releaseDate - now;
+          
+                  if (timeDifference <= 0) {
+                    // Timer reached, reset and start counting for the next project release
+                    releaseDate.setDate(releaseDate.getDate() + 7);
+                  }
+          
+                  const weeks = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 7));
+                  const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+          
+                  document.getElementById("weeks").innerText = weeks;
+                  document.getElementById("days").innerText = days;
+                  document.getElementById("hours").innerText = hours;
+                  document.getElementById("minutes").innerText = minutes;
+                  document.getElementById("seconds").innerText = seconds;
+                }
+          
+                setInterval(updateTimer, 1000);
+              }
+          
+              window.onload = startTimer;
+            </script>
+          </section>
+          <hr>
+          <section class="neon-music">
+            <div class="neon-music__section-tag neon-music__top-tag">< MUSIC ></div>
+            <div class="neon-music__container">
+              <div class="neon-music__column neon-music__timer-card">
+                <div class="neon-music__timer">
+                  <h1>Weekly Track Release Countdown</h1>
+                  <div id="countdown-timer" class="neon-music__countdown"></div>
+                </div>
+                <hr class="neon-music__separator">
+                <div class="neon-music__instructions">
+                  <h2>Explore Our Latest Tracks</h2>
+                  <p>
+                    Click on any track card to visit the track's page or use the button beneath each track's name.
+                  </p>
+                </div>
+              </div>
+              <div class="neon-music__column neon-music__tracks-grid">
+                <a href="/track-1" class="neon-music__track-card">
+                  <div>
+                    <h2>Track One</h2>
+                    <div class="neon-music__track-type">Single</div>
+                    <img src="/path/to/track-1.jpg" alt="Track One" class="neon-music__track-img">
+                    <button class="neon-music__track-button">Listen</button>
+                  </div>
+                </a>
+                <a href="/track-2" class="neon-music__track-card">
+                  <div>
+                    <h2>Track Two</h2>
+                    <div class="neon-music__track-type">Album</div>
+                    <img src="/path/to/track-2.jpg" alt="Track Two" class="neon-music__track-img">
+                    <button class="neon-music__track-button">Listen</button>
+                  </div>
+                </a>
+                <a href="/track-3" class="neon-music__track-card">
+                  <div>
+                    <h2>Track Three</h2>
+                    <div class="neon-music__track-type">Single</div>
+                    <img src="/path/to/track-3.jpg" alt="Track Three" class="neon-music__track-img">
+                    <button class="neon-music__track-button">Listen</button>
+                  </div>
+                </a>
+                <a href="/track-4" class="neon-music__track-card">
+                  <div>
+                    <h2>Track Four</h2>
+                    <div class="neon-music__track-type">Album</div>
+                    <img src="/path/to/track-4.jpg" alt="Track Four" class="neon-music__track-img">
+                    <button class="neon-music__track-button">Listen</button>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="neon-music__button-container">
+              <a href="/music" class="neon-music__all-tracks-button">View All Tracks</a>
+            </div>
+            <div class="neon-music__section-tag neon-music__bottom-tag">< MUSIC ></div>
+          
+            <style>
+              .neon-music {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #ff00ff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-music__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #ff00ff;
+                font-weight: bold;
+              }
+          
+              .neon-music__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-music__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-music__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-music__timer-card {
+                background: #1a1a1a;
+                padding: 1.5rem;
+                border: 2px solid #00ffff;
+                box-shadow: 0 0 15px #00ffff;
+              }
+          
+              .neon-music__timer h1 {
+                font-size: 2rem;
+                color: #ff00ff;
+                margin-bottom: 0.5rem;
+              }
+          
+              .neon-music__countdown {
+                font-size: 1.5rem;
+                color: #00ffff;
+                font-weight: bold;
+              }
+          
+              .neon-music__separator {
+                margin: 1.5rem 0;
+                border-color: #39ff14;
+              }
+          
+              .neon-music__instructions h2 {
+                font-size: 1.8rem;
+                color: #ff00ff;
+              }
+          
+              .neon-music__instructions p {
+                font-size: 1.2rem;
+                color: #00ffff;
+              }
+          
+              .neon-music__tracks-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+              }
+          
+              .neon-music__track-card {
+                display: block;
+                background: #1a1a1a;
+                padding: 1rem;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+                text-align: center;
+                text-decoration: none;
+                color: inherit;
+                transition: transform 0.3s;
+              }
+          
+              .neon-music__track-card:hover {
+                transform: scale(1.05);
+              }
+          
+              .neon-music__track-type {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                padding: 5px 10px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                border-radius: 5px;
+              }
+          
+              .neon-music__track-img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+                position: relative;
+              }
+          
+              .neon-music__track-button {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+                color: #39ff14;
+                background: transparent;
+                border: 2px solid #39ff14;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-music__track-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              .neon-music__button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-music__all-tracks-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14;
+                background: transparent;
+                border: 2px solid #39ff14;
+                text-decoration: none;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-music__all-tracks-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-music__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-music__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          
+            <script>
+              // Countdown Timer Logic (Resets every Friday)
+              function updateCountdown() {
+                const now = new Date();
+                const nextFriday = new Date();
+                nextFriday.setDate(now.getDate() + (5 - now.getDay() + 7) % 7); // Get next Friday
+                nextFriday.setHours(0, 0, 0, 0); // Set to midnight of that Friday
+          
+                const timeDiff = nextFriday - now;
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+          
+                document.getElementById('countdown-timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+              }
+          
+              setInterval(updateCountdown, 1000); // Update every second
+              updateCountdown(); // Initial call
+            </script>
+          </section>
+          <hr>
+          <section class="neon-newsletter">
+            <div class="neon-newsletter__section-tag neon-newsletter__top-tag">< NEWSLETTER ></div>
+            <div class="neon-newsletter__container">
+              <div class="neon-newsletter__column neon-newsletter__full-name-column">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+              </div>
+              <div class="neon-newsletter__column neon-newsletter__email-column">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="neon-newsletter__button-container">
+              <form action="/Assets/Code/Hypertext Preprocessor Scripts/Newletter Submission Form.php" method="POST">
+                <button type="submit" class="neon-newsletter__submit-button">Submit</button>
+              </form>
+            </div>
+            <div class="neon-newsletter__section-tag neon-newsletter__bottom-tag">< NEWSLETTER ></div>
+          
+            <style>
+              .neon-newsletter {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #00ffff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-newsletter__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-newsletter__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-newsletter__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-newsletter__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-newsletter__column {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+          
+              .neon-newsletter__column input {
+                padding: 1rem;
+                background: #1a1a1a;
+                color: #ffffff;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+                font-size: 1rem;
+                width: 90%; /* Input fields not the full width */
+                margin: 0 auto;
+              }
+          
+              .neon-newsletter__column label {
+                font-size: 1.2rem;
+                color: #39ff14;
+                text-align: left;
+              }
+          
+              .neon-newsletter__button-container {
+                text-align: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-newsletter__submit-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14;
+                background: transparent;
+                border: 2px solid #39ff14;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-newsletter__submit-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-newsletter__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-newsletter__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          </section>
+          <hr>
+              <section class="neon-contact">
+            <div class="neon-contact__section-tag neon-contact__top-tag">< CONTACT ME ></div>
+            <div class="neon-contact__container">
+              <div class="neon-contact__column neon-contact__full-name-column">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+              </div>
+              <div class="neon-contact__column neon-contact__email-column">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="neon-contact__column neon-contact__message-column">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="neon-contact__button-container">
+              <form action="/Assets/Code/Hypertext Preprocessor Scripts/Contact Form.php" method="POST">
+                <button type="submit" class="neon-contact__submit-button">Send Message</button>
+              </form>
+            </div>
+            <div class="neon-contact__section-tag neon-contact__bottom-tag">< CONTACT ME ></div>
+          
+            <style>
+              .neon-contact {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #00ffff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-contact__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-contact__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-contact__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-contact__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-contact__column {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+          
+              .neon-contact__column input, .neon-contact__column textarea {
+                padding: 1rem;
+                background: #1a1a1a;
+                color: #ffffff;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+                font-size: 1rem;
+                width: 90%; /* Input fields not the full width */
+                margin: 0 auto;
+              }
+          
+              .neon-contact__column label {
+                font-size: 1.2rem;
+                color: #39ff14;
+                text-align: left;
+              }
+          
+              .neon-contact__button-container {
+                text-align: center;
+                margin-top: 1.5rem;
+              }
+          
+              .neon-contact__submit-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.2rem;
+                color: #39ff14;
+                background: transparent;
+                border: 2px solid #39ff14;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-contact__submit-button:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-contact__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-contact__section-tag {
+                  font-size: 1rem;
+                }
+              }
+            </style>
+          </section>
+          <hr>
+          <section class="neon-footer">
+            <div class="neon-footer__section-tag neon-footer__top-tag">< FOOTER ></div>
+            <div class="neon-footer__container">
+              <!-- First Column: Pages Grid -->
+              <div class="neon-footer__column neon-footer__pages-column">
+                <div class="neon-footer__grid">
+                  <a href="#home" class="neon-footer__grid-item">Home</a>
+                  <a href="#about" class="neon-footer__grid-item">About</a>
+                  <a href="#services" class="neon-footer__grid-item">Services</a>
+                  <a href="#projects" class="neon-footer__grid-item">Projects</a>
+                  <a href="#music" class="neon-footer__grid-item">Music</a>
+                  <a href="#contact" class="neon-footer__grid-item">Contact</a>
+                  <a href="#blog" class="neon-footer__grid-item">Blog</a>
+                  <a href="#portfolio" class="neon-footer__grid-item">Portfolio</a>
+                  <a href="#shop" class="neon-footer__grid-item">Shop</a>
+                </div>
+              </div>
+              
+              <!-- Second Column: Social Icons Grid -->
+              <div class="neon-footer__column neon-footer__social-column">
+                <div class="neon-footer__grid">
+                  <a href="https://facebook.com" class="neon-footer__social-icon">FB</a>
+                  <a href="https://twitter.com" class="neon-footer__social-icon">TW</a>
+                  <a href="https://instagram.com" class="neon-footer__social-icon">IG</a>
+                  <a href="https://linkedin.com" class="neon-footer__social-icon">LN</a>
+                  <a href="https://github.com" class="neon-footer__social-icon">GH</a>
+                  <a href="https://youtube.com" class="neon-footer__social-icon">YT</a>
+                  <a href="https://pinterest.com" class="neon-footer__social-icon">PN</a>
+                  <a href="https://tiktok.com" class="neon-footer__social-icon">TT</a>
+                  <a href="https://snapchat.com" class="neon-footer__social-icon">SC</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Footer Text -->
+            <div class="neon-footer__footer-text">
+              <p>&copy; 2024 John Ogletree. All rights reserved.</p>
+            </div>
+            
+            <div class="neon-footer__section-tag neon-footer__bottom-tag">< FOOTER ></div>
+          
+            <style>
+              .neon-footer {
+                position: relative;
+                background: #0a0a0a;
+                color: #ffffff;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid #00ffff; /* Neon border */
+                font-family: 'Arial', sans-serif;
+              }
+          
+              .neon-footer__section-tag {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #39ff14;
+                font-weight: bold;
+              }
+          
+              .neon-footer__top-tag {
+                top: 0.5rem;
+                left: 0.5rem;
+              }
+          
+              .neon-footer__bottom-tag {
+                bottom: 0.5rem;
+                right: 0.5rem;
+              }
+          
+              .neon-footer__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem 0;
+              }
+          
+              .neon-footer__column {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+          
+              .neon-footer__grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1rem;
+                text-align: center;
+              }
+          
+              .neon-footer__grid-item, .neon-footer__social-icon {
+                padding: 1rem;
+                background: #1a1a1a;
+                color: #ffffff;
+                border: 2px solid #39ff14;
+                box-shadow: 0 0 10px #39ff14;
+                font-size: 1rem;
+                text-decoration: none;
+                display: block;
+                transition: background 0.3s, color 0.3s;
+              }
+          
+              .neon-footer__grid-item:hover, .neon-footer__social-icon:hover {
+                background: #39ff14;
+                color: #0a0a0a;
+              }
+          
+              .neon-footer__footer-text {
+                margin-top: 2rem;
+                font-size: 1.2rem;
+                color: #39ff14;
+              }
+          
+              .neon-footer__footer-text p {
+                margin: 0;
+              }
+          
+              /* Mobile responsiveness */
+              @media (max-width: 768px) {
+                .neon-footer__container {
+                  grid-template-columns: 1fr;
+                }
+          
+                .neon-footer__section-tag {
+                  font-size: 1rem;
+                }
+          
+                .neon-footer__grid {
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(3, 1fr);
+                }
+          
+                .neon-footer__grid-item, .neon-footer__social-icon {
+                  font-size: 0.9rem;
+                }
+              }
+            </style>
+          </section>
+          
     </main>
 </body>
 </html>
