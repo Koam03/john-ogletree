@@ -420,7 +420,6 @@
 				<li><a href="#" class="neon-link">Contact Me</a></li>
 				<li><a href="#" class="neon-link">Resume</a></li>
         <li><a href="#" class="neon-link">Resume</a></li>
-        
 			</ul>
 		</nav>
 		<main>
@@ -536,6 +535,22 @@
 							<img src="Assets/Images/John Ogletree 2025 Logo.png" alt="John Ogletree" class="about-profile-img">
 							<h3 class="about-profile-name">John Ogletree</h3>
 							<p class="about-profile-desc">Graphic Artist & Web Developer</p>
+							
+							<!-- Social Icons -->
+							<div class="about-social-icons">
+								<a href="https://facebook.com" target="_blank" class="about-social-icon">
+									<img src="Assets/Icons/facebook-icon.png" alt="Facebook">
+								</a>
+								<a href="https://twitter.com" target="_blank" class="about-social-icon">
+									<img src="Assets/Icons/twitter-icon.png" alt="Twitter">
+								</a>
+								<a href="https://linkedin.com" target="_blank" class="about-social-icon">
+									<img src="Assets/Icons/linkedin-icon.png" alt="LinkedIn">
+								</a>
+								<a href="https://instagram.com" target="_blank" class="about-social-icon">
+									<img src="Assets/Icons/instagram-icon.png" alt="Instagram">
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="about-column">
@@ -639,6 +654,24 @@
 						font-size: 1.2rem;
 						color: #00ffff;
 						/* neon cyan */
+					}
+			
+					/* Social Icons */
+					.about-social-icons {
+						display: flex;
+						justify-content: center;
+						gap: 1rem;
+						margin-top: 1rem;
+					}
+			
+					.about-social-icon img {
+						width: 30px;
+						height: 30px;
+						transition: transform 0.3s;
+					}
+			
+					.about-social-icon img:hover {
+						transform: scale(1.1);
 					}
 			
 					.about-skills-grid {
@@ -924,195 +957,6 @@
 			
 						.service-category-view-all-btn {
 							padding: 0.5rem 1rem;
-						}
-					}
-				</style>
-			</section>
-			<hr>
-			<section class="pricing-section">
-				<div class="pricing-title">
-					&lt; PRICING &gt;
-				</div>
-				<div class="pricing-container">
-					<div class="pricing-column">
-						<div class="pricing-instructions-card">
-							<h2 class="pricing-instructions-title">Affordable Packages for Every Need</h2>
-							<p class="pricing-instructions-text">Choose the plan that best fits your goals. We offer flexible options with no hidden fees. All our pricing plans come with a 30-day money-back guarantee.</p>
-						</div>
-					</div>
-					<div class="pricing-column">
-						<div class="pricing-cards-grid">
-							<div class="pricing-card">
-								<h3 class="pricing-card-name">Basic Plan</h3>
-								<p class="pricing-card-price">$19.99/month</p>
-								<p class="pricing-card-description">Perfect for individuals starting out with basic features.</p>
-								<a href="/pricing/basic" class="pricing-card-button">Learn More</a>
-							</div>
-							<div class="pricing-card">
-								<h3 class="pricing-card-name">Standard Plan</h3>
-								<p class="pricing-card-price">$49.99/month</p>
-								<p class="pricing-card-description">Ideal for small businesses with essential tools.</p>
-								<a href="/pricing/standard" class="pricing-card-button">Learn More</a>
-							</div>
-							<div class="pricing-card">
-								<h3 class="pricing-card-name">Premium Plan</h3>
-								<p class="pricing-card-price">$99.99/month</p>
-								<p class="pricing-card-description">For growing businesses that need advanced features.</p>
-								<a href="/pricing/premium" class="pricing-card-button">Learn More</a>
-							</div>
-							<div class="pricing-card">
-								<h3 class="pricing-card-name">Enterprise Plan</h3>
-								<p class="pricing-card-price">$199.99/month</p>
-								<p class="pricing-card-description">Tailored solutions for large enterprises with custom needs.</p>
-								<a href="/pricing/enterprise" class="pricing-card-button">Learn More</a>
-							</div>
-						</div>
-					</div>
-					<div class="pricing-column">
-						<a href="/pricing" class="pricing-view-all-button">View All Pricing Plans</a>
-					</div>
-				</div>
-			
-				<style>
-					.pricing-section {
-						background: #0a0a0a;
-						color: #ffffff;
-						padding: 2rem;
-						position: relative;
-						font-family: 'Pixel Crash', sans-serif;
-						text-align: center;
-					}
-			
-					.pricing-title {
-						position: absolute;
-						top: 1rem;
-						right: 1rem;
-						color: #39ff14;
-						/* neon green */
-						font-size: 1.5rem;
-						text-transform: uppercase;
-					}
-			
-					.pricing-container {
-						display: flex;
-						justify-content: center;
-						align-items: flex-start;
-						flex-wrap: wrap;
-						gap: 2rem;
-						margin-top: 2rem;
-					}
-			
-					.pricing-column {
-						flex: 1 1 30%;
-						min-width: 280px;
-						padding: 1rem;
-					}
-			
-					.pricing-instructions-card {
-						background: #1a1a1a;
-						padding: 1.5rem;
-						border-radius: 8px;
-					}
-			
-					.pricing-instructions-title {
-						font-size: 1.25rem;
-						color: #39ff14;
-						/* neon green */
-						margin-bottom: 0.5rem;
-					}
-			
-					.pricing-instructions-text {
-						font-size: 1rem;
-						color: #ffffff;
-					}
-			
-					.pricing-cards-grid {
-						display: grid;
-						grid-template-columns: repeat(2, 1fr);
-						gap: 1.5rem;
-					}
-			
-					.pricing-card {
-						background: #1a1a1a;
-						padding: 1.5rem;
-						border-radius: 8px;
-						text-align: left;
-						box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
-					}
-			
-					.pricing-card-name {
-						font-size: 1.2rem;
-						color: #39ff14;
-						/* neon green */
-						margin-bottom: 0.5rem;
-					}
-			
-					.pricing-card-price {
-						font-size: 1.5rem;
-						color: #ffffff;
-						margin-bottom: 1rem;
-					}
-			
-					.pricing-card-description {
-						font-size: 1rem;
-						color: #ffffff;
-						margin-bottom: 1.5rem;
-					}
-			
-					.pricing-card-button {
-						font-size: 1rem;
-						color: #39ff14;
-						/* neon green */
-						text-decoration: none;
-						padding: 0.75rem 1.5rem;
-						background: transparent;
-						border: 2px solid #39ff14;
-						border-radius: 8px;
-						display: inline-block;
-						transition: background-color 0.3s, color 0.3s;
-					}
-			
-					.pricing-card-button:hover {
-						background-color: #39ff14;
-						color: #0a0a0a;
-					}
-			
-					.pricing-view-all-button {
-						font-size: 1.25rem;
-						color: #39ff14;
-						/* neon green */
-						text-decoration: none;
-						padding: 1rem 2rem;
-						background: transparent;
-						border: 2px solid #39ff14;
-						border-radius: 8px;
-						display: inline-block;
-						transition: background-color 0.3s, color 0.3s;
-					}
-			
-					.pricing-view-all-button:hover {
-						background-color: #39ff14;
-						color: #0a0a0a;
-					}
-			
-					/* Responsive adjustments */
-					@media (max-width: 768px) {
-						.pricing-title {
-							font-size: 1.2rem;
-						}
-			
-						.pricing-container {
-							flex-direction: column;
-							gap: 1.5rem;
-						}
-			
-						.pricing-column {
-							text-align: center;
-							width: 100%;
-						}
-			
-						.pricing-cards-grid {
-							grid-template-columns: 1fr;
 						}
 					}
 				</style>
@@ -1891,66 +1735,60 @@
 			</section>
 			<hr>
 			<footer class="footer-section">
-				<div class="footer-title">
-					&lt; FOOTER &gt;
-				</div>
 				<div class="footer-container">
 					<div class="footer-column">
-						<p class="footer-text">© 2024 John Ogletree. All rights reserved.</p>
+						<h4 class="footer-title">About Me</h4>
+						<p class="footer-text">I am a graphic artist and web developer passionate about bringing creative visions to life. Explore my projects and skills below!</p>
 					</div>
+			
 					<div class="footer-column">
+						<h4 class="footer-title">Quick Links</h4>
 						<ul class="footer-links">
-							<li><a href="/about" class="footer-link">About</a></li>
-							<li><a href="/projects" class="footer-link">Projects</a></li>
-							<li><a href="/services" class="footer-link">Services</a></li>
-							<li><a href="/contact" class="footer-link">Contact</a></li>
+							<li><a href="about.john-ogletree.com" class="footer-link">About Me</a></li>
+							<li><a href="projects.john-ogletree.com" class="footer-link">Projects</a></li>
+							<li><a href="contact.john-ogletree.com" class="footer-link">Contact</a></li>
+							<li><a href="faq.john-ogletree.com" class="footer-link">FAQ</a></li>
 						</ul>
 					</div>
+			
 					<div class="footer-column">
-						<div class="footer-social-links">
-							<a href="https://twitter.com/yourprofile" class="footer-social-link" target="_blank">
-								<img src="twitter-icon.png" alt="Twitter" class="footer-social-icon"> Twitter
+						<h4 class="footer-title">Follow Me</h4>
+						<div class="footer-social-icons">
+							<a href="https://facebook.com" target="_blank" class="footer-social-icon">
+								<img src="Assets/Icons/facebook-icon.png" alt="Facebook">
 							</a>
-							<a href="https://facebook.com/yourprofile" class="footer-social-link" target="_blank">
-								<img src="facebook-icon.png" alt="Facebook" class="footer-social-icon"> Facebook
+							<a href="https://twitter.com" target="_blank" class="footer-social-icon">
+								<img src="Assets/Icons/twitter-icon.png" alt="Twitter">
 							</a>
-							<a href="https://instagram.com/yourprofile" class="footer-social-link" target="_blank">
-								<img src="instagram-icon.png" alt="Instagram" class="footer-social-icon"> Instagram
+							<a href="https://linkedin.com" target="_blank" class="footer-social-icon">
+								<img src="Assets/Icons/linkedin-icon.png" alt="LinkedIn">
 							</a>
-							<a href="https://linkedin.com/in/yourprofile" class="footer-social-link" target="_blank">
-								<img src="linkedin-icon.png" alt="LinkedIn" class="footer-social-icon"> LinkedIn
+							<a href="https://instagram.com" target="_blank" class="footer-social-icon">
+								<img src="Assets/Icons/instagram-icon.png" alt="Instagram">
 							</a>
 						</div>
 					</div>
+				</div>
+			
+				<div class="footer-bottom">
+					<p class="footer-copy">© 2024 John Ogletree. All rights reserved.</p>
 				</div>
 			
 				<style>
 					.footer-section {
 						background: #0a0a0a;
 						color: #ffffff;
-						padding: 2rem;
-						position: relative;
+						padding: 3rem 1.5rem;
 						font-family: 'Pixel Crash', sans-serif;
 						text-align: center;
 					}
 			
-					.footer-title {
-						position: absolute;
-						top: 1rem;
-						right: 1rem;
-						color: #39ff14;
-						/* neon green */
-						font-size: 1.5rem;
-						text-transform: uppercase;
-					}
-			
 					.footer-container {
 						display: flex;
-						justify-content: center;
-						align-items: flex-start;
-						flex-wrap: wrap;
+						justify-content: space-between;
 						gap: 2rem;
-						margin-top: 2rem;
+						flex-wrap: wrap;
+						margin-bottom: 2rem;
 					}
 			
 					.footer-column {
@@ -1959,57 +1797,63 @@
 						padding: 1rem;
 					}
 			
+					.footer-title {
+						font-size: 1.5rem;
+						color: #39ff14;
+						/* neon green */
+						margin-bottom: 1rem;
+					}
+			
 					.footer-text {
 						font-size: 1rem;
 						color: #ffffff;
 					}
 			
-					.footer-links,
-					.footer-social-links {
+					.footer-links {
 						list-style: none;
 						padding: 0;
-						margin: 0;
+					}
+			
+					.footer-links li {
+						margin: 0.5rem 0;
 					}
 			
 					.footer-link {
 						color: #39ff14;
-						/* neon green */
-						font-size: 1rem;
 						text-decoration: none;
-						display: block;
-						margin: 0.5rem 0;
+						font-size: 1.2rem;
 					}
 			
 					.footer-link:hover {
-						color: #00ff00;
-						/* lighter neon green */
 						text-decoration: underline;
 					}
 			
-					.footer-social-links {
+					/* Social Icons */
+					.footer-social-icons {
 						display: flex;
 						justify-content: center;
-						gap: 1.5rem;
+						gap: 1rem;
+						margin-top: 1rem;
 					}
 			
-					.footer-social-link {
+					.footer-social-icon img {
+						width: 30px;
+						height: 30px;
+						transition: transform 0.3s;
+					}
+			
+					.footer-social-icon img:hover {
+						transform: scale(1.1);
+					}
+			
+					.footer-bottom {
+						margin-top: 2rem;
+					}
+			
+					.footer-copy {
+						font-size: 1rem;
 						color: #39ff14;
 						/* neon green */
-						font-size: 1rem;
-						text-decoration: none;
-						display: flex;
-						align-items: center;
-					}
-			
-					.footer-social-link:hover {
-						color: #00ff00;
-						/* lighter neon green */
-					}
-			
-					.footer-social-icon {
-						width: 24px;
-						height: 24px;
-						margin-right: 0.5rem;
 					}
 			
 					/* Responsive adjustments */
@@ -2018,23 +1862,12 @@
 							font-size: 1.2rem;
 						}
 			
-						.footer-container {
-							flex-direction: column;
-							gap: 1.5rem;
+						.footer-text, .footer-link {
+							font-size: 1rem;
 						}
 			
-						.footer-column {
-							text-align: center;
-						}
-			
-						.footer-social-links {
-							flex-direction: column;
-							gap: 1rem;
-						}
-			
-						.footer-social-icon {
-							width: 20px;
-							height: 20px;
+						.footer-bottom {
+							font-size: 0.8rem;
 						}
 					}
 				</style>
