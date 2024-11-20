@@ -49,8 +49,6 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-MWBBDTBW9Y"></script>
 		<script src="/Assets/Code/JavaScripts/Page Specific Scripts/index/project release timer.js" defer></script>
 		<script src="/Assets/Code/JavaScripts/Page Specific Scripts/music/track release timer.js" defer></script>
-		<script src="/Assets/Code/Hypertext Preprocessor Scripts/Contact Form.php" defer></script>
-		<script src="/Assets/Code/Hypertext Preprocessor Scripts/Newletter Submission Form.php" defer></script>
 		<script src="#" defer></script>
 		<script src="#" defer></script>
 		<script src="#" defer></script>
@@ -114,7 +112,7 @@
 		<nav class="neon-sidebar" aria-label="Primary Navigation">
 			<div class="logo"> <img src="/Assets/Images/John Ogletree 2025 Logo.png" alt="John Ogletree Logo"> </div>
 			<ul class="sidebar-nav" id="sidebar-nav">
-				<li><a href="https://github.com/Koam03/john-ogletree" class="neon-link">Home</a></li>
+				<li><a href="/index.html" class="neon-link">Home</a></li>
 				<li class="has-submenu">
 					<a href="http://journey.john-ogletree.info/" class="neon-link">My Journey <i class="fas fa-caret-down"></i></a>
 					<ul>
@@ -742,7 +740,7 @@
 				</div>
 				<div class="contact-container">
 					<div class="contact-column">
-						<form action="send_email.php" method="POST" class="contact-form">
+						<form action="/Assets/Code/Hypertext Preprocessor Scripts/Contact Form.php" method="POST" class="contact-form">
 							<div class="input-group">
 								<label for="full-name" class="contact-label">Full Name</label>
 								<input type="text" id="full-name" name="full-name" class="contact-input" required>
@@ -771,7 +769,7 @@
 				</div>
 				<div class="newsletter-container">
 					<div class="newsletter-column">
-						<form action="subscribe.php" method="POST" class="newsletter-form">
+						<form action="/Assets/Code/Hypertext Preprocessor Scripts/Newletter Submission Form.php" method="POST" class="newsletter-form">
 							<div class="input-group">
 								<label for="full-name" class="newsletter-label">Full Name</label>
 								<input type="text" id="full-name" name="full-name" class="newsletter-input" required>
