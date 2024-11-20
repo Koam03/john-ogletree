@@ -1,0 +1,82 @@
+.introduction-section {
+						background: #0a0a0a;
+						color: #ffffff;
+						padding: 2rem;
+						position: relative;
+						font-family: 'Pixel Crash', sans-serif;
+						text-align: center;
+					}
+			
+					.introduction-title {
+						position: absolute;
+						top: 1rem;
+						right: 1rem;
+						color: #39ff14;
+						/* neon green */
+						font-size: 1.5rem;
+						text-transform: uppercase;
+					}
+			
+					.introduction-container {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-wrap: wrap;
+						gap: 2rem;
+						margin-top: 2rem;
+					}
+			
+					.introduction-column {
+						flex: 1 1 30%;
+						min-width: 280px;
+						padding: 1rem;
+					}
+			
+					.introduction-heading {
+						color: #ff00ff;
+						/* neon pink */
+						font-size: 2.5rem;
+						margin: 0;
+					}
+			
+					.introduction-subheading {
+						color: #00ffff;
+						/* neon cyan */
+						font-size: 1.8rem;
+						margin: 0;
+					}
+			
+					.introduction-button {
+						display: inline-block;
+						margin-top: 1rem;
+						padding: 0.5rem 1.5rem;
+						color: #39ff14;
+						/* neon green */
+						border: 2px solid #39ff14;
+						text-decoration: none;
+						transition: background 0.3s, color 0.3s;
+					}
+			
+					.introduction-button:hover {
+						background: #39ff14;
+						color: #0a0a0a;
+					}
+			
+					/* Responsive adjustments */
+					@media (max-width: 768px) {
+						.introduction-title {
+							font-size: 1.2rem;
+						}
+			
+						.introduction-heading {
+							font-size: 2rem;
+						}
+			
+						.introduction-subheading {
+							font-size: 1.5rem;
+						}
+			
+						.introduction-button {
+							padding: 0.5rem 1rem;
+						}
+					}

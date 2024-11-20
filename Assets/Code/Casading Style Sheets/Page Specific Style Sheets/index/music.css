@@ -1,0 +1,164 @@
+.music-section {
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 2rem;
+  position: relative;
+  font-family: 'Pixel Crash', sans-serif;
+  text-align: center;
+}
+
+.music-title {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #39ff14;
+  /* neon green */
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.music-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.music-column {
+  flex: 1 1 30%;
+  min-width: 280px;
+  padding: 1rem;
+}
+
+.music-timer-card {
+  background-color: #222222;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.music-timer-title {
+  font-size: 1.8rem;
+  color: #ff00ff;
+  /* neon pink */
+  margin: 0;
+}
+
+.music-timer p {
+  font-size: 1.2rem;
+  color: #00ffff;
+  /* neon cyan */
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.music-card {
+  display: block;
+  background-color: #222222;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.music-card:hover {
+  transform: scale(1.05);
+}
+
+.music-name {
+  font-size: 1.5rem;
+  color: #39ff14;
+  /* neon green */
+  margin: 0;
+}
+
+.music-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.music-tag span {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.music-img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.music-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  color: #39ff14;
+  /* neon green */
+  border: 2px solid #39ff14;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.music-btn:hover {
+  background: #39ff14;
+  color: #0a0a0a;
+}
+
+.music-view-all-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  color: #39ff14;
+  /* neon green */
+  border: 2px solid #39ff14;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.music-view-all-btn:hover {
+  background: #39ff14;
+  color: #0a0a0a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .music-title {
+    font-size: 1.2rem;
+  }
+
+  .music-timer-title {
+    font-size: 1.5rem;
+  }
+
+  .music-timer p {
+    font-size: 1rem;
+  }
+
+  .music-name {
+    font-size: 1.2rem;
+  }
+
+  .music-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .music-view-all-btn {
+    padding: 0.5rem 1rem;
+  }
+}

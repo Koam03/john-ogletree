@@ -1,0 +1,173 @@
+.about-section {
+						background: #0a0a0a;
+						color: #ffffff;
+						padding: 2rem;
+						position: relative;
+						font-family: 'Pixel Crash', sans-serif;
+						text-align: center;
+					}
+			
+					.about-title {
+						position: absolute;
+						top: 1rem;
+						right: 1rem;
+						color: #39ff14;
+						/* neon green */
+						font-size: 1.5rem;
+						text-transform: uppercase;
+					}
+			
+					.about-container {
+						display: flex;
+						justify-content: center;
+						align-items: flex-start;
+						flex-wrap: wrap;
+						gap: 2rem;
+						margin-top: 2rem;
+					}
+			
+					.about-column {
+						flex: 1 1 30%;
+						min-width: 280px;
+						padding: 1rem;
+					}
+			
+					.about-profile-card {
+						background-color: #222222;
+						padding: 1.5rem;
+						border-radius: 10px;
+						text-align: center;
+					}
+			
+					.about-profile-img {
+						width: 100px;
+						height: 100px;
+						border-radius: 50%;
+						margin-bottom: 1rem;
+					}
+			
+					.about-profile-name {
+						font-size: 1.8rem;
+						color: #ff00ff;
+						/* neon pink */
+						margin: 0;
+					}
+			
+					.about-profile-desc {
+						font-size: 1.2rem;
+						color: #00ffff;
+						/* neon cyan */
+					}
+			
+					/* Social Icons */
+					.about-social-icons {
+						display: flex;
+						justify-content: center;
+						gap: 1rem;
+						margin-top: 1rem;
+					}
+			
+					.about-social-icon img {
+						width: 30px;
+						height: 30px;
+						transition: transform 0.3s;
+					}
+			
+					.about-social-icon img:hover {
+						transform: scale(1.1);
+					}
+			
+					.about-skills-grid {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						gap: 1.5rem;
+					}
+			
+					.about-skill-card {
+						background-color: #222222;
+						padding: 1.5rem;
+						border-radius: 10px;
+						text-align: center;
+					}
+			
+					.about-skill-name {
+						font-size: 1.5rem;
+						color: #39ff14;
+						/* neon green */
+					}
+			
+					.about-skill-icon {
+						font-size: 2rem;
+						margin: 1rem 0;
+					}
+			
+					.about-progress-bar {
+						background-color: #444444;
+						width: 100%;
+						height: 12px;
+						border-radius: 5px;
+						margin-top: 0.5rem;
+					}
+			
+					.about-progress {
+						height: 100%;
+						background-color: #39ff14;
+						/* neon green */
+						border-radius: 5px;
+					}
+			
+					.about-progress-percentage {
+						margin-top: 0.5rem;
+						color: #ffffff;
+					}
+			
+					.about-learn-more-btn {
+						display: inline-block;
+						margin-top: 1rem;
+						padding: 0.5rem 1.5rem;
+						color: #39ff14;
+						/* neon green */
+						border: 2px solid #39ff14;
+						text-decoration: none;
+						transition: background 0.3s, color 0.3s;
+					}
+			
+					.about-learn-more-btn:hover {
+						background: #39ff14;
+						color: #0a0a0a;
+					}
+			
+					/* Responsive adjustments */
+					@media (max-width: 768px) {
+						.about-title {
+							font-size: 1.2rem;
+						}
+			
+						.about-profile-name {
+							font-size: 1.5rem;
+						}
+			
+						.about-profile-desc {
+							font-size: 1rem;
+						}
+			
+						.about-skill-name {
+							font-size: 1.2rem;
+						}
+			
+						.about-skill-icon {
+							font-size: 1.5rem;
+						}
+			
+						.about-progress-bar {
+							height: 10px;
+						}
+			
+						.about-progress-percentage {
+							font-size: 1rem;
+						}
+			
+						.about-learn-more-btn {
+							padding: 0.5rem 1rem;
+						}
+					}
