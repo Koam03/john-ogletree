@@ -1,20 +1,22 @@
 .music-section {
-  background: #0a0a0a;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
   color: #ffffff;
   padding: 2rem;
   position: relative;
   font-family: 'Pixel Crash', sans-serif;
   text-align: center;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 10px #39ff14;
 }
 
 .music-title {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  color: #39ff14;
-  /* neon green */
+  color: #39ff14; /* neon green */
   font-size: 1.5rem;
   text-transform: uppercase;
+  text-shadow: 0 0 8px #39ff14;
 }
 
 .music-container {
@@ -30,6 +32,10 @@
   flex: 1 1 30%;
   min-width: 280px;
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+  border-radius: 8px;
 }
 
 .music-timer-card {
@@ -37,19 +43,20 @@
   padding: 1.5rem;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 0 10px #ff00ff;
 }
 
 .music-timer-title {
   font-size: 1.8rem;
-  color: #ff00ff;
-  /* neon pink */
+  color: #ff00ff; /* neon pink */
   margin: 0;
+  text-shadow: 0 0 6px #ff00ff;
 }
 
 .music-timer p {
   font-size: 1.2rem;
-  color: #00ffff;
-  /* neon cyan */
+  color: #00ffff; /* neon cyan */
+  text-shadow: 0 0 6px #00ffff;
 }
 
 .music-grid {
@@ -66,19 +73,21 @@
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
+  box-shadow: 0 0 8px #39ff14;
 }
 
 .music-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 12px #39ff14;
 }
 
 .music-name {
   font-size: 1.5rem;
-  color: #39ff14;
-  /* neon green */
+  color: #39ff14; /* neon green */
   margin: 0;
+  text-shadow: 0 0 6px #39ff14;
 }
 
 .music-tag {
@@ -90,6 +99,7 @@
   background-color: #333;
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
+  box-shadow: 0 0 6px #39ff14;
 }
 
 .music-tag span {
@@ -102,38 +112,43 @@
   height: auto;
   margin-top: 1rem;
   border-radius: 8px;
+  box-shadow: 0 0 8px #39ff14;
 }
 
 .music-btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
-  color: #39ff14;
-  /* neon green */
+  color: #39ff14; /* neon green */
   border: 2px solid #39ff14;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  text-shadow: 0 0 4px #39ff14;
+  box-shadow: 0 0 8px #39ff14;
 }
 
 .music-btn:hover {
   background: #39ff14;
   color: #0a0a0a;
+  box-shadow: 0 0 12px #39ff14;
 }
 
 .music-view-all-btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
-  color: #39ff14;
-  /* neon green */
+  color: #39ff14; /* neon green */
   border: 2px solid #39ff14;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  text-shadow: 0 0 4px #39ff14;
+  box-shadow: 0 0 8px #39ff14;
 }
 
 .music-view-all-btn:hover {
   background: #39ff14;
   color: #0a0a0a;
+  box-shadow: 0 0 12px #39ff14;
 }
 
 /* Responsive adjustments */
