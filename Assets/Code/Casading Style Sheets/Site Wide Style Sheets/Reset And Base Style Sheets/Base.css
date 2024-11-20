@@ -130,8 +130,29 @@ main {
     font-weight: 600;
     width: 100%;
     display: block;
+    position: relative; /* For positioning the neon line */
     /* Adding ARIA role for links */
     role: link;
+}
+
+/* Add the neon rainbow line effect */
+.sidebar-nav li > a.neon-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9900cc, #ff33cc);
+    background-size: 400% 400%;
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.sidebar-nav li > a.neon-link:hover::after,
+.sidebar-nav li > a.neon-link:focus::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Focus styles for links */
@@ -284,16 +305,14 @@ main {
 
     .sidebar-nav li > a.neon-link {
         font-size: 1.5em;
-        padding: 18px 22px;
     }
 
     .has-submenu > a {
         font-size: 1.5em;
-        padding: 18px 22px;
     }
 
     .sidebar-nav ul li a {
         font-size: 1.5em;
-        padding: 18px 22px;
     }
 }
+
