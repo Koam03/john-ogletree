@@ -131,8 +131,13 @@ main {
     width: 100%;
     display: block;
     position: relative; /* For positioning the neon line */
-    /* Adding ARIA role for links */
-    role: link;
+    text-align: center; /* Center the text inside the link */
+    /* Adding the gradient neon box behind the text */
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff00c8, #00ffea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    box-shadow: 0 0 10px rgba(0, 255, 234, 0.8), 0 0 20px rgba(255, 0, 200, 0.6); /* Neon glow effect */
 }
 
 /* Add the neon rainbow line effect */
@@ -295,24 +300,18 @@ main {
         width: 280px;
     }
 
-    .neon-sidebar .logo h1 {
-        font-size: 2em;
+    .menu-toggle-label {
+        display: none;
     }
 
-    .neon-sidebar .logo img {
-        width: 100px;
-    }
-
-    .sidebar-nav li > a.neon-link {
-        font-size: 1.5em;
-    }
-
-    .has-submenu > a {
-        font-size: 1.5em;
-    }
-
-    .sidebar-nav ul li a {
-        font-size: 1.5em;
+    #menuToggle:checked ~ .overlay {
+        display: none;
     }
 }
 
+@media (max-width: 1024px) {
+    .sidebar-nav li > a.neon-link {
+        font-size: 1.3em;
+        padding: 14px 18px;
+    }
+}
