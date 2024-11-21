@@ -1,6 +1,8 @@
 {
     "window.closeWhenEmpty": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 1,
     "workbench.editor.tabSizing": "fixed",
-    "workbench.editor.wrapTabs": true
+    "workbench.editor.wrapTabs": true,
+    "editor.detectIndentation": false,
+    "editor.definitionLinkOpensInPeek": true
 }
