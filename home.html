@@ -1,347 +1,541 @@
- <!DOCTYPE html>
- <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>John Ogletree | Freelance Graphic Designer</title>
+  <title>
+   John Ogletree | Freelance Graphic Designer
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!">
-    <meta name="keywords" content="graphic design, logo design, branding, web design, video editing, music production, illustrator, freelance designer">
-    <meta name="author" content="John Ogletree">
-    <meta property="og:title" content="John Ogletree | Freelance Graphic Designer">
-    <meta property="og:description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!">
-    <meta property="og:image" content="Assets/Images/Logos/John Ogletree/John Ogletree.png">
-    <meta property="og:url" content="https://john-ogletree.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="John Ogletree">
-    <meta property="og:locale" content="en_US">
-    <link rel="icon" type="image/png" href="/Assets/Favicon/favicon-48x48.png" sizes="48x48"/>
-    <link rel="icon" type="image/svg+xml" href="/Assets/Favicon/favicon.svg"/>
-    <link rel="shortcut icon" href="/Assets/Favicon/favicon.ico"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Favicon/apple-touch-icon.png"/>
-    <meta name="apple-mobile-web-app-title" content="John Ogletree"/>
-    <link rel="manifest" href="/Assets/Favicon/site.webmanifest"/>
-    <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Site Wide Style Sheets.css">
-   
-    
-    <!-- External Liberaries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWBBDTBW9Y"></script>
-    <script src="/Assets/scripts/google-analytics.js" defer></script>
-</head>
-<body>
-    <!-- Hidden Checkbox for Menu Toggle -->
-    <input type="checkbox" id="menuToggle">
-
-    <!-- Label for Menu Toggle (Hamburger Icon) -->
-    <label for="menuToggle" class="menu-toggle-label" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-    </label>
-
-    <!-- Overlay for Mobile Menu -->
-    <label for="menuToggle" class="overlay"></label>
-
-    <!-- Navigation Sidebar -->
-    <nav class="neon-sidebar" aria-label="Primary Navigation">
-    <div class="logo">
-        <img src="/Assets/Images/John Ogletree 2025 Logo.png" alt="John Ogletree Logo">
-    </div>
-
-    <!-- Navigation Menu -->
-    <ul class="sidebar-nav" id="sidebar-nav">
-        <!-- Home -->
-        <li><a href="/index.html" class="neon-link">Home</a></li>
-
-        <!-- About Me -->
-        <li><a href="https://about.john-ogletree.com/" class="neon-link">About Me</a></li>
-
-        <!-- Services Dropdown -->
-        <li class="has-submenu">
-            <a href="https://services.john-ogletree.com/.html" class="neon-link">Services <i class="fas fa-caret-down"></i></a>
-            <ul>
-                <!-- Design And Print Submenu -->
-                <li class="has-submenu">
-                    <a href="https://services.john-ogletree.com//design-and-print.html" class="neon-link">Design And Print <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/logo-design.html" class="neon-link">Logo Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/brand-style-guides.html" class="neon-link">Brand Style Guides</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/business-cards.html" class="neon-link">Business Cards</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/typography.html" class="neon-link">Typography</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/icon-design.html" class="neon-link">Icon Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/illustration.html" class="neon-link">Illustration</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/pattern-design.html" class="neon-link">Pattern Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/tattoo-design.html" class="neon-link">Tattoo Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/flyer-design.html" class="neon-link">Flyer Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/brochure-design.html" class="neon-link">Brochure Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/poster-design.html" class="neon-link">Poster Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/catalog-design.html" class="neon-link">Catalog Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/menu-design.html" class="neon-link">Menu Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/invitation-design.html" class="neon-link">Invitation Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/label-design.html" class="neon-link">Label Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/book-covers.html" class="neon-link">Book Covers</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/album-cover-design.html" class="neon-link">Album Cover Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/podcast-cover-art.html" class="neon-link">Podcast Cover Art</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/social-media-kit-design.html" class="neon-link">Social Media Kit Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/email-design.html" class="neon-link">Email Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/web-banners.html" class="neon-link">Web Banners</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/signage-design.html" class="neon-link">Signage Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/graphics-for-streamers.html" class="neon-link">Graphics for Streamers</a></li>
-                        <li><a href="https://services.john-ogletree.com//design-and-print/merchandise-design.html" class="neon-link">Merchandise Design</a></li>
-                    </ul>
-                </li>
-
-                <!-- Digital Media Submenu -->
-                <li class="has-submenu">
-                    <a href="https://services.john-ogletree.com//digital-media.html" class="neon-link">Digital Media <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://services.john-ogletree.com//digital-media/website-design.html" class="neon-link">Website Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/presentation-design.html" class="neon-link">Presentation Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/infographic-design.html" class="neon-link">Infographic Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/vector-tracing.html" class="neon-link">Vector Tracing</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/resume-design.html" class="neon-link">Resume Design</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/social-media-videos.html" class="neon-link">Social Media Videos</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/lottie-animation.html" class="neon-link">Lottie Animation</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/text-animation.html" class="neon-link">Text Animation</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/music-videos.html" class="neon-link">Music Videos</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/slideshow-videos.html" class="neon-link">Slideshow Videos</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/product-videos.html" class="neon-link">Product Videos</a></li>
-                        <li><a href="https://services.john-ogletree.com//digital-media/ecommerce-product-videos.html" class="neon-link">E-commerce Product Videos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Video And Animations Submenu -->
-                <li class="has-submenu">
-                    <a href="https://services.john-ogletree.com//video-and-animations.html" class="neon-link">Video And Animations <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/video-editing.html" class="neon-link">Video Editing</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/video-ads.html" class="neon-link">Video Ads</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/character-animations.html" class="neon-link">Character Animations</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/logo-animation.html" class="neon-link">Logo Animation</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/web-animation.html" class="neon-link">Web Animation</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/visual-effects.html" class="neon-link">Visual Effects</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/3d-product-animation.html" class="neon-link">3D Product Animation</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/intro-videos.html" class="neon-link">Intro Videos</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/outro-videos.html" class="neon-link">Outro Videos</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/subtitles.html" class="neon-link">Subtitles</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/captions.html" class="neon-link">Captions</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/animations-for-kids.html" class="neon-link">Animations for Kids</a></li>
-                        <li><a href="https://services.john-ogletree.com//video-and-animation/animations-for-streamers.html" class="neon-link">Animations for Streamers</a></li>
-                    </ul>
-                </li>
-
-                <!-- Audio Submenu -->
-                <li class="has-submenu">
-                    <a href="https://services.john-ogletree.com//audio.html" class="neon-link">Audio <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://services.john-ogletree.com//audio/beat-making.html" class="neon-link">Beat Making</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/intro-songs.html" class="neon-link">Intro Songs</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/outro-songs.html" class="neon-link">Outro Songs</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/custom-songs.html" class="neon-link">Custom Songs</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/audio-editing.html" class="neon-link">Audio Editing</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/podcast-production.html" class="neon-link">Podcast Production</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/audiobook-production.html" class="neon-link">Audiobook Production</a></li>
-                        <li><a href="https://services.john-ogletree.com//audio/audio-ads-production.html" class="neon-link">Audio Ads Production</a></li>
-                    </ul>
-                </li>
-            </ul>
+  <meta name="keywords" content="graphic design, logo design, branding, web design, video editing, music production, illustrator, freelance designer">
+  <meta name="author" content="John Ogletree">
+  <meta property="og:title" content="John Ogletree | Freelance Graphic Designer">
+  <meta property="og:description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!">
+  <meta property="og:image" content="Assets/Images/Logos/John Ogletree/John Ogletree.png">
+  <meta property="og:url" content="https://john-ogletree.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="John Ogletree">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" type="image/png" href="/Assets/Favicon/favicon-48x48.png" sizes="48x48"/>
+  <link rel="icon" type="image/svg+xml" href="/Assets/Favicon/favicon.svg"/>
+  <link rel="shortcut icon" href="/Assets/Favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Favicon/apple-touch-icon.png"/>
+  <meta name="apple-mobile-web-app-title" content="John Ogletree"/>
+  <link rel="manifest" href="/Assets/Favicon/site.webmanifest"/>
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Site Wide Style Sheets.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWBBDTBW9Y"></script>
+  <script src="/Assets/scripts/google-analytics.js" defer></script>
+ </head>
+ <body>
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menu-toggle-label" aria-label="Toggle Menu">
+   <i class="fas fa-bars"></i>
+  </label>
+  <label for="menuToggle" class="overlay"></label>
+  <nav class="neon-sidebar" aria-label="Primary Navigation">
+   <div class="logo">
+    <img src="/Assets/Images/John Ogletree 2025 Logo.png" alt="John Ogletree Logo">
+   </div>
+   <ul class="sidebar-nav" id="sidebar-nav">
+    <li>
+     <a href="/index.html" class="neon-link">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="https://about.john-ogletree.com/" class="neon-link">
+      About Me
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a href="https://services.john-ogletree.com/.html" class="neon-link">
+      Services
+      <i class="fas fa-caret-down"></i>
+     </a>
+     <ul>
+      <li class="has-submenu">
+       <a href="https://services.john-ogletree.com//design-and-print.html" class="neon-link">
+        Design And Print
+        <i class="fas fa-caret-right"></i>
+       </a>
+       <ul>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/logo-design.html" class="neon-link">
+          Logo Design
+         </a>
         </li>
-
-        <!-- Pricing Dropdown -->
-        <li class="has-submenu">
-            <a href="https://pricing.john-ogletree.com/.html" class="neon-link">Pricing <i class="fas fa-caret-down"></i></a>
-            <ul>
-                <!-- Design And Print Pricing Submenu -->
-                <li class="has-submenu">
-                    <a href="https://pricing.john-ogletree.com//design-and-print.html" class="neon-link">Design And Print <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/logo-design.html" class="neon-link">Logo Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/brand-style-guides.html" class="neon-link">Brand Style Guides</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/business-cards.html" class="neon-link">Business Cards</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/typography.html" class="neon-link">Typography</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/icon-design.html" class="neon-link">Icon Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/illustration.html" class="neon-link">Illustration</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/pattern-design.html" class="neon-link">Pattern Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/tattoo-design.html" class="neon-link">Tattoo Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/flyer-design.html" class="neon-link">Flyer Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/brochure-design.html" class="neon-link">Brochure Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/poster-design.html" class="neon-link">Poster Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/catalog-design.html" class="neon-link">Catalog Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/menu-design.html" class="neon-link">Menu Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/invitation-design.html" class="neon-link">Invitation Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/label-design.html" class="neon-link">Label Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/book-covers.html" class="neon-link">Book Covers</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/album-cover-design.html" class="neon-link">Album Cover Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/podcast-cover-art.html" class="neon-link">Podcast Cover Art</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/social-media-kit-design.html" class="neon-link">Social Media Kit Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/email-design.html" class="neon-link">Email Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/web-banners.html" class="neon-link">Web Banners</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/signage-design.html" class="neon-link">Signage Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/graphics-for-streamers.html" class="neon-link">Graphics for Streamers</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//design-and-print/merchandise-design.html" class="neon-link">Merchandise Design</a></li>
-                    </ul>
-                </li>
-
-                <!-- Digital Media Pricing Submenu -->
-                <li class="has-submenu">
-                    <a href="https://pricing.john-ogletree.com//digital-media.html" class="neon-link">Digital Media <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/website-design.html" class="neon-link">Website Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/presentation-design.html" class="neon-link">Presentation Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/infographic-design.html" class="neon-link">Infographic Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/vector-tracing.html" class="neon-link">Vector Tracing</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/resume-design.html" class="neon-link">Resume Design</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/social-media-videos.html" class="neon-link">Social Media Videos</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/lottie-animation.html" class="neon-link">Lottie Animation</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/text-animation.html" class="neon-link">Text Animation</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/music-videos.html" class="neon-link">Music Videos</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/slideshow-videos.html" class="neon-link">Slideshow Videos</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/product-videos.html" class="neon-link">Product Videos</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//digital-media/ecommerce-product-videos.html" class="neon-link">E-commerce Product Videos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Video And Animations Pricing Submenu -->
-                <li class="has-submenu">
-                    <a href="https://pricing.john-ogletree.com//video-and-animations.html" class="neon-link">Video And Animations <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/video-editing.html" class="neon-link">Video Editing</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/video-ads.html" class="neon-link">Video Ads</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/character-animations.html" class="neon-link">Character Animations</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/logo-animation.html" class="neon-link">Logo Animation</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/web-animation.html" class="neon-link">Web Animation</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/visual-effects.html" class="neon-link">Visual Effects</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/3d-product-animation.html" class="neon-link">3D Product Animation</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/intro-videos.html" class="neon-link">Intro Videos</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/outro-videos.html" class="neon-link">Outro Videos</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/subtitles.html" class="neon-link">Subtitles</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/captions.html" class="neon-link">Captions</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/animations-for-kids.html" class="neon-link">Animations for Kids</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//video-and-animation/animations-for-streamers.html" class="neon-link">Animations for Streamers</a></li>
-                    </ul>
-                </li>
-
-                <!-- Audio Pricing Submenu -->
-                <li class="has-submenu">
-                    <a href="https://pricing.john-ogletree.com//audio.html" class="neon-link">Audio <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://pricing.john-ogletree.com//audio/beat-making.html" class="neon-link">Beat Making</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/intro-songs.html" class="neon-link">Intro Songs</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/outro-songs.html" class="neon-link">Outro Songs</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/custom-songs.html" class="neon-link">Custom Songs</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/audio-editing.html" class="neon-link">Audio Editing</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/podcast-production.html" class="neon-link">Podcast Production</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/audiobook-production.html" class="neon-link">Audiobook Production</a></li>
-                        <li><a href="https://pricing.john-ogletree.com//audio/audio-ads-production.html" class="neon-link">Audio Ads Production</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/brand-style-guides.html" class="neon-link">
+          Brand Style Guides
+         </a>
         </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/business-cards.html" class="neon-link">
+          Business Cards
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/typography.html" class="neon-link">
+          Typography
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/icon-design.html" class="neon-link">
+          Icon Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/illustration.html" class="neon-link">
+          Illustration
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/pattern-design.html" class="neon-link">
+          Pattern Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/tattoo-design.html" class="neon-link">
+          Tattoo Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/flyer-design.html" class="neon-link">
+          Flyer Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/brochure-design.html" class="neon-link">
+          Brochure Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/poster-design.html" class="neon-link">
+          Poster Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/catalog-design.html" class="neon-link">
+          Catalog Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/menu-design.html" class="neon-link">
+          Menu Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/invitation-design.html" class="neon-link">
+          Invitation Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/label-design.html" class="neon-link">
+          Label Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/book-covers.html" class="neon-link">
+          Book Covers
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/album-cover-design.html" class="neon-link">
+          Album Cover Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/podcast-cover-art.html" class="neon-link">
+          Podcast Cover Art
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/social-media-kit-design.html" class="neon-link">
+          Social Media Kit Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/email-design.html" class="neon-link">
+          Email Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/web-banners.html" class="neon-link">
+          Web Banners
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/signage-design.html" class="neon-link">
+          Signage Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/graphics-for-streamers.html" class="neon-link">
+          Graphics for Streamers
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//design-and-print/merchandise-design.html" class="neon-link">
+          Merchandise Design
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-submenu">
+       <a href="https://services.john-ogletree.com//digital-media.html" class="neon-link">
+        Digital Media
+        <i class="fas fa-caret-right"></i>
+       </a>
+       <ul>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/website-design.html" class="neon-link">
+          Website Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/presentation-design.html" class="neon-link">
+          Presentation Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/infographic-design.html" class="neon-link">
+          Infographic Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/vector-tracing.html" class="neon-link">
+          Vector Tracing
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/resume-design.html" class="neon-link">
+          Resume Design
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/social-media-videos.html" class="neon-link">
+          Social Media Videos
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/lottie-animation.html" class="neon-link">
+          Lottie Animation
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/text-animation.html" class="neon-link">
+          Text Animation
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/music-videos.html" class="neon-link">
+          Music Videos
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/slideshow-videos.html" class="neon-link">
+          Slideshow Videos
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/product-videos.html" class="neon-link">
+          Product Videos
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//digital-media/ecommerce-product-videos.html" class="neon-link">
+          E-commerce Product Videos
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-submenu">
+       <a href="https://services.john-ogletree.com//video-and-animations.html" class="neon-link">
+        Video And Animations
+        <i class="fas fa-caret-right"></i>
+       </a>
+       <ul>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/video-editing.html" class="neon-link">
+          Video Editing
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/video-ads.html" class="neon-link">
+          Video Ads
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/character-animations.html" class="neon-link">
+          Character Animations
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/logo-animation.html" class="neon-link">
+          Logo Animation
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/web-animation.html" class="neon-link">
+          Web Animation
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/visual-effects.html" class="neon-link">
+          Visual Effects
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/3d-product-animation.html" class="neon-link">
+          3D Product Animation
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/intro-videos.html" class="neon-link">
+          Intro Videos
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/outro-videos.html" class="neon-link">
+          Outro Videos
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/subtitles.html" class="neon-link">
+          Subtitles
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/captions.html" class="neon-link">
+          Captions
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/animations-for-kids.html" class="neon-link">
+          Animations for Kids
+         </a>
+        </li>
+        <li>
+         <a href="https://services.john-ogletree.com//video-and-animation/animations-for-streamers.html" class="neon-link">
+          Animations for Streamers
+         </a>
+        </li>
+       </ul>
+      </li>
 
-        <!-- Project Vault Dropdown -->
-        <li class="has-submenu">
-            <a href="https://projects.john-ogletree.com/.html" class="neon-link">Projects <i class="fas fa-caret-down"></i></a>
-            <ul>
-                <!-- Graphics Submenu -->
-                <li class="has-submenu">
-                    <a href="https://projects.john-ogletree.com//graphics.html" class="neon-link">Graphics <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <!-- Logoverse Submenu -->
-                        <li class="has-submenu">
-                            <a href="https://projects.john-ogletree.com//graphics/logoverse.html" class="neon-link">Logoverse <i class="fas fa-caret-right"></i></a>
-                            <ul>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/burst-through.html" class="neon-link">Burst Through</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/vust-reservations.html" class="neon-link">Vust Reservations</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/living-out-life-bible-study.html" class="neon-link">Living Out Life: Bible Study</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/peak.html" class="neon-link">Peak</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/stay-whole.html" class="neon-link">Stay Whole</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/foundation.html" class="neon-link">Foundation</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/creative-minds.html" class="neon-link">Creative Minds</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/avon-productions.html" class="neon-link">Avon Productions</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/create-change.html" class="neon-link">Create Change</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/build-the-lily.html" class="neon-link">Build The Lily</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/number-one.html" class="neon-link">Number One</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/the-mixo.html" class="neon-link">The Mixo</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/blonde-jackets.html" class="neon-link">Blonde Jackets</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/still-and-steal.html" class="neon-link">Still And Steal</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/introverted-cafe.html" class="neon-link">Introverted Cafe</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/burst-photography.html" class="neon-link">Burst Photography</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/break-the-code.html" class="neon-link">Break The Code</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/born-to-win.html" class="neon-link">Born to Win</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/logoverse/city-of-bad-dreams.html" class="neon-link">City Of Bad Dreams</a></li>
-                            </ul>
-                        </li>
+<!-- Audio Submenu -->
+<li class="has-submenu">
+<a href="https://services.john-ogletree.com//audio.html" class="neon-link">Audio <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://services.john-ogletree.com//audio/beat-making.html" class="neon-link">Beat Making</a></li>
+<li><a href="https://services.john-ogletree.com//audio/intro-songs.html" class="neon-link">Intro Songs</a></li>
+<li><a href="https://services.john-ogletree.com//audio/outro-songs.html" class="neon-link">Outro Songs</a></li>
+<li><a href="https://services.john-ogletree.com//audio/custom-songs.html" class="neon-link">Custom Songs</a></li>
+<li><a href="https://services.john-ogletree.com//audio/audio-editing.html" class="neon-link">Audio Editing</a></li>
+<li><a href="https://services.john-ogletree.com//audio/podcast-production.html" class="neon-link">Podcast Production</a></li>
+<li><a href="https://services.john-ogletree.com//audio/audiobook-production.html" class="neon-link">Audiobook Production</a></li>
+<li><a href="https://services.john-ogletree.com//audio/audio-ads-production.html" class="neon-link">Audio Ads Production</a></li>
+</ul>
+</li>
+</ul>
+</li>
 
-                        <!-- Visions Unveiled Submenu -->
-                        <li class="has-submenu">
-                            <a href="https://projects.john-ogletree.com//graphics/visions-unveiled.html" class="neon-link">Visions Unveiled <i class="fas fa-caret-right"></i></a>
-                            <ul>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/fallen-angel.html" class="neon-link">Fallen Angel</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/death-is-only-the-beginning.html" class="neon-link">Death Is Only The Beginning</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/watch-what-you-say.html" class="neon-link">Watch What You Say</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/god-bless-america.html" class="neon-link">God Bless America</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/serpentine-sip.html" class="neon-link">Serpentine Sip</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/serpentine-gaze-a-dance-of-mortality.html" class="neon-link">Serpentine Gaze: A Dance of Mortality</a></li>
-                                <li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/dreamweaver.html" class="neon-link">Dreamweaver</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+<!-- Pricing Dropdown -->
+<li class="has-submenu">
+<a href="https://pricing.john-ogletree.com/.html" class="neon-link">Pricing <i class="fas fa-caret-down"></i></a>
+<ul>
+<!-- Design And Print Pricing Submenu -->
+<li class="has-submenu">
+<a href="https://pricing.john-ogletree.com//design-and-print.html" class="neon-link">Design And Print <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/logo-design.html" class="neon-link">Logo Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/brand-style-guides.html" class="neon-link">Brand Style Guides</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/business-cards.html" class="neon-link">Business Cards</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/typography.html" class="neon-link">Typography</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/icon-design.html" class="neon-link">Icon Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/illustration.html" class="neon-link">Illustration</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/pattern-design.html" class="neon-link">Pattern Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/tattoo-design.html" class="neon-link">Tattoo Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/flyer-design.html" class="neon-link">Flyer Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/brochure-design.html" class="neon-link">Brochure Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/poster-design.html" class="neon-link">Poster Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/catalog-design.html" class="neon-link">Catalog Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/menu-design.html" class="neon-link">Menu Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/invitation-design.html" class="neon-link">Invitation Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/label-design.html" class="neon-link">Label Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/book-covers.html" class="neon-link">Book Covers</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/album-cover-design.html" class="neon-link">Album Cover Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/podcast-cover-art.html" class="neon-link">Podcast Cover Art</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/social-media-kit-design.html" class="neon-link">Social Media Kit Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/email-design.html" class="neon-link">Email Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/web-banners.html" class="neon-link">Web Banners</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/signage-design.html" class="neon-link">Signage Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/graphics-for-streamers.html" class="neon-link">Graphics for Streamers</a></li>
+<li><a href="https://pricing.john-ogletree.com//design-and-print/merchandise-design.html" class="neon-link">Merchandise Design</a></li>
+</ul>
+</li>
 
-                <!-- Videos Submenu -->
-                <li class="has-submenu">
-                    <a href="https://projects.john-ogletree.com//videos.html" class="neon-link">Videos <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <li><a href="https://projects.john-ogletree.com//videos/movie-trailers.html" class="neon-link">Movie Trailers</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/book-trailers.html" class="neon-link">Book Trailers</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/music-videos.html" class="neon-link">Music Videos</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/podcasts.html" class="neon-link">Podcasts</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/podcasts-clips.html" class="neon-link">Podcasts Clips</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/product-videos.html" class="neon-link">Product Videos</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/artwork-videos.html" class="neon-link">Artwork Videos</a></li>
-                        <li><a href="https://projects.john-ogletree.com//videos/from-pixels-to-pixels.html" class="neon-link">From Pixels To Pixels</a></li>
-                    </ul>
-                </li>
+<!-- Digital Media Pricing Submenu -->
+<li class="has-submenu">
+<a href="https://pricing.john-ogletree.com//digital-media.html" class="neon-link">Digital Media <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://pricing.john-ogletree.com//digital-media/website-design.html" class="neon-link">Website Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/presentation-design.html" class="neon-link">Presentation Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/infographic-design.html" class="neon-link">Infographic Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/vector-tracing.html" class="neon-link">Vector Tracing</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/resume-design.html" class="neon-link">Resume Design</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/social-media-videos.html" class="neon-link">Social Media Videos</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/lottie-animation.html" class="neon-link">Lottie Animation</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/text-animation.html" class="neon-link">Text Animation</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/music-videos.html" class="neon-link">Music Videos</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/slideshow-videos.html" class="neon-link">Slideshow Videos</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/product-videos.html" class="neon-link">Product Videos</a></li>
+<li><a href="https://pricing.john-ogletree.com//digital-media/ecommerce-product-videos.html" class="neon-link">E-commerce Product Videos</a></li>
+</ul>
+</li>
 
-                <!-- Books Submenu -->
-                <li class="has-submenu">
-                    <a href="https://projects.john-ogletree.com//books.html" class="neon-link">Books <i class="fas fa-caret-right"></i></a>
-                    <ul>
-                        <!-- Inside The Storm Submenu -->
-                        <li class="has-submenu">
-                            <a href="https://projects.john-ogletree.com//books/inside-the-storm.html" class="neon-link">Inside The Storm <i class="fas fa-caret-right"></i></a>
-                            <ul>
-                                <li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-awakening.html" class="neon-link">The Awakening</a></li>
-                                <li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-journey.html" class="neon-link">The Journey</a></li>
-                                <li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-revelation.html" class="neon-link">The Revelation</a></li>
-                                <li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-finale.html" class="neon-link">The Finale</a></li>
-                            </ul>
-                        </li>
-                            <!-- Additional Books Projects -->
-                            <li><a href="https://projects.john-ogletree.com//books/darkness-rising.html" class="neon-link">Darkness Rising</a></li>
-                            <li><a href="https://projects.john-ogletree.com//books/shadows-of-the-past.html" class="neon-link">Shadows of the Past</a></li>
-                        </ul>
-                    </li>
-                    <!-- Music Submenu -->
-                    <li class="has-submenu">
-                        <a href="https://projects.john-ogletree.com//music.html" class="neon-link">Music <i class="fas fa-caret-right"></i></a>
-                        <ul>
-                            <li><a href="https://projects.john-ogletree.com//music/the-weight-of-depression.html" class="neon-link">The Weight of Depression</a></li>
-                            <li><a href="https://projects.john-ogletree.com//music/pink-moon.html">Pink Moon</a></li>
-                            <li><a href="https://projects.john-ogletree.com//music/glitchy.html">Glithy</a></li>
-                            <li><a href="https://projects.john-ogletree.com//music/midnight-drive.html">Midnight Drive</a></li>
-                            <li><a href="https://projects.john-ogletree.com//music/the-end.html">The End</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://contact.john-ogletree.com/" class="neon-link">Contact Me</a></li>
-            <li><a href="https://resume.john-ogletree.com/" class="neon-link">Resume</a></li>
-            <li><a href="https://resume.john-ogletree.com/" class="neon-link">Directory</a></li>
-        </ul>
-    </nav>
-    <!-- Main Content -->
-        <main>
-        </main>
-    </body>
+<!-- Video And Animations Pricing Submenu -->
+<li class="has-submenu">
+<a href="https://pricing.john-ogletree.com//video-and-animations.html" class="neon-link">Video And Animations <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/video-editing.html" class="neon-link">Video Editing</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/video-ads.html" class="neon-link">Video Ads</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/character-animations.html" class="neon-link">Character Animations</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/logo-animation.html" class="neon-link">Logo Animation</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/web-animation.html" class="neon-link">Web Animation</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/visual-effects.html" class="neon-link">Visual Effects</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/3d-product-animation.html" class="neon-link">3D Product Animation</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/intro-videos.html" class="neon-link">Intro Videos</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/outro-videos.html" class="neon-link">Outro Videos</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/subtitles.html" class="neon-link">Subtitles</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/captions.html" class="neon-link">Captions</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/animations-for-kids.html" class="neon-link">Animations for Kids</a></li>
+<li><a href="https://pricing.john-ogletree.com//video-and-animation/animations-for-streamers.html" class="neon-link">Animations for Streamers</a></li>
+</ul>
+</li>
+
+<!-- Audio Pricing Submenu -->
+<li class="has-submenu">
+<a href="https://pricing.john-ogletree.com//audio.html" class="neon-link">Audio <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://pricing.john-ogletree.com//audio/beat-making.html" class="neon-link">Beat Making</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/intro-songs.html" class="neon-link">Intro Songs</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/outro-songs.html" class="neon-link">Outro Songs</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/custom-songs.html" class="neon-link">Custom Songs</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/audio-editing.html" class="neon-link">Audio Editing</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/podcast-production.html" class="neon-link">Podcast Production</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/audiobook-production.html" class="neon-link">Audiobook Production</a></li>
+<li><a href="https://pricing.john-ogletree.com//audio/audio-ads-production.html" class="neon-link">Audio Ads Production</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<!-- Project Vault Dropdown -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com/.html" class="neon-link">Projects <i class="fas fa-caret-down"></i></a>
+<ul>
+<!-- Graphics Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//graphics.html" class="neon-link">Graphics <i class="fas fa-caret-right"></i></a>
+<ul>
+<!-- Logoverse Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//graphics/logoverse.html" class="neon-link">Logoverse <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/burst-through.html" class="neon-link">Burst Through</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/vust-reservations.html" class="neon-link">Vust Reservations</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/living-out-life-bible-study.html" class="neon-link">Living Out Life: Bible Study</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/peak.html" class="neon-link">Peak</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/stay-whole.html" class="neon-link">Stay Whole</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/foundation.html" class="neon-link">Foundation</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/creative-minds.html" class="neon-link">Creative Minds</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/avon-productions.html" class="neon-link">Avon Productions</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/create-change.html" class="neon-link">Create Change</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/build-the-lily.html" class="neon-link">Build The Lily</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/number-one.html" class="neon-link">Number One</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/the-mixo.html" class="neon-link">The Mixo</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/blonde-jackets.html" class="neon-link">Blonde Jackets</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/still-and-steal.html" class="neon-link">Still And Steal</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/introverted-cafe.html" class="neon-link">Introverted Cafe</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/burst-photography.html" class="neon-link">Burst Photography</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/break-the-code.html" class="neon-link">Break The Code</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/born-to-win.html" class="neon-link">Born to Win</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/logoverse/city-of-bad-dreams.html" class="neon-link">City Of Bad Dreams</a></li>
+</ul>
+</li>
+
+<!-- Visions Unveiled Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//graphics/visions-unveiled.html" class="neon-link">Visions Unveiled <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/fallen-angel.html" class="neon-link">Fallen Angel</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/death-is-only-the-beginning.html" class="neon-link">Death Is Only The Beginning</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/watch-what-you-say.html" class="neon-link">Watch What You Say</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/god-bless-america.html" class="neon-link">God Bless America</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/serpentine-sip.html" class="neon-link">Serpentine Sip</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/serpentine-gaze-a-dance-of-mortality.html" class="neon-link">Serpentine Gaze: A Dance of Mortality</a></li>
+<li><a href="https://projects.john-ogletree.com//graphics/visions-unveiled/dreamweaver.html" class="neon-link">Dreamweaver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<!-- Videos Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//videos.html" class="neon-link">Videos <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://projects.john-ogletree.com//videos/movie-trailers.html" class="neon-link">Movie Trailers</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/book-trailers.html" class="neon-link">Book Trailers</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/music-videos.html" class="neon-link">Music Videos</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/podcasts.html" class="neon-link">Podcasts</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/podcasts-clips.html" class="neon-link">Podcasts Clips</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/product-videos.html" class="neon-link">Product Videos</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/artwork-videos.html" class="neon-link">Artwork Videos</a></li>
+<li><a href="https://projects.john-ogletree.com//videos/from-pixels-to-pixels.html" class="neon-link">From Pixels To Pixels</a></li>
+</ul>
+</li>
+
+<!-- Books Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//books.html" class="neon-link">Books <i class="fas fa-caret-right"></i></a>
+<ul>
+<!-- Inside The Storm Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//books/inside-the-storm.html" class="neon-link">Inside The Storm <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-awakening.html" class="neon-link">The Awakening</a></li>
+<li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-journey.html" class="neon-link">The Journey</a></li>
+<li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-revelation.html" class="neon-link">The Revelation</a></li>
+<li><a href="https://projects.john-ogletree.com//books/inside-the-storm/the-finale.html" class="neon-link">The Finale</a></li>
+</ul>
+</li>
+<!-- Additional Books Projects -->
+<li><a href="https://projects.john-ogletree.com//books/darkness-rising.html" class="neon-link">Darkness Rising</a></li>
+<li><a href="https://projects.john-ogletree.com//books/shadows-of-the-past.html" class="neon-link">Shadows of the Past</a></li>
+</ul>
+</li>
+<!-- Music Submenu -->
+<li class="has-submenu">
+<a href="https://projects.john-ogletree.com//music.html" class="neon-link">Music <i class="fas fa-caret-right"></i></a>
+<ul>
+<li><a href="https://projects.john-ogletree.com//music/the-weight-of-depression.html" class="neon-link">The Weight of Depression</a></li>
+<li><a href="https://projects.john-ogletree.com//music/pink-moon.html">Pink Moon</a></li>
+<li><a href="https://projects.john-ogletree.com//music/glitchy.html">Glithy</a></li>
+<li><a href="https://projects.john-ogletree.com//music/midnight-drive.html">Midnight Drive</a></li>
+<li><a href="https://projects.john-ogletree.com//music/the-end.html">The End</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://contact.john-ogletree.com/" class="neon-link">Contact Me</a></li>
+<li><a href="https://resume.john-ogletree.com/" class="neon-link">Resume</a></li>
+<li><a href="https://resume.john-ogletree.com/" class="neon-link">Directory</a></li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main>
+</main>
+</body>
 </html>
