@@ -42,5 +42,6 @@ main {flex: 1; padding: 20px; margin-top: 60px;}
 @media (min-width: 768px) {.neon-sidebar {left: -280px;} .menu-toggle-label {display: block;} main {margin-left: 0;} #menuToggle:checked ~ .overlay {display: block;} main {padding: 40px 30px;} .sidebar-nav li > a.neon-link {font-size: 1.4em; padding: 16px 20px;} .has-submenu > a {font-size: 1.4em; padding: 16px 20px;} .sidebar-nav ul li a {font-size: 1.4em; padding: 16px 20px;}}
 @media (min-width: 1024px) {.neon-sidebar {width: 280px;} .neon-sidebar .logo h1 {font-size: 2em;} .neon-sidebar .logo img {width: 100px;} .sidebar-nav li > a.neon-link {font-size: 1.5em; padding: 18px 22px;} .has-submenu > a {font-size: 1.5em; padding: 18px 22px;} .sidebar-nav ul li a {font-size: 1.5em; padding: 18px 22px;}}
 
+
 /* base.css */
 .neon-sidebar {position: fixed; top: 0; left: -280px; width: 280px; height: 100vh; background-color: #1a1a1a; padding: 60px 20px; box-shadow: 0 0 5px #00ffea; overflow-y: auto; z-index: 1000; transition: left 0.3s ease;}
