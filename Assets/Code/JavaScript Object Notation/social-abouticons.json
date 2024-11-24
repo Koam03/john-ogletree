@@ -1,0 +1,36 @@
+{
+ "socialLinks": [
+   {
+     "platform": "Facebook",
+     "url": "#",
+     "backgroundColor": "#1877F2",
+     "icon": "facebook-icon.png",
+     "alt": "Facebook",
+     "handle": "@handle"
+   },
+   {
+     "platform": "Twitter",
+     "url": "#",
+     "backgroundColor": "#1DA1F2",
+     "icon": "twitter-icon.png",
+     "alt": "Twitter",
+     "handle": "@handle"
+   },
+   {
+     "platform": "Instagram",
+     "url": "#",
+     "backgroundColor": "#E4405F",
+     "icon": "instagram-icon.png",
+     "alt": "Instagram",
+     "handle": "@handle"
+   },
+   {
+     "platform": "LinkedIn",
+     "url": "#",
+     "backgroundColor": "#0A66C2",
+     "icon": "linkedin-icon.png",
+     "alt": "LinkedIn",
+     "handle": "@handle"
+   }
+ ]
+}
