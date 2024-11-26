@@ -1005,7 +1005,1413 @@
   </ul>
  </nav>
  <main>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+  <section class="homepage-index-intro">
+    <div class="homepage-index-intro-tag">&lt; INTRODUCTION /&gt;</div>
+    <div class="homepage-index-intro-grid">
+      <div class="homepage-index-intro-heading">welcome to my pixelated internet corner</div>
+      <div class="homepage-index-intro-subheading">turning dreams into pixels</div>
+    </div>
+    <a href="#" class="homepage-index-intro-button">View My Projects</a>
+  
+    <style>
+      /* Overall Section Styling */
+      .homepage-index-intro {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+        padding: 4rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box; /* Prevent content from overflowing */
+      }
+  
+      /* Tag Styling */
+      .homepage-index-intro-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #76e5fc;
+        font-size: 1.2rem;
+        text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
+        white-space: nowrap; /* Prevent text from wrapping */
+      }
+  
+      /* Grid Styling */
+      .homepage-index-intro-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem; /* Added more space between grid items */
+        margin: 2rem 0;
+      }
+  
+      @media (min-width: 768px) {
+        .homepage-index-intro-grid {
+          grid-template-columns: 1fr 1fr;
+          text-align: left;
+          gap: 2rem; /* More space between columns on larger screens */
+        }
+      }
+  
+      /* Column Headings */
+      .homepage-index-intro-heading {
+        font-size: 1.8rem;
+        color: #ff6f91;
+        text-shadow: 0 0 10px #ff6f91, 0 0 20px #d45079;
+        word-wrap: break-word; /* Allow text to wrap on smaller screens */
+        margin-bottom: 1rem; /* Added bottom margin to create space */
+      }
+  
+      .homepage-index-intro-subheading {
+        font-size: 1.4rem;
+        color: #f8f32b;
+        text-shadow: 0 0 10px #f8f32b, 0 0 20px #dbd900;
+        word-wrap: break-word; /* Allow text to wrap on smaller screens */
+        margin-bottom: 1rem; /* Added bottom margin to create space */
+      }
+  
+      /* Button Styling */
+      .homepage-index-intro-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 1rem 2rem;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin-top: 2rem;
+        box-shadow: 0 0 15px rgba(255, 0, 128, 0.6);
+        transition: transform 0.2s, box-shadow 0.2s;
+        max-width: 100%; /* Ensure the button doesn't exceed the section */
+        box-sizing: border-box; /* Prevent button overflow */
+      }
+  
+      .homepage-index-intro-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  </section>
+  <hr>
+  <section class="about-section">
+    <div class="about-section-tag">&lt; ABOUT /&gt;</div>
+    <div class="about-section-grid">
+      <div class="about-section-column1">
+        <div class="about-profile-card">
+          <div class="about-profile-image">
+            <!-- Replace with actual image -->
+            <img src="profile.jpg" alt="Profile Image">
+          </div>
+          <div class="about-profile-info">
+            <div class="about-profile-name">John Ogletree</div>
+            <hr>
+            <div class="about-profile-subheading">Creative Artist & Developer in Training</div>
+          </div>
+        </div>
+        <div class="about-social-icons">
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+        </div>
+        <div class="about-social-icons">
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+          <a href="#" class="social-icon"></a>
+        </div>
+      </div>
+  
+      <div class="about-section-column2">
+        <div class="about-skills-grid">
+          <div class="about-skill-card">
+            <div class="about-skill-name">HTML</div>
+            <div class="about-skill-icon">🌐</div>
+            <div class="about-skill-progress">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <div class="about-skill-percent">90%</div>
+          </div>
+          <div class="about-skill-card">
+            <div class="about-skill-name">CSS</div>
+            <div class="about-skill-icon">🎨</div>
+            <div class="about-skill-progress">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <div class="about-skill-percent">85%</div>
+          </div>
+          <div class="about-skill-card">
+            <div class="about-skill-name">JavaScript</div>
+            <div class="about-skill-icon">💻</div>
+            <div class="about-skill-progress">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <div class="about-skill-percent">80%</div>
+          </div>
+          <div class="about-skill-card">
+            <div class="about-skill-name">Node.js</div>
+            <div class="about-skill-icon">⚡</div>
+            <div class="about-skill-progress">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <div class="about-skill-percent">75%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="about-section-button">Learn More</a>
+  
+    <style>
+      /* Overall Section Styling */
+      .about-section {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+        padding: 4rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box;
+      }
+  
+      /* Tag Styling */
+      .about-section-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #76e5fc;
+        font-size: 1.2rem;
+        text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
+        white-space: nowrap;
+      }
+  
+      /* Grid Styling */
+      .about-section-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+  
+      @media (min-width: 768px) {
+        .about-section-grid {
+          grid-template-columns: 1fr 1fr;
+          text-align: left;
+          gap: 3rem;
+        }
+      }
+  
+      /* Column 1 (Profile Card) */
+      .about-section-column1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .about-profile-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-width: 100%; /* Ensure it doesn't overflow */
+      }
+  
+      .about-profile-image img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+  
+      .about-profile-info {
+        text-align: center;
+      }
+  
+      .about-profile-name {
+        font-size: 1.6rem;
+        color: #ff6f91;
+        text-shadow: 0 0 10px #ff6f91, 0 0 20px #d45079;
+      }
+  
+      .about-profile-subheading {
+        font-size: 1.2rem;
+        color: #f8f32b;
+        text-shadow: 0 0 10px #f8f32b, 0 0 20px #dbd900;
+      }
+  
+      .about-social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+  
+      .social-icon {
+        background: #f8f32b;
+        color: #16213e;
+        padding: 0.8rem;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .social-icon:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(248, 243, 43, 0.6);
+      }
+  
+      /* Column 2 (Skills Grid) */
+      .about-section-column2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .about-skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+  
+      @media (min-width: 768px) {
+        .about-skills-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+  
+      .about-skill-card {
+        background: #16213e;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+  
+      .about-skill-name {
+        font-size: 1.2rem;
+        color: #ff6f91;
+        margin-bottom: 0.5rem;
+      }
+  
+      .about-skill-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      .about-skill-progress {
+        background: #f8f32b;
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+      }
+  
+      .progress-bar {
+        background: #ff6f91;
+        height: 100%;
+      }
+  
+      .about-skill-percent {
+        font-size: 1rem;
+        color: #f8f32b;
+      }
+  
+      /* Button Styling */
+      .about-section-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 1rem 2rem;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin-top: 2rem;
+        box-shadow: 0 0 15px rgba(255, 0, 128, 0.6);
+        transition: transform 0.2s, box-shadow 0.2s;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+  
+      .about-section-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  </section>
+  <hr>
+  <section class="service-category-section">
+    <div class="service-category-tag">&lt; SERVICES /&gt;</div>
+    <div class="service-category-grid">
+      <!-- Column 1: Instructions Card -->
+      <div class="service-category-column1">
+        <div class="instructions-card">
+          <h3 class="instructions-title">How It Works</h3>
+          <p class="instructions-text">Choose a category that fits your needs and get started with the services we offer. Each category has specific services tailored to help you reach your goals.</p>
+        </div>
+      </div>
+  
+      <!-- Column 2: 2x2 Grid of Service Category Cards -->
+      <div class="service-category-column2">
+        <div class="service-category-grid-cards">
+          <div class="service-category-card">
+            <div class="service-category-image">
+              <img src="service1.jpg" alt="Service 1">
+            </div>
+            <div class="service-category-name">Design & Print</div>
+            <a href="#" class="service-category-button">View Service</a>
+          </div>
+          <div class="service-category-card">
+            <div class="service-category-image">
+              <img src="service2.jpg" alt="Service 2">
+            </div>
+            <div class="service-category-name">Video & Animation</div>
+            <a href="#" class="service-category-button">View Service</a>
+          </div>
+          <div class="service-category-card">
+            <div class="service-category-image">
+              <img src="service3.jpg" alt="Service 3">
+            </div>
+            <div class="service-category-name">Digital Animation</div>
+            <a href="#" class="service-category-button">View Service</a>
+          </div>
+          <div class="service-category-card">
+            <div class="service-category-image">
+              <img src="service4.jpg" alt="Service 4">
+            </div>
+            <div class="service-category-name">Audio</div>
+            <a href="#" class="service-category-button">View Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="service-category-main-button">See All Services</a>
+  
+    <style>
+      /* Overall Section Styling */
+      .service-category-section {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+        padding: 4rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box;
+      }
+  
+      /* Tag Styling */
+      .service-category-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #76e5fc;
+        font-size: 1.2rem;
+        text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
+        white-space: nowrap;
+      }
+  
+      /* Grid Layout */
+      .service-category-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+  
+      @media (min-width: 768px) {
+        .service-category-grid {
+          grid-template-columns: 1fr 1fr;
+          text-align: left;
+          gap: 3rem;
+        }
+      }
+  
+      /* Column 1 (Instructions Card) */
+      .service-category-column1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .instructions-card {
+        background: #16213e;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      .instructions-title {
+        font-size: 1.6rem;
+        color: #ff6f91;
+        margin-bottom: 1rem;
+      }
+  
+      .instructions-text {
+        font-size: 1.2rem;
+        color: #f8f32b;
+        margin-bottom: 1.5rem;
+      }
+  
+      .instructions-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 1rem 2rem;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .instructions-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+  
+      /* Column 2 (Service Category Cards) */
+      .service-category-column2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .service-category-grid-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+  
+      @media (min-width: 768px) {
+        .service-category-grid-cards {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+  
+      .service-category-card {
+        background: #16213e;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+  
+      .service-category-image img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+  
+      .service-category-name {
+        font-size: 1.4rem;
+        color: #ff6f91;
+        margin: 1rem 0;
+      }
+  
+      .service-category-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 0.8rem 1.5rem;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .service-category-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+  
+      /* Main Button at the Bottom */
+      .service-category-main-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 1rem 2rem;
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin-top: 3rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .service-category-main-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  </section>
+  <hr>
+  <section class="projects-section">
+    <div class="projects-tag">&lt; PROJECTS /&gt;</div>
+    <div class="projects-grid">
+      <!-- Column 1: Instructions Card and Timer -->
+      <div class="projects-column1">
+        <div class="instructions-card">
+          <h3 class="instructions-title">Project Release Info</h3>
+          <p class="instructions-text">Check out the upcoming projects and their release countdowns. New projects are released every Friday at 12 AM!</p>
+        </div>
+        <div class="project-release-timer">
+          <h4 class="timer-title">Next Project Release:</h4>
+          <div id="release-timer" class="timer"></div>
+        </div>
+      </div>
+  
+      <!-- Column 2: 2x2 Grid of Project Cards -->
+      <div class="projects-column2">
+        <div class="projects-grid-cards">
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="project1.jpg" alt="Project 1">
+            </div>
+            <div class="project-card-name">Fallen Angel</div>
+            <div class="project-card-buttons">
+              <a href="#" class="project-button">View Project</a>
+              <a href="#" class="project-button">View Collection</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="project2.jpg" alt="Project 2">
+            </div>
+            <div class="project-card-name">Project Two</div>
+            <div class="project-card-buttons">
+              <a href="#" class="project-button">View Project</a>
+              <a href="#" class="project-button">Download</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="project3.jpg" alt="Project 3">
+            </div>
+            <div class="project-card-name">Project Three</div>
+            <div class="project-card-buttons">
+              <a href="#" class="project-button">View Project</a>
+              <a href="#" class="project-button">Download</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="project4.jpg" alt="Project 4">
+            </div>
+            <div class="project-card-name">Project Four</div>
+            <div class="project-card-buttons">
+              <a href="#" class="project-button">View Project</a>
+              <a href="#" class="project-button">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="projects-main-button">See All Projects</a>
+  
+    <style>
+      /* Overall Section Styling */
+      .projects-section {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+        padding: 4rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box;
+      }
+  
+      /* Tag Styling */
+      .projects-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #76e5fc;
+        font-size: 1.2rem;
+        text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
+        white-space: nowrap;
+      }
+  
+      /* Grid Layout */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+  
+      @media (min-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr 1fr;
+          text-align: left;
+          gap: 3rem;
+        }
+      }
+  
+      /* Column 1 (Instructions Card and Timer) */
+      .projects-column1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .instructions-card {
+        background: #16213e;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      .instructions-title {
+        font-size: 1.6rem;
+        color: #ff6f91;
+        margin-bottom: 1rem;
+      }
+  
+      .instructions-text {
+        font-size: 1.2rem;
+        color: #f8f32b;
+        margin-bottom: 1.5rem;
+      }
+  
+      .project-release-timer {
+        background: #16213e;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      .timer-title {
+        font-size: 1.4rem;
+        color: #f8f32b;
+        margin-bottom: 1rem;
+      }
+  
+      .timer {
+        font-size: 2rem;
+        color: #76e5fc;
+      }
+  
+      /* Column 2 (Project Cards) */
+      .projects-column2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .projects-grid-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+  
+      @media (min-width: 768px) {
+        .projects-grid-cards {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+  
+      .project-card {
+        background: #16213e;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+  
+      .project-card-image img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+  
+      .project-card-name {
+        font-size: 1.4rem;
+        color: #ff6f91;
+        margin: 1rem 0;
+      }
+  
+      .project-card-buttons a {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 0.8rem 1.5rem;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin: 0.5rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .project-card-buttons a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+  
+      /* Main Button at the Bottom */
+      .projects-main-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 1rem 2rem;
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin-top: 3rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .projects-main-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  
+    <script>
+      // Timer script for the project release countdown
+      function startTimer() {
+        const nextFriday = new Date();
+        nextFriday.setDate(nextFriday.getDate() + (5 + 7 - nextFriday.getDay()) % 7); // Next Friday
+        nextFriday.setHours(0, 0, 0, 0); // Set to midnight
+  
+        const timer = setInterval(() => {
+          const now = new Date();
+          const timeLeft = nextFriday - now;
+  
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            document.getElementById("release-timer").textContent = "New Release Now!";
+          } else {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+            document.getElementById("release-timer").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          }
+        }, 1000);
+      }
+  
+      startTimer(); // Start the timer on page load
+    </script>
+  </section>
+  <hr>
+  <section class="music-section">
+    <div class="music-tag">&lt; MUSIC /&gt;</div>
+    <div class="music-grid">
+      <!-- Column 1: Instructions Card and Music Release Timer -->
+      <div class="music-column1">
+        <div class="instructions-card">
+          <h3 class="instructions-title">Music Release Info</h3>
+          <p class="instructions-text">Explore the latest music tracks and upcoming releases. New music is released every Monday at 12 AM!</p>
+        </div>
+        <div class="music-release-timer">
+          <h4 class="timer-title">Next Music Release:</h4>
+          <div id="music-release-timer" class="timer"></div>
+        </div>
+      </div>
+  
+      <!-- Column 2: 2x2 Grid of Music Cards -->
+      <div class="music-column2">
+        <div class="music-grid-cards">
+          <div class="music-card">
+            <div class="music-card-image">
+              <img src="album1.jpg" alt="Track 1">
+            </div>
+            <div class="music-card-name">Track One</div>
+            <div class="music-card-buttons">
+              <a href="#" class="music-button">Listen Now</a>
+              <a href="#" class="music-button">Download</a>
+            </div>
+          </div>
+          <div class="music-card">
+            <div class="music-card-image">
+              <img src="album2.jpg" alt="Track 2">
+            </div>
+            <div class="music-card-name">Track Two</div>
+            <div class="music-card-buttons">
+              <a href="#" class="music-button">Listen Now</a>
+              <a href="#" class="music-button">Download</a>
+            </div>
+          </div>
+          <div class="music-card">
+            <div class="music-card-image">
+              <img src="album3.jpg" alt="Track 3">
+            </div>
+            <div class="music-card-name">Track Three</div>
+            <div class="music-card-buttons">
+              <a href="#" class="music-button">Listen Now</a>
+              <a href="#" class="music-button">Download</a>
+            </div>
+          </div>
+          <div class="music-card">
+            <div class="music-card-image">
+              <img src="album4.jpg" alt="Track 4">
+            </div>
+            <div class="music-card-name">Track Four</div>
+            <div class="music-card-buttons">
+              <a href="#" class="music-button">Listen Now</a>
+              <a href="#" class="music-button">View Tracks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="music-main-button">See All Tracks</a>
+  
+    <style>
+      /* Overall Section Styling */
+      .music-section {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+        padding: 4rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box;
+      }
+  
+      /* Tag Styling */
+      .music-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #76e5fc;
+        font-size: 1.2rem;
+        text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
+        white-space: nowrap;
+      }
+  
+      /* Grid Layout */
+      .music-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+  
+      @media (min-width: 768px) {
+        .music-grid {
+          grid-template-columns: 1fr 1fr;
+          text-align: left;
+          gap: 3rem;
+        }
+      }
+  
+      /* Column 1 (Instructions Card and Timer) */
+      .music-column1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .instructions-card {
+        background: #16213e;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      .instructions-title {
+        font-size: 1.6rem;
+        color: #ff6f91;
+        margin-bottom: 1rem;
+      }
+  
+      .instructions-text {
+        font-size: 1.2rem;
+        color: #f8f32b;
+        margin-bottom: 1.5rem;
+      }
+  
+      .music-release-timer {
+        background: #16213e;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      .timer-title {
+        font-size: 1.4rem;
+        color: #f8f32b;
+        margin-bottom: 1rem;
+      }
+  
+      .timer {
+        font-size: 2rem;
+        color: #76e5fc;
+      }
+  
+      /* Column 2 (Music Cards) */
+      .music-column2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .music-grid-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+  
+      @media (min-width: 768px) {
+        .music-grid-cards {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+  
+      .music-card {
+        background: #16213e;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+  
+      .music-card-image img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+  
+      .music-card-name {
+        font-size: 1.4rem;
+        color: #ff6f91;
+        margin: 1rem 0;
+      }
+  
+      .music-card-buttons a {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 0.8rem 1.5rem;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin: 0.5rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .music-card-buttons a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+  
+      /* Main Button at the Bottom */
+      .music-main-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        padding: 1rem 2rem;
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 5px;
+        margin-top: 3rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .music-main-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  
+    <script>
+      // Music Release Timer Script
+      function startMusicTimer() {
+        const nextFridayMusic = new Date();
+        nextFridayMusic.setDate(nextFridayMusic.getDate() + (5 + 7 - nextFridayMusic.getDay()) % 7); // Next Friday
+        nextFridayMusic.setHours(0, 0, 0, 0); // Set to midnight
+  
+        const timer = setInterval(() => {
+          const now = new Date();
+          const timeLeft = nextFridayMusic - now;
+  
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            document.getElementById("music-release-timer").textContent = "New Release Now!";
+          } else {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+            document.getElementById("music-release-timer").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          }
+        }, 1000);
+      }
+  
+      startMusicTimer(); // Start the music timer on page load
+    </script>
+  </section>
+  <hr>
+  <section class="newsletter-signup">
+    <h2>Sign Up for Our Newsletter</h2>
+    <form action="send_newsletter.php" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit" class="submit-btn">Sign Up</button>
+    </form>
+  
+    <style>
+      /* Overall Section Styling */
+      .newsletter-signup {
+        background: #16213e;
+        color: #fff;
+        padding: 3rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      }
+  
+      .newsletter-signup h2 {
+        font-size: 2rem;
+        color: #ff6f91;
+        margin-bottom: 2rem;
+      }
+  
+      /* Form Group Styling */
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+  
+      .form-group label {
+        font-size: 1rem;
+        color: #f8f32b;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+  
+      .form-group input {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 2px solid #ff6f91;
+        border-radius: 5px;
+        background-color: #1a1a2e;
+        color: #fff;
+      }
+  
+      .form-group input:focus {
+        outline: none;
+        border-color: #ff0080;
+        box-shadow: 0 0 10px rgba(255, 0, 128, 0.7);
+      }
+  
+      /* Submit Button Styling */
+      .submit-btn {
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .submit-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  
+    <script>
+  <!-- PHP Script to Send the Form Data -->
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Collect form data
+        $name = htmlspecialchars(trim($_POST["name"]));
+        $email = htmlspecialchars(trim($_POST["email"]));
+  
+        // Validate email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            die("Invalid email format.");
+        }
+  
+        // Recipient email (your Gmail address)
+        $to = "your-email@gmail.com";  // Replace with your Gmail address
+        $subject = "New Newsletter Signup";
+        $message = "You have a new newsletter signup!\n\nName: $name\nEmail: $email";
+  
+        // Additional headers
+        $headers = "From: no-reply@yourdomain.com" . "\r\n";
+        $headers .= "Reply-To: $email" . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
+  
+        // Send the email
+        if (mail($to, $subject, $message, $headers)) {
+            echo "<p>Thank you for signing up!</p>";
+        } else {
+            echo "<p>Sorry, there was an issue with your submission.</p>";
+        }
+    }
+    ?>
+    </script>
+  </section>
+  <hr>
+  <section class="contact-me">
+    <h2>Contact Me</h2>
+    <form action="send_contact.php" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  
+    <style>
+      /* Overall Section Styling */
+      .contact-me {
+        background: #16213e;
+        color: #fff;
+        padding: 3rem 2rem;
+        font-family: 'Press Start 2P', sans-serif;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      }
+  
+      .contact-me h2 {
+        font-size: 2rem;
+        color: #ff6f91;
+        margin-bottom: 2rem;
+      }
+  
+      /* Form Group Styling */
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+  
+      .form-group label {
+        font-size: 1rem;
+        color: #f8f32b;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+  
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 2px solid #ff6f91;
+        border-radius: 5px;
+        background-color: #1a1a2e;
+        color: #fff;
+      }
+  
+      .form-group textarea {
+        height: 150px;
+      }
+  
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #ff0080;
+        box-shadow: 0 0 10px rgba(255, 0, 128, 0.7);
+      }
+  
+      /* Submit Button Styling */
+      .submit-btn {
+        background: linear-gradient(90deg, #ff0080, #ff8c00);
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+  
+      .submit-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 0, 128, 0.9);
+      }
+    </style>
+  
+    <script>
+  <!-- PHP Script to Send the Form Data -->
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Collect form data
+        $name = htmlspecialchars(trim($_POST["name"]));
+        $email = htmlspecialchars(trim($_POST["email"]));
+        $message = htmlspecialchars(trim($_POST["message"]));
+  
+        // Validate email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            die("Invalid email format.");
+        }
+  
+        // Recipient email (your Gmail address)
+        $to = "your-email@gmail.com";  // Replace with your Gmail address
+        $subject = "New Contact Message from $name";
+        $messageBody = "You have a new message from the contact form:\n\nName: $name\nEmail: $email\nMessage:\n$message";
+  
+        // Additional headers
+        $headers = "From: no-reply@yourdomain.com" . "\r\n";
+        $headers .= "Reply-To: $email" . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
+  
+        // Send the email
+        if (mail($to, $subject, $messageBody, $headers)) {
+            echo "<p>Thank you for contacting me! I will get back to you shortly.</p>";
+        } else {
+            echo "<p>Sorry, there was an issue with your message. Please try again later.</p>";
+        }
+    }
+    ?>
+    </script>
+  </section>
+  <hr>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"></a>
+        <a href="#" class="social-icon"></a>
+        <a href="#" class="social-icon"></a>
+        <a href="#" class="social-icon"></a>
+        
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"></a>
+        <a href="#" class="social-icon"></a>
+        <a href="#" class="social-icon"></a>
+      </div>
+    </div>
+  
+    <style>
+      /* Footer Styling */
+      .site-footer {
+        background: #16213e;
+        color: #fff;
+        padding: 2rem 1rem;
+        text-align: center;
+        font-family: 'Press Start 2P', sans-serif;
+        box-sizing: border-box;
+      }
+  
+      /* Footer Content */
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+  
+      /* Footer Text */
+      .site-footer p {
+        font-size: 1rem;
+        color: #f8f32b;
+        margin-bottom: 1rem;
+      }
+  
+      /* Footer Links */
+      .footer-links {
+        margin-bottom: 1rem;
+      }
+  
+      .footer-links a {
+        text-decoration: none;
+        color: #ff6f91;
+        margin: 0 1rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        transition: color 0.3s;
+      }
+  
+      .footer-links a:hover {
+        color: #ff0080;
+      }
+  
+      /* Footer Social Icons */
+      .footer-social {
+        margin-top: 1rem;
+      }
+  
+      .footer-social .social-icon {
+        display: inline-block;
+        background-color: #ff6f91;
+        color: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+  
+      .footer-social .social-icon:hover {
+        background-color: #ff0080;
+        transform: scale(1.1);
+      }
+  
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .footer-content {
+          padding: 1rem;
+        }
+  
+        .footer-links a {
+          font-size: 0.9rem;
+          margin: 0 0.5rem;
+        }
+  
+        .footer-social .social-icon {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </footer>
+  
  </main>
 </body>
 </html>
