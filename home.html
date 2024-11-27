@@ -1007,100 +1007,107 @@
  </nav>
  <main>
   <section class="homepage-index-intro">
-    <div class="homepage-index-intro-tag">
-     &lt; INTRODUCTION /&gt;
-    </div>
-    <div class="homepage-index-intro-grid">
-      <div class="homepage-index-intro-heading">
-       welcome to my pixelated internet corner
-      </div>
-      <div class="homepage-index-intro-subheading">
-       turning dreams into pixels
-      </div>
-    </div>
-    <a href="#" class="homepage-index-intro-button">
-     View My Projects
-    </a>
-    <style>
-      /* Overall Section Styling */
-      .homepage-index-intro {
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
-        color: #fff;
-        padding: 4rem 2rem;
-        font-family: 'Press Start 2P', sans-serif;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        box-sizing: border-box; /* Prevent content from overflowing */
-      }
-  
-      /* Tag Styling */
-      .homepage-index-intro-tag {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        color: #76e5fc;
-        font-size: 1.2rem;
-        text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
-        white-space: nowrap; /* Prevent text from wrapping */
-      }
-  
-      /* Grid Styling */
-      .homepage-index-intro-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem; /* Added more space between grid items */
-        margin: 2rem 0;
-      }
-  
-      @media (min-width: 768px) {
-        .homepage-index-intro-grid {
-          grid-template-columns: 1fr 1fr;
-          text-align: left;
-          gap: 2rem; /* More space between columns on larger screens */
-        }
-      }
-  
-      /* Column Headings */
-      .homepage-index-intro-heading {
-        font-size: 1.8rem;
-        color: #ff6f91;
-        text-shadow: 0 0 10px #ff6f91, 0 0 20px #d45079;
-        word-wrap: break-word; /* Allow text to wrap on smaller screens */
-        margin-bottom: 1rem; /* Added bottom margin to create space */
-      }
-  
-      .homepage-index-intro-subheading {
-        font-size: 1.4rem;
-        color: #f8f32b;
-        text-shadow: 0 0 10px #f8f32b, 0 0 20px #dbd900;
-        word-wrap: break-word; /* Allow text to wrap on smaller screens */
-        margin-bottom: 1rem; /* Added bottom margin to create space */
-      }
-  
-      /* Button Styling */
-      .homepage-index-intro-button {
-        display: inline-block;
-        background: linear-gradient(90deg, #ff0080, #ff8c00);
-        padding: 1rem 2rem;
-        color: #fff;
-        font-size: 1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        border-radius: 5px;
-        margin-top: 2rem;
-        box-shadow: 0 0 15px rgba(255, 0, 128, 0.6);
-        transition: transform 0.2s, box-shadow 0.2s;
-        max-width: 100%; /* Ensure the button doesn't exceed the section */
-        box-sizing: border-box; /* Prevent button overflow */
-      }
-  
-      .homepage-index-intro-button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
-      }
-    </style>
-  </section>
+   <div class="homepage-index-intro-tag">
+    &lt; INTRODUCTION /&gt;
+   </div>
+   <div class="homepage-index-intro-grid">
+     <div class="homepage-index-intro-heading">
+      welcome to my pixelated internet corner
+     </div>
+     <div class="homepage-index-intro-subheading">
+      turning dreams into pixels
+     </div>
+   </div>
+   <a href="#" class="homepage-index-intro-button">
+    View My Projects
+   </a>
+   <style>
+     /* Overall Section Styling */
+     .homepage-index-intro {
+       background: linear-gradient(135deg, #1a1a2e, #16213e);
+       color: #fff;
+       padding: 4rem 2rem;
+       font-family: 'Press Start 2P', sans-serif;
+       position: relative;
+       overflow: hidden;
+       text-align: center;
+       box-sizing: border-box; /* Prevent content from overflowing */
+     }
+ 
+     /* Tag Styling */
+     .homepage-index-intro-tag {
+       position: absolute;
+       top: 1rem;
+       right: 1rem;
+       color: #76e5fc;
+       font-size: 1.2rem;
+       text-shadow: 0 0 8px #76e5fc, 0 0 12px #3f87a6;
+       white-space: nowrap; /* Prevent text from wrapping */
+     }
+ 
+     /* Grid Styling */
+     .homepage-index-intro-grid {
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 1.5rem; /* Added more space between grid items */
+       margin: 2rem 0;
+     }
+ 
+     @media (min-width: 768px) {
+       .homepage-index-intro-grid {
+         grid-template-columns: 1fr 1fr;
+         text-align: left;
+         gap: 2rem; /* More space between columns on larger screens */
+       }
+     }
+ 
+     @media (min-width: 1200px) {
+       .homepage-index-intro-grid {
+         grid-template-columns: 1fr 1fr 1fr; /* Three columns on very large screens */
+         gap: 3rem; /* Even more space between columns on larger screens */
+       }
+     }
+ 
+     /* Column Headings */
+     .homepage-index-intro-heading {
+       font-size: 1.8rem;
+       color: #ff6f91;
+       text-shadow: 0 0 10px #ff6f91, 0 0 20px #d45079;
+       word-wrap: break-word; /* Allow text to wrap on smaller screens */
+       margin-bottom: 1rem; /* Added bottom margin to create space */
+     }
+ 
+     .homepage-index-intro-subheading {
+       font-size: 1.4rem;
+       color: #f8f32b;
+       text-shadow: 0 0 10px #f8f32b, 0 0 20px #dbd900;
+       word-wrap: break-word; /* Allow text to wrap on smaller screens */
+       margin-bottom: 1rem; /* Added bottom margin to create space */
+     }
+ 
+     /* Button Styling */
+     .homepage-index-intro-button {
+       display: inline-block;
+       background: linear-gradient(90deg, #ff0080, #ff8c00);
+       padding: 1rem 2rem;
+       color: #fff;
+       font-size: 1rem;
+       text-decoration: none;
+       text-transform: uppercase;
+       border-radius: 5px;
+       margin-top: 2rem;
+       box-shadow: 0 0 15px rgba(255, 0, 128, 0.6);
+       transition: transform 0.2s, box-shadow 0.2s;
+       max-width: 100%; /* Ensure the button doesn't exceed the section */
+       box-sizing: border-box; /* Prevent button overflow */
+     }
+ 
+     .homepage-index-intro-button:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 25px rgba(255, 0, 128, 0.9);
+     }
+   </style>
+ </section>
   <hr>
   <section class="about-section">
     <div class="about-section-tag">
