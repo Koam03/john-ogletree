@@ -2,9 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>
-   John Ogletree | Freelance Graphic Designer
-  </title>
+  <title>John Ogletree | Freelance Graphic Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!">
   <meta name="keywords" content="graphic design, logo design, branding, web design, video editing, music production, illustrator, freelance designer">
@@ -23,13 +21,28 @@
   <meta name="apple-mobile-web-app-title" content="John Ogletree"/>
   <link rel="manifest" href="/Assets/Favicon/site.webmanifest"/>
   <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Site Wide Style Sheets.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/introduction.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/about.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/services.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/projects.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/music.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/newletter.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/contact.css">
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWBBDTBW9Y"></script>
-  <script src="/Assets/scripts/google-analytics.js" defer></script>
-  <script src="/Assets/Code/JavaScripts/socail-icons-about.js" defer></script>
+  <script src="/Assets/Code/JavaScripts/Site Wide Javascript Scripts/Google Analytics.js" defer></script>
+  <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Service Fltration System.js" defer></script>
+  <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Project Filtration System.js" defer></script>
+  <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Project Release Timer.js" defer></script>
+  <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Music Filtration System.js" defer></script>
+  <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Track Release Timer.js" defer></script>  
+  <script src="/Assets/Code/JavaScripts/Site Wide Javascripts/Loading Bar.js"></script>
  </head>
  <body>
+  <!-- Loading Bar -->
+  <div id="loading-bar"></div>
   <input type="checkbox" id="menuToggle">
   <label for="menuToggle" class="menu-toggle-label" aria-label="Toggle Menu">
    <i class="fas fa-bars"></i>
@@ -1006,23 +1019,40 @@
   </ul>
  </nav>
  <main>
-  <section class="homepage-index-introduction">
-   <div class="bookmark">
+  <section class="page_index-section_introduction">
+   <div class="page_index-section_introduction-bookmark">
      <span>&lt; INTRODUCTION /&gt;</span>
    </div>
-   <div class="grid-container">
-     <div class="card">Welcome to my internet pixel universe</div>
-     <div class="card">Turning dreams into pixels</div>
-     <div class="card">
-       <a href="#" class="btn">Explore More</a>
+   <div class="page_index-section_introduction-grid-container">
+     <!-- Column 1 -->
+     <div class="page_index-section_introduction-column1">
+       <div class="page_index-section_introduction-card">
+         <i class="fas fa-globe-americas" aria-hidden="true"></i>
+         <span>Welcome to my internet pixel universe</span>
+       </div>
+     </div>
+     
+     <!-- Column 2 with Vertical Grid -->
+     <div class="page_index-section_introduction-column2">
+       <div class="page_index-section_introduction-vertical-grid">
+         <div class="page_index-section_introduction-card">
+           <i class="fas fa-magic" aria-hidden="true"></i>
+           <span>Turning dreams into pixels</span>
+         </div>
+         <div class="page_index-section_introduction-button">
+           <a href="#" class="page_index-section_introduction-btn">
+             <i class="fas fa-arrow-right" aria-hidden="true"></i>
+             <span>Explore My Projects</span>
+           </a>
+         </div>
+       </div>
      </div>
    </div>
- 
-   <!-- CSS is placed here -->
+   
+   <!-- Embedded CSS -->
    <style>
-     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
- 
-     .homepage-index-introduction {
+     /* Base Styles */
+     .page_index-section_introduction {
        font-family: 'Press Start 2P', cursive;
        background: linear-gradient(135deg, rgb(2, 131, 147), rgb(246, 86, 37));
        color: rgb(246, 220, 172);
@@ -1032,7 +1062,7 @@
        overflow: hidden;
      }
  
-     .homepage-index-introduction .bookmark {
+     .page_index-section_introduction-bookmark {
        position: absolute;
        top: 0;
        left: 0;
@@ -1040,37 +1070,71 @@
        color: rgb(255, 235, 0);
        padding: 0.5rem 1rem;
        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-       font-size: 0.8rem;
+       font-size: 1rem;
      }
  
-     .homepage-index-introduction .bookmark span {
+     .page_index-section_introduction-bookmark span {
        display: block;
      }
  
-     .homepage-index-introduction .grid-container {
+     .page_index-section_introduction-grid-container {
        display: grid;
-       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       grid-template-columns: 1fr 1fr;
        gap: 1.5rem;
        margin-top: 4rem;
      }
  
-     .homepage-index-introduction .card {
+     /* Column 1 */
+     .page_index-section_introduction-column1 {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+ 
+     /* Column 2 with Vertical Grid */
+     .page_index-section_introduction-column2 {
+       display: flex;
+       flex-direction: column;
+       gap: 1.5rem;
+     }
+ 
+     .page_index-section_introduction-vertical-grid {
+       display: flex;
+       flex-direction: column;
+       gap: 1.5rem;
+     }
+ 
+     .page_index-section_introduction-button {
+       display: flex;
+       justify-content: flex-start;
+     }
+ 
+     /* Card Styles */
+     .page_index-section_introduction-card {
        background: rgba(0, 0, 0, 0.6);
        border: 2px solid rgb(248, 0, 177);
        border-radius: 8px;
        padding: 1.5rem;
-       text-align: center;
+       text-align: left;
        color: rgb(255, 235, 0);
        transition: transform 0.3s ease, box-shadow 0.3s ease;
+       font-size: 1rem;
+       display: flex;
+       align-items: center;
      }
  
-     .homepage-index-introduction .card:hover {
-       transform: scale(1.05);
-       box-shadow: 0 0 15px rgb(183, 0, 206);
+     .page_index-section_introduction-card i {
+       font-size: 1.5rem;
+       margin-right: 0.75rem;
+       color: rgb(255, 235, 0);
+       min-width: 24px;
+       text-align: center;
      }
  
-     .homepage-index-introduction .btn {
-       display: inline-block;
+     .page_index-section_introduction-btn {
+       display: flex;
+       align-items: center;
+       justify-content: center;
        padding: 0.75rem 1.5rem;
        background: rgb(183, 0, 206);
        color: rgb(246, 220, 172);
@@ -1080,79 +1144,1960 @@
        transition: background 0.3s ease, transform 0.3s ease;
      }
  
-     .homepage-index-introduction .btn:hover {
+     .page_index-section_introduction-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_introduction-btn:hover {
+       background: rgb(250, 170, 104);
+       transform: translateY(-3px);
+     }
+ 
+     .page_index-section_introduction-card:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 15px rgb(183, 0, 206);
+     }
+ 
+     /* Responsive Design */
+ 
+     /* Extra Small Devices (Mobile Phones) */
+     @media (max-width: 480px) {
+       .page_index-section_introduction {
+         padding: 1rem;
+       }
+ 
+       .page_index-section_introduction-bookmark {
+         font-size: 0.8rem;
+         padding: 0.4rem 0.8rem;
+       }
+ 
+       .page_index-section_introduction-grid-container {
+         grid-template-columns: 1fr;
+         gap: 1rem;
+       }
+ 
+       .page_index-section_introduction-column2 {
+         flex-direction: column;
+       }
+ 
+       .page_index-section_introduction-card {
+         padding: 1rem;
+         font-size: 0.9rem;
+         flex-direction: row;
+       }
+ 
+       .page_index-section_introduction-btn {
+         padding: 0.5rem 1rem;
+         font-size: 0.9rem;
+       }
+     }
+ 
+     /* Small Devices (Portrait Tablets) */
+     @media (min-width: 481px) and (max-width: 768px) {
+       .page_index-section_introduction {
+         padding: 1.5rem;
+       }
+ 
+       .page_index-section_introduction-bookmark {
+         font-size: 0.9rem;
+         padding: 0.4rem 1rem;
+       }
+ 
+       .page_index-section_introduction-grid-container {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 1.25rem;
+       }
+ 
+       .page_index-section_introduction-card {
+         padding: 1.25rem;
+         font-size: 0.95rem;
+       }
+ 
+       .page_index-section_introduction-btn {
+         padding: 0.6rem 1.2rem;
+         font-size: 0.95rem;
+       }
+     }
+ 
+     /* Medium Devices (Landscape Tablets / Small Desktops) */
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .page_index-section_introduction {
+         padding: 1.75rem;
+       }
+ 
+       .page_index-section_introduction-bookmark {
+         font-size: 1rem;
+         padding: 0.5rem 1rem;
+       }
+ 
+       .page_index-section_introduction-grid-container {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 1.5rem;
+       }
+ 
+       .page_index-section_introduction-card {
+         padding: 1.5rem;
+         font-size: 1rem;
+       }
+ 
+       .page_index-section_introduction-btn {
+         padding: 0.75rem 1.5rem;
+         font-size: 1rem;
+       }
+     }
+ 
+     /* Large Devices (Desktops) */
+     @media (min-width: 1025px) {
+       .page_index-section_introduction {
+         padding: 2rem;
+       }
+ 
+       .page_index-section_introduction-bookmark {
+         font-size: 1.1rem;
+         padding: 0.5rem 1rem;
+       }
+ 
+       .page_index-section_introduction-grid-container {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 1.5rem;
+       }
+ 
+       .page_index-section_introduction-card {
+         padding: 1.5rem;
+         font-size: 1rem;
+       }
+ 
+       .page_index-section_introduction-btn {
+         padding: 0.75rem 1.5rem;
+         font-size: 1rem;
+       }
+     }
+   </style>
+ </section>
+ <hr>
+ <section class="page_index-section_about-me">
+   <!-- About Me Bookmark -->
+   <div class="page_index-section_about-me-bookmark">
+     <span>&lt; ABOUT ME /&gt;</span>
+   </div>
+ 
+   <div class="page_index-section_about-me-grid-container">
+     <!-- Column 1 -->
+     <div class="page_index-section_about-me-column1">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_about-me-vertical-grid">
+         <!-- Column 1 -->
+         <div class="page_index-section_about-me-profile">
+           <!-- Profile Picture -->
+           <img src="your-profile-picture.jpg" alt="Profile Picture" class="profile-picture" />
+           <!-- Horizontal Grid -->
+           <div class="page_index-section_about-me-horizontal-grid">
+             <!-- Column 1: Name -->
+             <div class="page_index-section_about-me-name">
+               <h2>Your Name</h2>
+             </div>
+             <!-- Column 2: Social Icons -->
+             <div class="page_index-section_about-me-social-icons">
+               <!-- Social Icons -->
+               <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+               <!-- Add more social icons as needed -->
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+ 
+     <!-- Column 2 -->
+     <div class="page_index-section_about-me-column2">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_about-me-vertical-grid">
+         <!-- Column 1 -->
+         <div class="page_index-section_about-me-skills-grid">
+           <!-- Skills Grid -->
+           <div class="skills-grid">
+             <!-- Skill Card 1 -->
+             <div class="skill-card">
+               <div class="skill-card-header">
+                 <i class="fas fa-code"></i>
+                 <h3>Programming</h3>
+               </div>
+               <div class="progress-bar">
+                 <div class="progress" style="width: 80%;"></div>
+               </div>
+               <span class="percentage">80%</span>
+             </div>
+             <!-- Skill Card 2 -->
+             <div class="skill-card">
+               <div class="skill-card-header">
+                 <i class="fas fa-paint-brush"></i>
+                 <h3>Design</h3>
+               </div>
+               <div class="progress-bar">
+                 <div class="progress" style="width: 70%;"></div>
+               </div>
+               <span class="percentage">70%</span>
+             </div>
+             <!-- Skill Card 3 -->
+             <div class="skill-card">
+               <div class="skill-card-header">
+                 <i class="fas fa-database"></i>
+                 <h3>Database</h3>
+               </div>
+               <div class="progress-bar">
+                 <div class="progress" style="width: 85%;"></div>
+               </div>
+               <span class="percentage">85%</span>
+             </div>
+             <!-- Skill Card 4 -->
+             <div class="skill-card">
+               <div class="skill-card-header">
+                 <i class="fas fa-language"></i>
+                 <h3>Languages</h3>
+               </div>
+               <div class="progress-bar">
+                 <div class="progress" style="width: 90%;"></div>
+               </div>
+               <span class="percentage">90%</span>
+             </div>
+           </div>
+         </div>
+         <!-- Column 2: Learn More Button -->
+         <div class="page_index-section_about-me-button">
+           <a href="#" class="learn-more-btn">
+             <i class="fas fa-arrow-right"></i>
+             <span>Learn More</span>
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     /* Base Styles */
+     .page_index-section_about-me {
+       font-family: 'Press Start 2P', cursive;
+       background: linear-gradient(135deg, rgb(255, 184, 108), rgb(255, 92, 92));
+       color: rgb(255, 255, 255);
+       padding: 2rem;
+       position: relative;
+       border-radius: 8px;
+       overflow: hidden;
+     }
+ 
+     .page_index-section_about-me-bookmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: rgb(1, 32, 78);
+       color: rgb(255, 235, 0);
+       padding: 0.5rem 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_about-me-bookmark span {
+       display: block;
+     }
+ 
+     .page_index-section_about-me-grid-container {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1.5rem;
+       margin-top: 4rem;
+     }
+ 
+     /* Column 1 */
+     .page_index-section_about-me-column1 {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+ 
+     .page_index-section_about-me-profile {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+ 
+     .profile-picture {
+       width: 150px;
+       height: 150px;
+       border-radius: 50%;
+       object-fit: cover;
+       margin-bottom: 1rem;
+     }
+ 
+     .page_index-section_about-me-horizontal-grid {
+       display: flex;
+       align-items: center;
+     }
+ 
+     .page_index-section_about-me-name h2 {
+       margin: 0;
+       font-size: 1.5rem;
+       color: rgb(255, 235, 0);
+     }
+ 
+     .page_index-section_about-me-social-icons {
+       margin-left: 1rem;
+     }
+ 
+     .social-icon {
+       color: rgb(255, 235, 0);
+       font-size: 1.5rem;
+       margin-right: 0.5rem;
+       text-decoration: none;
+       transition: color 0.3s ease;
+     }
+ 
+     .social-icon:hover {
+       color: rgb(255, 255, 255);
+     }
+ 
+     /* Column 2 */
+     .page_index-section_about-me-column2 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .skills-grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+     }
+ 
+     .skill-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       color: rgb(255, 235, 0);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
+ 
+     .skill-card-header {
+       display: flex;
+       align-items: center;
+       margin-bottom: 0.5rem;
+     }
+ 
+     .skill-card-header i {
+       font-size: 1.5rem;
+       margin-right: 0.5rem;
+       color: rgb(255, 235, 0);
+     }
+ 
+     .skill-card-header h3 {
+       margin: 0;
+       font-size: 1.2rem;
+     }
+ 
+     .progress-bar {
+       background: rgba(255, 255, 255, 0.2);
+       border-radius: 5px;
+       overflow: hidden;
+       margin: 0.5rem 0;
+     }
+ 
+     .progress {
+       background: rgb(248, 0, 177);
+       height: 10px;
+     }
+ 
+     .percentage {
+       font-size: 0.9rem;
+     }
+ 
+     .skill-card:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 15px rgb(183, 0, 206);
+     }
+ 
+     .learn-more-btn {
+       display: inline-flex;
+       align-items: center;
+       padding: 0.75rem 1.5rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 1rem;
+       transition: background 0.3s ease, transform 0.3s ease;
+       margin-top: 1.5rem;
+     }
+ 
+     .learn-more-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .learn-more-btn:hover {
        background: rgb(250, 170, 104);
        transform: translateY(-3px);
      }
  
      /* Responsive Design */
-     
-     /* Small Devices (Mobile Phones) */
+ 
+     /* Extra Small Devices (Mobile Phones) */
      @media (max-width: 480px) {
-       .homepage-index-introduction {
-         padding: 1rem;
-       }
- 
-       .homepage-index-introduction .bookmark {
-         font-size: 0.7rem;
-         padding: 0.4rem 0.8rem;
-       }
- 
-       .homepage-index-introduction .grid-container {
+       .page_index-section_about-me-grid-container {
          grid-template-columns: 1fr;
          gap: 1rem;
        }
  
-       .homepage-index-introduction .card {
-         padding: 1rem;
-         font-size: 0.9rem;
+       .page_index-section_about-me-horizontal-grid {
+         flex-direction: column;
+         align-items: center;
+       }
+ 
+       .page_index-section_about-me-social-icons {
+         margin-left: 0;
+         margin-top: 0.5rem;
+       }
+ 
+       .skills-grid {
+         grid-template-columns: 1fr;
        }
      }
  
-     /* Medium Devices (Tablets) */
+     /* Small Devices (Portrait Tablets) */
      @media (min-width: 481px) and (max-width: 768px) {
-       .homepage-index-introduction {
-         padding: 1.5rem;
+       .skills-grid {
+         grid-template-columns: 1fr 1fr;
        }
+     }
  
-       .homepage-index-introduction .bookmark {
-         font-size: 0.75rem;
-         padding: 0.4rem 1rem;
-       }
- 
-       .homepage-index-introduction .grid-container {
-         grid-template-columns: repeat(2, 1fr);
-         gap: 1.25rem;
-       }
- 
-       .homepage-index-introduction .card {
-         padding: 1.25rem;
+     /* Medium Devices (Landscape Tablets / Small Desktops) */
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .skills-grid {
+         grid-template-columns: 1fr 1fr;
        }
      }
  
      /* Large Devices (Desktops) */
-     @media (min-width: 769px) {
-       .homepage-index-introduction {
-         padding: 2rem;
-       }
- 
-       .homepage-index-introduction .bookmark {
-         font-size: 1rem;
-         padding: 0.5rem 1rem;
-       }
- 
-       .homepage-index-introduction .grid-container {
-         grid-template-columns: repeat(3, 1fr);
-         gap: 1.5rem;
-       }
- 
-       .homepage-index-introduction .card {
-         padding: 1.5rem;
+     @media (min-width: 1025px) {
+       .skills-grid {
+         grid-template-columns: 1fr 1fr;
        }
      }
    </style>
  </section>
+ <hr>
+ <section class="page_index-section_services">
+   <!-- Services Bookmark -->
+   <div class="page_index-section_services-bookmark">
+     <span>&lt; SERVICES /&gt;</span>
+   </div>
  
+   <div class="page_index-section_services-grid-container">
+     <!-- Column 1 -->
+     <div class="page_index-section_services-column1">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_services-vertical-grid">
+         <!-- Instructions Card -->
+         <div class="instructions-card">
+           <p>
+             Here you can find a variety of services I offer. Use the filters to narrow down your search.
+           </p>
+         </div>
+         <!-- Filter Tags -->
+         <div class="filter-tags">
+           <button class="filter-btn active" data-filter="all">All</button>
+           <button class="filter-btn" data-filter="design-print">Design & Print</button>
+           <button class="filter-btn" data-filter="development">Development</button>
+           <button class="filter-btn" data-filter="consulting">Consulting</button>
+           <!-- Add more filter buttons as needed -->
+         </div>
+       </div>
+     </div>
+ 
+     <!-- Column 2 -->
+     <div class="page_index-section_services-column2">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_services-vertical-grid">
+         <!-- Column 1 -->
+         <div class="services-grid">
+           <!-- Service Cards with Filter Types -->
+           <div class="service-card" data-category="design-print all">
+             <img src="service1.jpg" alt="Logo Design" class="service-image" />
+             <h3>Logo Design</h3>
+             <a href="#" class="service-btn">Learn More</a>
+           </div>
+           <div class="service-card" data-category="development all">
+             <img src="service2.jpg" alt="Web Development" class="service-image" />
+             <h3>Web Development</h3>
+             <a href="#" class="service-btn">Learn More</a>
+           </div>
+           <div class="service-card" data-category="design-print all">
+             <img src="service3.jpg" alt="Print Materials" class="service-image" />
+             <h3>Print Materials</h3>
+             <a href="#" class="service-btn">Learn More</a>
+           </div>
+           <div class="service-card" data-category="consulting all">
+             <img src="service4.jpg" alt="IT Consulting" class="service-image" />
+             <h3>IT Consulting</h3>
+             <a href="#" class="service-btn">Learn More</a>
+           </div>
+         </div>
+         <!-- Column 2: Button -->
+         <div class="page_index-section_services-button">
+           <a href="#" class="view-all-btn">
+             <i class="fas fa-arrow-right"></i>
+             <span>View All Services</span>
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     /* Base Styles */
+     .page_index-section_services {
+       font-family: 'Press Start 2P', cursive;
+       background: linear-gradient(135deg, rgb(100, 184, 255), rgb(0, 92, 255));
+       color: rgb(255, 255, 255);
+       padding: 2rem;
+       position: relative;
+       border-radius: 8px;
+       overflow: hidden;
+     }
+ 
+     .page_index-section_services-bookmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: rgb(1, 32, 78);
+       color: rgb(255, 235, 0);
+       padding: 0.5rem 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_services-bookmark span {
+       display: block;
+     }
+ 
+     .page_index-section_services-grid-container {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       gap: 1.5rem;
+       margin-top: 4rem;
+     }
+ 
+     /* Column 1 */
+     .page_index-section_services-column1 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .instructions-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       color: rgb(255, 235, 0);
+       margin-bottom: 1rem;
+     }
+ 
+     .filter-tags {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 0.5rem;
+     }
+ 
+     .filter-btn {
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       border: none;
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       font-size: 0.9rem;
+       cursor: pointer;
+       transition: background 0.3s ease;
+     }
+ 
+     .filter-btn.active {
+       background: rgb(250, 170, 104);
+     }
+ 
+     .filter-btn:hover {
+       background: rgb(250, 170, 104);
+     }
+ 
+     /* Hide any active filter button */
+     .filter-btn.active {
+       display: none;
+     }
+ 
+     /* Column 2 */
+     .page_index-section_services-column2 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .services-grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+     }
+ 
+     .service-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       text-align: center;
+       color: rgb(255, 235, 0);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
+ 
+     .service-card img {
+       width: 100%;
+       height: auto;
+       border-radius: 4px;
+       margin-bottom: 0.5rem;
+     }
+ 
+     .service-card h3 {
+       margin: 0.5rem 0;
+       font-size: 1.2rem;
+     }
+ 
+     .service-btn {
+       display: inline-block;
+       padding: 0.5rem 1rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 0.9rem;
+       transition: background 0.3s ease;
+     }
+ 
+     .service-btn:hover {
+       background: rgb(250, 170, 104);
+     }
+ 
+     .service-card:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 15px rgb(183, 0, 206);
+     }
+ 
+     .page_index-section_services-button {
+       margin-top: 1.5rem;
+       text-align: center;
+     }
+ 
+     .view-all-btn {
+       display: inline-flex;
+       align-items: center;
+       padding: 0.75rem 1.5rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 1rem;
+       transition: background 0.3s ease, transform 0.3s ease;
+     }
+ 
+     .view-all-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .view-all-btn:hover {
+       background: rgb(250, 170, 104);
+       transform: translateY(-3px);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 480px) {
+       .page_index-section_services-grid-container {
+         grid-template-columns: 1fr;
+       }
+ 
+       .services-grid {
+         grid-template-columns: 1fr;
+       }
+     }
+ 
+     @media (min-width: 481px) and (max-width: 768px) {
+       .services-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+ 
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .services-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+ 
+     @media (min-width: 1025px) {
+       .services-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+   </style>
+ 
+   <!-- JavaScript for Filtering -->
+   <script>
+     document.addEventListener('DOMContentLoaded', function () {
+       const filterButtons = document.querySelectorAll('.filter-btn');
+       const serviceCards = document.querySelectorAll('.service-card');
+ 
+       filterButtons.forEach(button => {
+         button.addEventListener('click', () => {
+           // Remove 'active' class from all buttons
+           filterButtons.forEach(btn => btn.classList.remove('active'));
+           // Add 'active' class to the clicked button
+           button.classList.add('active');
+ 
+           const filter = button.getAttribute('data-filter');
+ 
+           serviceCards.forEach(card => {
+             const categories = card.getAttribute('data-category').split(' ');
+ 
+             if (categories.includes(filter) || filter === 'all') {
+               card.style.display = 'block';
+             } else {
+               card.style.display = 'none';
+             }
+           });
+         });
+       });
+ 
+       // Initially hide the 'All' button since it's active
+       const activeFilter = document.querySelector('.filter-btn.active');
+       if (activeFilter) {
+         activeFilter.style.display = 'none';
+       }
+     });
+   </script>
+ </section>
+ <hr>
+ <section class="page_index-section_projects">
+   <!-- Projects Bookmark -->
+   <div class="page_index-section_projects-bookmark">
+     <span>&lt; PROJECTS /&gt;</span>
+   </div>
+ 
+   <div class="page_index-section_projects-grid-container">
+     <!-- Column 1 -->
+     <div class="page_index-section_projects-column1">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_projects-vertical-grid">
+         <!-- Instructions Card -->
+         <div class="instructions-card">
+           <p>
+             Explore a selection of my projects. Use the filters to view projects by category.
+           </p>
+         </div>
+         <!-- Projects Release Timer -->
+         <div class="release-timer">
+           <h3>Next Project Release In:</h3>
+           <div id="timer">
+             <div class="time-box">
+               <span id="days">00</span>
+               <span class="label">Days</span>
+             </div>
+             <div class="time-box">
+               <span id="hours">00</span>
+               <span class="label">Hours</span>
+             </div>
+             <div class="time-box">
+               <span id="minutes">00</span>
+               <span class="label">Minutes</span>
+             </div>
+             <div class="time-box">
+               <span id="seconds">00</span>
+               <span class="label">Seconds</span>
+             </div>
+           </div>
+         </div>
+         <!-- Filter Tags -->
+         <div class="filter-tags">
+           <button class="filter-btn active" data-filter="all">All</button>
+           <button class="filter-btn" data-filter="web-development">Web Development</button>
+           <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+           <button class="filter-btn" data-filter="mobile-apps">Mobile Apps</button>
+           <!-- Add more filter buttons as needed -->
+         </div>
+       </div>
+     </div>
+ 
+     <!-- Column 2 -->
+     <div class="page_index-section_projects-column2">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_projects-vertical-grid">
+         <!-- Column 1 -->
+         <div class="projects-grid">
+           <!-- Project Cards with Filter Types -->
+           <div class="project-card" data-category="web-development all">
+             <img src="project1.jpg" alt="Project 1 - Logo Design" class="project-image" />
+             <h3>Logo Design</h3>
+             <a href="#" class="project-btn">View Details</a>
+           </div>
+           <div class="project-card" data-category="graphic-design all">
+             <img src="project2.jpg" alt="Project 2 - Branding" class="project-image" />
+             <h3>Branding</h3>
+             <a href="#" class="project-btn">View Details</a>
+           </div>
+           <div class="project-card" data-category="mobile-apps all">
+             <img src="project3.jpg" alt="Project 3 - Mobile App" class="project-image" />
+             <h3>Mobile App</h3>
+             <a href="#" class="project-btn">View Details</a>
+           </div>
+           <div class="project-card" data-category="web-development all">
+             <img src="project4.jpg" alt="Project 4 - Website Redesign" class="project-image" />
+             <h3>Website Redesign</h3>
+             <a href="#" class="project-btn">View Details</a>
+           </div>
+         </div>
+         <!-- Column 2: Button -->
+         <div class="page_index-section_projects-button">
+           <a href="#" class="view-all-btn">
+             <i class="fas fa-arrow-right"></i>
+             <span>View All Projects</span>
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     /* Base Styles */
+     .page_index-section_projects {
+       font-family: 'Press Start 2P', cursive;
+       background: linear-gradient(135deg, rgb(255, 100, 100), rgb(100, 100, 255));
+       color: rgb(255, 255, 255);
+       padding: 2rem;
+       position: relative;
+       border-radius: 8px;
+       overflow: hidden;
+     }
+ 
+     .page_index-section_projects-bookmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: rgb(1, 32, 78);
+       color: rgb(255, 235, 0);
+       padding: 0.5rem 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_projects-bookmark span {
+       display: block;
+     }
+ 
+     .page_index-section_projects-grid-container {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       gap: 1.5rem;
+       margin-top: 4rem;
+     }
+ 
+     /* Column 1 */
+     .page_index-section_projects-column1 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .page_index-section_projects-vertical-grid {
+       display: flex;
+       flex-direction: column;
+       gap: 1.5rem;
+     }
+ 
+     .instructions-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       color: rgb(255, 235, 0);
+     }
+ 
+     .release-timer {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       color: rgb(255, 235, 0);
+       text-align: center;
+     }
+ 
+     .release-timer h3 {
+       margin-bottom: 1rem;
+       font-size: 1rem;
+     }
+ 
+     #timer {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+       justify-items: center;
+       align-items: center;
+     }
+ 
+     .time-box {
+       background: rgba(255, 255, 255, 0.1);
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       width: 100%;
+       max-width: 100px;
+     }
+ 
+     .time-box span {
+       display: block;
+       font-size: 1.2rem;
+       font-weight: bold;
+       margin-bottom: 0.3rem;
+     }
+ 
+     .label {
+       font-size: 0.8rem;
+       text-transform: uppercase;
+     }
+ 
+     .filter-tags {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 0.5rem;
+     }
+ 
+     .filter-btn {
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       border: none;
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       font-size: 0.9rem;
+       cursor: pointer;
+       transition: background 0.3s ease;
+     }
+ 
+     .filter-btn.active {
+       background: rgb(250, 170, 104);
+       display: none; /* Hide active filter button */
+     }
+ 
+     .filter-btn:hover {
+       background: rgb(250, 170, 104);
+     }
+ 
+     /* Column 2 */
+     .page_index-section_projects-column2 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .projects-grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+     }
+ 
+     .project-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       text-align: center;
+       color: rgb(255, 235, 0);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
+ 
+     .project-card img {
+       width: 100%;
+       height: auto;
+       border-radius: 4px;
+       margin-bottom: 0.5rem;
+     }
+ 
+     .project-card h3 {
+       margin: 0.5rem 0;
+       font-size: 1.2rem;
+     }
+ 
+     .project-btn {
+       display: inline-block;
+       padding: 0.5rem 1rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 0.9rem;
+       transition: background 0.3s ease;
+     }
+ 
+     .project-btn:hover {
+       background: rgb(250, 170, 104);
+     }
+ 
+     .project-card:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 15px rgb(183, 0, 206);
+     }
+ 
+     .page_index-section_projects-button {
+       margin-top: 1.5rem;
+       text-align: center;
+     }
+ 
+     .view-all-btn {
+       display: inline-flex;
+       align-items: center;
+       padding: 0.75rem 1.5rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 1rem;
+       transition: background 0.3s ease, transform 0.3s ease;
+     }
+ 
+     .view-all-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .view-all-btn:hover {
+       background: rgb(250, 170, 104);
+       transform: translateY(-3px);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 480px) {
+       .page_index-section_projects-grid-container {
+         grid-template-columns: 1fr;
+       }
+ 
+       .projects-grid {
+         grid-template-columns: 1fr;
+       }
+ 
+       #timer {
+         grid-template-columns: 1fr;
+         gap: 0.5rem;
+       }
+ 
+       .time-box {
+         max-width: none;
+         width: 80px;
+       }
+     }
+ 
+     @media (min-width: 481px) and (max-width: 768px) {
+       .projects-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+ 
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .projects-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+ 
+     @media (min-width: 1025px) {
+       .projects-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+   </style>
+ 
+   <!-- JavaScript for Filtering and Release Timer -->
+   <script>
+     document.addEventListener('DOMContentLoaded', function () {
+       // Filtering Functionality
+       const filterButtons = document.querySelectorAll('.filter-btn');
+       const projectCards = document.querySelectorAll('.project-card');
+ 
+       filterButtons.forEach(button => {
+         button.addEventListener('click', () => {
+           // Remove 'active' class from all buttons and show them
+           filterButtons.forEach(btn => {
+             btn.classList.remove('active');
+             btn.style.display = 'inline-block';
+           });
+           // Add 'active' class to the clicked button and hide it
+           button.classList.add('active');
+           button.style.display = 'none';
+ 
+           const filter = button.getAttribute('data-filter');
+ 
+           projectCards.forEach(card => {
+             const categories = card.getAttribute('data-category').split(' ');
+ 
+             if (categories.includes(filter) || filter === 'all') {
+               card.style.display = 'block';
+             } else {
+               card.style.display = 'none';
+             }
+           });
+         });
+       });
+ 
+       // Initially hide the active filter button ('All')
+       const activeFilter = document.querySelector('.filter-btn.active');
+       if (activeFilter) {
+         activeFilter.style.display = 'none';
+       }
+ 
+       // Projects Release Timer Functionality
+       const timerElement = document.getElementById('timer');
+ 
+       function updateTimer() {
+         const now = new Date();
+         const currentDay = now.getDay(); // 0 (Sun) to 6 (Sat)
+         const currentHours = now.getHours();
+         const currentMinutes = now.getMinutes();
+         const currentSeconds = now.getSeconds();
+ 
+         // Calculate how many days until next Friday
+         let daysUntilFriday = (5 - currentDay + 7) % 7;
+         if (daysUntilFriday === 0 && (currentHours > 0 || currentMinutes > 0 || currentSeconds > 0)) {
+           daysUntilFriday = 7;
+         }
+ 
+         // Set next release date to next Friday at 12:00 AM
+         const nextRelease = new Date(now);
+         nextRelease.setDate(now.getDate() + daysUntilFriday);
+         nextRelease.setHours(0, 0, 0, 0);
+ 
+         const timeDifference = nextRelease - now;
+ 
+         if (timeDifference <= 0) {
+           // Release time reached, reset to next Friday
+           nextRelease.setDate(nextRelease.getDate() + 7);
+           const newTimeDifference = nextRelease - now;
+           startTimer(newTimeDifference);
+         } else {
+           startTimer(timeDifference);
+         }
+       }
+ 
+       function startTimer(timeDifference) {
+         // Calculate time components
+         const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+ 
+         // Update the DOM elements
+         document.getElementById('days').textContent = String(days).padStart(2, '0');
+         document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+         document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+         document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+       }
+ 
+       // Initialize the timer
+       updateTimer();
+       setInterval(updateTimer, 1000);
+     });
+   </script>
+ </section>
+ <hr>
+ <section class="page_index-section_music">
+   <!-- Music Bookmark -->
+   <div class="page_index-section_music-bookmark">
+     <span>&lt; MUSIC /&gt;</span>
+   </div>
+ 
+   <div class="page_index-section_music-grid-container">
+     <!-- Column 1 -->
+     <div class="page_index-section_music-column1">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_music-vertical-grid">
+         <!-- Instructions Card -->
+         <div class="instructions-card">
+           <p>
+             Discover my musical projects and releases. Use the filters to explore different genres and styles.
+           </p>
+         </div>
+         <!-- Music Release Timer -->
+         <div class="release-timer">
+           <h3>Next Music Release In:</h3>
+           <div id="timer-music">
+             <div class="time-box">
+               <span id="music-days">00</span>
+               <span class="label">Days</span>
+             </div>
+             <div class="time-box">
+               <span id="music-hours">00</span>
+               <span class="label">Hours</span>
+             </div>
+             <div class="time-box">
+               <span id="music-minutes">00</span>
+               <span class="label">Minutes</span>
+             </div>
+             <div class="time-box">
+               <span id="music-seconds">00</span>
+               <span class="label">Seconds</span>
+             </div>
+           </div>
+         </div>
+         <!-- Filter Tags -->
+         <div class="filter-tags">
+           <button class="filter-btn active" data-filter="all">All</button>
+           <button class="filter-btn" data-filter="rock">Rock</button>
+           <button class="filter-btn" data-filter="jazz">Jazz</button>
+           <button class="filter-btn" data-filter="electronic">Electronic</button>
+           <!-- Add more filter buttons as needed -->
+         </div>
+       </div>
+     </div>
+ 
+     <!-- Column 2 -->
+     <div class="page_index-section_music-column2">
+       <!-- Vertical Grid -->
+       <div class="page_index-section_music-vertical-grid">
+         <!-- Column 1 -->
+         <div class="music-grid">
+           <!-- Music Cards with Filter Types -->
+           <div class="music-card" data-category="rock all">
+             <img src="music1.jpg" alt="Music 1 - Rock Anthem" class="music-image" />
+             <h3>Rock Anthem</h3>
+             <a href="#" class="music-btn">Listen Now</a>
+           </div>
+           <div class="music-card" data-category="jazz all">
+             <img src="music2.jpg" alt="Music 2 - Smooth Jazz" class="music-image" />
+             <h3>Smooth Jazz</h3>
+             <a href="#" class="music-btn">Listen Now</a>
+           </div>
+           <div class="music-card" data-category="electronic all">
+             <img src="music3.jpg" alt="Music 3 - Electronic Beats" class="music-image" />
+             <h3>Electronic Beats</h3>
+             <a href="#" class="music-btn">Listen Now</a>
+           </div>
+           <div class="music-card" data-category="rock all">
+             <img src="music4.jpg" alt="Music 4 - Classic Rock" class="music-image" />
+             <h3>Classic Rock</h3>
+             <a href="#" class="music-btn">Listen Now</a>
+           </div>
+         </div>
+         <!-- Column 2: Button -->
+         <div class="page_index-section_music-button">
+           <a href="#" class="view-all-btn">
+             <i class="fas fa-arrow-right"></i>
+             <span>View All Music</span>
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     /* Base Styles */
+     .page_index-section_music {
+       font-family: 'Press Start 2P', cursive;
+       background: linear-gradient(135deg, rgb(100, 255, 150), rgb(0, 255, 200));
+       color: rgb(255, 255, 255);
+       padding: 2rem;
+       position: relative;
+       border-radius: 8px;
+       overflow: hidden;
+     }
+ 
+     .page_index-section_music-bookmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: rgb(1, 32, 78);
+       color: rgb(255, 235, 0);
+       padding: 0.5rem 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_music-bookmark span {
+       display: block;
+     }
+ 
+     .page_index-section_music-grid-container {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       gap: 1.5rem;
+       margin-top: 4rem;
+     }
+ 
+     /* Column 1 */
+     .page_index-section_music-column1 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .page_index-section_music-vertical-grid {
+       display: flex;
+       flex-direction: column;
+       gap: 1.5rem;
+     }
+ 
+     .instructions-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       color: rgb(255, 235, 0);
+     }
+ 
+     .release-timer {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       color: rgb(255, 235, 0);
+       text-align: center;
+     }
+ 
+     .release-timer h3 {
+       margin-bottom: 1rem;
+       font-size: 1rem;
+     }
+ 
+     #timer-music {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+       justify-items: center;
+       align-items: center;
+     }
+ 
+     .time-box {
+       background: rgba(255, 255, 255, 0.1);
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       width: 100%;
+       max-width: 100px;
+     }
+ 
+     .time-box span {
+       display: block;
+       font-size: 1.2rem;
+       font-weight: bold;
+       margin-bottom: 0.3rem;
+     }
+ 
+     .label {
+       font-size: 0.8rem;
+       text-transform: uppercase;
+     }
+ 
+     .filter-tags {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 0.5rem;
+     }
+ 
+     .filter-btn {
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       border: none;
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       font-size: 0.9rem;
+       cursor: pointer;
+       transition: background 0.3s ease;
+     }
+ 
+     .filter-btn.active {
+       background: rgb(250, 170, 104);
+       display: none; /* Hide active filter button */
+     }
+ 
+     .filter-btn:hover {
+       background: rgb(250, 170, 104);
+     }
+ 
+     /* Column 2 */
+     .page_index-section_music-column2 {
+       display: flex;
+       flex-direction: column;
+     }
+ 
+     .music-grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+     }
+ 
+     .music-card {
+       background: rgba(0, 0, 0, 0.6);
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 8px;
+       padding: 1rem;
+       text-align: center;
+       color: rgb(255, 235, 0);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
+ 
+     .music-card img {
+       width: 100%;
+       height: auto;
+       border-radius: 4px;
+       margin-bottom: 0.5rem;
+     }
+ 
+     .music-card h3 {
+       margin: 0.5rem 0;
+       font-size: 1.2rem;
+     }
+ 
+     .music-btn {
+       display: inline-block;
+       padding: 0.5rem 1rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 0.9rem;
+       transition: background 0.3s ease;
+     }
+ 
+     .music-btn:hover {
+       background: rgb(250, 170, 104);
+     }
+ 
+     .music-card:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 15px rgb(183, 0, 206);
+     }
+ 
+     .page_index-section_music-button {
+       margin-top: 1.5rem;
+       text-align: center;
+     }
+ 
+     .view-all-btn {
+       display: inline-flex;
+       align-items: center;
+       padding: 0.75rem 1.5rem;
+       background: rgb(183, 0, 206);
+       color: rgb(246, 220, 172);
+       text-decoration: none;
+       border-radius: 4px;
+       font-size: 1rem;
+       transition: background 0.3s ease, transform 0.3s ease;
+     }
+ 
+     .view-all-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .view-all-btn:hover {
+       background: rgb(250, 170, 104);
+       transform: translateY(-3px);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 480px) {
+       .page_index-section_music-grid-container {
+         grid-template-columns: 1fr;
+       }
+ 
+       .music-grid {
+         grid-template-columns: 1fr;
+       }
+ 
+       #timer-music {
+         grid-template-columns: 1fr;
+         gap: 0.5rem;
+       }
+ 
+       .time-box {
+         max-width: none;
+         width: 80px;
+       }
+     }
+ 
+     @media (min-width: 481px) and (max-width: 768px) {
+       .music-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+ 
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .music-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+ 
+     @media (min-width: 1025px) {
+       .music-grid {
+         grid-template-columns: 1fr 1fr;
+       }
+     }
+   </style>
+ 
+   <!-- JavaScript for Filtering and Release Timer -->
+   <script>
+     document.addEventListener('DOMContentLoaded', function () {
+       // Filtering Functionality
+       const filterButtons = document.querySelectorAll('.filter-btn');
+       const musicCards = document.querySelectorAll('.music-card');
+ 
+       filterButtons.forEach(button => {
+         button.addEventListener('click', () => {
+           // Remove 'active' class from all buttons and show them
+           filterButtons.forEach(btn => {
+             btn.classList.remove('active');
+             btn.style.display = 'inline-block';
+             btn.setAttribute('aria-pressed', 'false');
+           });
+           // Add 'active' class to the clicked button and hide it
+           button.classList.add('active');
+           button.style.display = 'none';
+           button.setAttribute('aria-pressed', 'true');
+ 
+           const filter = button.getAttribute('data-filter');
+ 
+           musicCards.forEach(card => {
+             const categories = card.getAttribute('data-category').split(' ');
+ 
+             if (categories.includes(filter) || filter === 'all') {
+               card.style.display = 'block';
+             } else {
+               card.style.display = 'none';
+             }
+           });
+         });
+       });
+ 
+       // Initially hide the active filter button ('All')
+       const activeFilter = document.querySelector('.filter-btn.active');
+       if (activeFilter) {
+         activeFilter.style.display = 'none';
+       }
+ 
+       // Music Release Timer Functionality
+       function updateMusicTimer() {
+         const now = new Date();
+         const currentDay = now.getDay(); // 0 (Sun) to 6 (Sat)
+         const currentHours = now.getHours();
+         const currentMinutes = now.getMinutes();
+         const currentSeconds = now.getSeconds();
+ 
+         // Calculate how many days until next Saturday
+         let daysUntilSaturday = (6 - currentDay + 7) % 7;
+         if (daysUntilSaturday === 0 && (currentHours > 0 || currentMinutes > 0 || currentSeconds > 0)) {
+           daysUntilSaturday = 7;
+         }
+ 
+         // Set next release date to next Saturday at 12:00 AM
+         const nextRelease = new Date(now);
+         nextRelease.setDate(now.getDate() + daysUntilSaturday);
+         nextRelease.setHours(0, 0, 0, 0);
+ 
+         const timeDifference = nextRelease - now;
+ 
+         if (timeDifference <= 0) {
+           // Release time reached, reset to next Saturday
+           nextRelease.setDate(nextRelease.getDate() + 7);
+           const newTimeDifference = nextRelease - now;
+           startMusicTimer(newTimeDifference);
+         } else {
+           startMusicTimer(timeDifference);
+         }
+       }
+ 
+       function startMusicTimer(timeDifference) {
+         // Calculate time components
+         const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+ 
+         // Update the DOM elements
+         document.getElementById('music-days').textContent = String(days).padStart(2, '0');
+         document.getElementById('music-hours').textContent = String(hours).padStart(2, '0');
+         document.getElementById('music-minutes').textContent = String(minutes).padStart(2, '0');
+         document.getElementById('music-seconds').textContent = String(seconds).padStart(2, '0');
+       }
+ 
+       // Initialize the timer
+       updateMusicTimer();
+       setInterval(updateMusicTimer, 1000);
+     });
+   </script>
+ </section>
+ <hr>
+ <section class="page_index-section_newsletter">
+   <!-- Newsletter Bookmark -->
+   <div class="page_index-section_newsletter-bookmark">
+     <span>&lt; NEWSLETTER /&gt;</span>
+   </div>
+ 
+   <!-- Newsletter Content -->
+   <div class="page_index-section_newsletter-content">
+     <h2>Stay Updated!</h2>
+     <p>Subscribe to my newsletter to get the latest updates and projects delivered straight to your inbox.</p>
+     <form action="#" method="POST" class="newsletter-form">
+       <input
+         type="email"
+         name="email"
+         placeholder="Enter your email"
+         required
+         class="newsletter-input"
+       />
+       <button type="submit" class="newsletter-btn">
+         <i class="fas fa-envelope"></i>
+         Subscribe
+       </button>
+     </form>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     .page_index-section_newsletter {
+       font-family: 'Press Start 2P', cursive;
+       background: linear-gradient(135deg, rgb(1, 32, 78), rgb(250, 170, 104));
+       color: rgb(246, 220, 172);
+       padding: 2rem;
+       border-radius: 8px;
+       text-align: center;
+       position: relative;
+     }
+ 
+     .page_index-section_newsletter-bookmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: rgb(183, 0, 206);
+       color: rgb(255, 235, 0);
+       padding: 0.5rem 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_newsletter-bookmark span {
+       display: block;
+     }
+ 
+     .page_index-section_newsletter-content h2 {
+       font-size: 1.5rem;
+       margin-bottom: 1rem;
+     }
+ 
+     .page_index-section_newsletter-content p {
+       font-size: 1rem;
+       margin-bottom: 1.5rem;
+     }
+ 
+     .newsletter-form {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 1rem;
+     }
+ 
+     .newsletter-input {
+       font-family: 'Press Start 2P', cursive;
+       padding: 0.75rem 1rem;
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 4px;
+       background: rgba(0, 0, 0, 0.6);
+       color: rgb(246, 220, 172);
+       font-size: 1rem;
+       width: 100%;
+       max-width: 400px;
+     }
+ 
+     .newsletter-btn {
+       font-family: 'Press Start 2P', cursive;
+       background: rgb(183, 0, 206);
+       color: rgb(255, 235, 0);
+       padding: 0.75rem 1.5rem;
+       border: none;
+       border-radius: 4px;
+       font-size: 1rem;
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: background 0.3s ease, transform 0.3s ease;
+     }
+ 
+     .newsletter-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .newsletter-btn:hover {
+       background: rgb(250, 170, 104);
+       transform: translateY(-3px);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 768px) {
+       .newsletter-input,
+       .newsletter-btn {
+         width: 100%;
+       }
+     }
+   </style>
+ </section>
+ <hr>
+ <section class="page_index-section_contact">
+   <!-- Contact Bookmark -->
+   <div class="page_index-section_contact-bookmark">
+     <span>&lt; CONTACT ME /&gt;</span>
+   </div>
+ 
+   <!-- Contact Content -->
+   <div class="page_index-section_contact-content">
+     <h2>Let's Get in Touch!</h2>
+     <p>Have a project or idea in mind? Feel free to drop me a message!</p>
+     <form action="# " method="POST" class="contact-form">
+       <div class="form-group">
+         <input
+           type="text"
+           name="name"
+           placeholder="Your Name"
+           required
+           class="contact-input"
+         />
+       </div>
+       <div class="form-group">
+         <input
+           type="email"
+           name="email"
+           placeholder="Your Email"
+           required
+           class="contact-input"
+         />
+       </div>
+       <div class="form-group">
+         <textarea
+           name="message"
+           placeholder="Your Message"
+           required
+           class="contact-textarea"
+         ></textarea>
+       </div>
+       <button type="submit" class="contact-btn">
+         <i class="fas fa-paper-plane"></i>
+         Send Message
+       </button>
+     </form>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     .page_index-section_contact {
+       font-family: 'Press Start 2P', cursive;
+       background: linear-gradient(135deg, rgb(1, 32, 78), rgb(248, 0, 177));
+       color: rgb(246, 220, 172);
+       padding: 2rem;
+       border-radius: 8px;
+       text-align: center;
+       position: relative;
+     }
+ 
+     .page_index-section_contact-bookmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: rgb(183, 0, 206);
+       color: rgb(255, 235, 0);
+       padding: 0.5rem 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+       font-size: 1rem;
+     }
+ 
+     .page_index-section_contact-bookmark span {
+       display: block;
+     }
+ 
+     .page_index-section_contact-content h2 {
+       font-size: 1.5rem;
+       margin-bottom: 1rem;
+     }
+ 
+     .page_index-section_contact-content p {
+       font-size: 1rem;
+       margin-bottom: 2rem;
+     }
+ 
+     .contact-form {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 1.5rem;
+     }
+ 
+     .form-group {
+       width: 100%;
+       max-width: 600px;
+     }
+ 
+     .contact-input,
+     .contact-textarea {
+       font-family: 'Press Start 2P', cursive;
+       width: 100%;
+       padding: 0.75rem;
+       border: 2px solid rgb(248, 0, 177);
+       border-radius: 4px;
+       background: rgba(0, 0, 0, 0.6);
+       color: rgb(246, 220, 172);
+       font-size: 1rem;
+       resize: none;
+     }
+ 
+     .contact-textarea {
+       height: 150px;
+     }
+ 
+     .contact-btn {
+       font-family: 'Press Start 2P', cursive;
+       background: rgb(183, 0, 206);
+       color: rgb(255, 235, 0);
+       padding: 0.75rem 1.5rem;
+       border: none;
+       border-radius: 4px;
+       font-size: 1rem;
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: background 0.3s ease, transform 0.3s ease;
+     }
+ 
+     .contact-btn i {
+       margin-right: 0.5rem;
+       font-size: 1rem;
+     }
+ 
+     .contact-btn:hover {
+       background: rgb(250, 170, 104);
+       transform: translateY(-3px);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 768px) {
+       .form-group {
+         width: 100%;
+       }
+     }
+   </style>
+ </section>
+ <hr>
+ <footer class="page_index-footer">
+   <!-- Footer Content -->
+   <div class="page_index-footer-container">
+     <div class="footer-branding">
+       <h3>Pixel Universe</h3>
+       <p>© 2024 Your Name. All Rights Reserved.</p>
+     </div>
+ 
+     <div class="footer-links">
+       <a href="#about" class="footer-link">About Me</a>
+       <a href="#projects" class="footer-link">Projects</a>
+       <a href="#services" class="footer-link">Services</a>
+       <a href="#contact" class="footer-link">Contact</a>
+     </div>
+ 
+     <div class="footer-social-icons">
+       <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+       <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+       <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+       <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+     </div>
+   </div>
+ 
+   <!-- Embedded CSS -->
+   <style>
+     .page_index-footer {
+       font-family: 'Press Start 2P', cursive;
+       background: rgb(1, 32, 78);
+       color: rgb(246, 220, 172);
+       padding: 2rem;
+       text-align: center;
+       border-top: 4px solid rgb(248, 0, 177);
+     }
+ 
+     .page_index-footer-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 1rem;
+     }
+ 
+     .footer-branding h3 {
+       font-size: 1.5rem;
+       margin: 0;
+     }
+ 
+     .footer-branding p {
+       font-size: 0.9rem;
+       margin: 0.5rem 0 0 0;
+     }
+ 
+     .footer-links {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1rem;
+       justify-content: center;
+     }
+ 
+     .footer-link {
+       text-decoration: none;
+       color: rgb(248, 0, 177);
+       font-size: 1rem;
+       transition: color 0.3s ease;
+     }
+ 
+     .footer-link:hover {
+       color: rgb(255, 235, 0);
+     }
+ 
+     .footer-social-icons {
+       display: flex;
+       gap: 1rem;
+       justify-content: center;
+     }
+ 
+     .social-icon {
+       color: rgb(248, 0, 177);
+       font-size: 1.5rem;
+       text-decoration: none;
+       transition: color 0.3s ease, transform 0.3s ease;
+     }
+ 
+     .social-icon:hover {
+       color: rgb(255, 235, 0);
+       transform: scale(1.2);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 768px) {
+       .page_index-footer-container {
+         gap: 1.5rem;
+       }
+ 
+       .footer-branding h3 {
+         font-size: 1.2rem;
+       }
+ 
+       .footer-link {
+         font-size: 0.9rem;
+       }
+ 
+       .social-icon {
+         font-size: 1.2rem;
+       }
+     }
+   </style>
+ </footer>
+ <hr>
  </main>
 </body>
 </html>
