@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta data-meta-name="Charaset" charset="UTF-8" />
+
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" id="charset-meta">
   <title>John Ogletree | Freelance Graphic Designer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!" />
-  <meta name="keywords" content="graphic design, logo design, branding, web design, video editing, music production, illustrator, freelance designer" />
-  <meta name="author" content="John Ogletree" />
-  <meta property="og:title" content="John Ogletree | Freelance Graphic Designer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!"/>
+  <meta name="keywords" content="graphic design, logo design, branding, web design, video editing, music production, illustrator, freelance designer"/>
+  <meta name="author" content="John Ogletree"/>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="John Ogletree | Freelance Graphic Designer"/>
   <meta property="og:description" content="I'm John Ogletree, a freelance graphic designer creating impactful visuals for brands. Need a logo, website, or video? Let's chat!" />
   <meta property="og:image" content="Assets/Images/Logos/John Ogletree/John Ogletree.png" />
   <meta property="og:url" content="https://john-ogletree.com" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="John Ogletree" />
   <meta property="og:locale" content="en_US" />
+  
+  <!-- Favicon Links -->
   <link rel="icon" type="image/png" href="/Assets/Favicon/favicon-48x48.png" sizes="48x48" />
   <link rel="icon" type="image/svg+xml" href="/Assets/Favicon/favicon.svg" />
   <link rel="shortcut icon" href="/Assets/Favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="John Ogletree" />
   <link rel="manifest" href="/Assets/Favicon/site.webmanifest" />
+  
+  <!-- Site Wide Styleshhets -->
   <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Site Wide Style Sheets.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/introduction.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/about.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/services.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/projects.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/music.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/newletter.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/contact.css" />
-  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/index/footer.css" />
+  
+  <!-- Section Specific Stylesheets -->
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/introduction Section Styles.css" />
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/About Me Section Styles.css"/>
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/Services Section Styles.css"/>
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/Projects Section Styles.css"/>
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/Music Section Styles.css"/>
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/Newletter Section Styles.css" />
+  <link rel="stylesheet" href="/Assets/Code/Casading Style Sheets/Page Specific Style Sheets/Index/Contact Me Sextion Styles"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- External Libraries and Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  
+  <!-- Google Analytics Scripts -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWBBDTBW9Y"></script>
   <script src="/Assets/Code/JavaScripts/Site Wide Javascript Scripts/Google Analytics.js" defer></script>
+  
+  <!-- Page-specific Scripts -->
   <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Service Fltration System.js" defer></script>
   <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Project Filtration System.js" defer></script>
   <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Project Release Timer.js" defer></script>
   <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Music Filtration System.js" defer></script>
   <script src="/Assets/Code/JavaScripts/Page Specific Javascript Scripts/Index/Track Release Timer.js" defer></script>
+  
+  <!-- Site-wide Scripts -->
   <script src="/Assets/Code/JavaScripts/Site Wide Javascripts/Loading Bar.js"></script>
  </head>
  <body>
+  
+  <!-- Loading Bar -->
   <div id="loading-bar"></div>
+  
+  <!-- Navigation Toggle -->
   <input type="checkbox" id="menuToggle" />
   <label for="menuToggle" class="menu-toggle-label" aria-label="Toggle Menu">
    <i class="fas fa-bars"></i>
   </label>
   <label for="menuToggle" class="overlay"></label>
+  
+  <!-- Sidebar Navigation -->
   <nav class="neon-sidebar" aria-label="Primary Navigation">
    <div class="logo">
     <img src="/Assets/Images/John Ogletree 2025 Logo.png" alt="John Ogletree Logo" />
@@ -365,6 +390,7 @@
        </div>
       </div>
      </section>
+     <hr>
   </main>
  </body>
 </html>
