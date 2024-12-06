@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+   /* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, rgb(2, 131, 147), rgb(246, 86, 37));
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: rgb(255, 235, 0);
+}
+
+/* Coming Soon Styles */
+.coming-soon-container {
+  text-align: center;
+  padding: 20px;
+  border: 5px solid rgb(183, 0, 206);
+  background-color: rgba(1, 32, 78, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 10px rgb(248, 0, 177);
+}
+
+.coming-soon-title {
+  font-size: 2.5rem;
+  margin: 0;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.coming-soon-text {
+  font-size: 1.2rem;
+  margin: 20px 0 0;
+  color: rgb(246, 220, 172);
+  text-shadow: 1px 1px 2px black, -1px -1px 2px rgb(250, 170, 104);
+}
+
+/* Animations */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgb(255, 235, 0), 0 0 10px rgb(248, 0, 177), 0 0 20px rgb(246, 220, 172);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 3px rgb(255, 235, 0), 0 0 7px rgb(250, 170, 104), 0 0 15px rgb(2, 131, 147);
+  }
+  100% {
+    opacity: 0.6;
+    text-shadow: 0 0 2px rgb(255, 235, 0), 0 0 5px rgb(246, 86, 37), 0 0 10px rgb(183, 0, 206);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coming-soon-title {
+    font-size: 2rem;
+  }
+
+  .coming-soon-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-title {
+    font-size: 1.5rem;
+  }
+
+  .coming-soon-text {
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="coming-soon-container">
+    <h1 class="coming-soon-title">Coming Soon</h1>
+    <p class="coming-soon-text">We’re preparing something amazing! Stay tuned.</p>
+  </div>
+</body>
+</html>
